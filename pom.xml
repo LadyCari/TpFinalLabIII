@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.tp_final_laboraotirio_iii/com.example.tp_final_laboraotirio_iii.HelloApplication
+                                com.example.tp_final_laboraotirio_iii/com.example.tp_final_laboraotirio_iii.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
