@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" />
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/aulaTpSus.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="640.0" fitWidth="1194.0">
+         <image>
+            <Image url="@Imagenes/Malenia Gurcia TPfinal2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/plantillaInterfazUsuario.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="766.0" layoutY="14.0" prefHeight="564.0" prefWidth="500.0" text="Aprende a programar bobo" textAlignment="CENTER">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
