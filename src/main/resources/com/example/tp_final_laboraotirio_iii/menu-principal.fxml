@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="720.0" fitWidth="1280.0">
                <image>
-                  <Image url="@Imagenes/Facultad%20(1).png" />
+                  <Image url="@Imagenes/entradaUTN.png" />
                </image>
             </ImageView>
             <Label layoutX="136.0" layoutY="136.0" text="Juego de Aventura Virtual Animada">

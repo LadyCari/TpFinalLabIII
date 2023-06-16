@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="750.0" fitWidth="1280.0">
                <image>
-                  <Image url="@Imagenes/a-perfect-day-wallpaper-1440x900_4.jpg" />
+                  <Image url="@Imagenes/CrearPersonaje.jpg" />
                </image>
             </ImageView>
             <Label layoutX="312.0" layoutY="146.0" text="Inserte nombre del personaje" textFill="#e30026e3">

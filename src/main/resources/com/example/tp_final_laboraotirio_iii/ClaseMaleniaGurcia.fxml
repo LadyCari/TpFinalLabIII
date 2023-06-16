@@ -13,7 +13,7 @@
       <AnchorPane prefHeight="720.0" prefWidth="1280.0" />
       <ImageView fitHeight="720.0" fitWidth="1280.0">
          <image>
-            <Image url="@Imagenes/148a168be0da3ed8628704a5f5b13625.png" />
+            <Image url="@Imagenes/AulaLaboratorio.png" />
          </image>
       </ImageView>
       <Label layoutX="135.0" layoutY="92.0" prefHeight="350.0" prefWidth="750.0" text="Aprende a programar bobo" textAlignment="CENTER">
