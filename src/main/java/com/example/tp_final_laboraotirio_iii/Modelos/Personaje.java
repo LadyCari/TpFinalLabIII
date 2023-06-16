@@ -2,6 +2,8 @@ package com.example.tp_final_laboraotirio_iii.Modelos;
 
 
 
+import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -22,6 +24,8 @@ public class Personaje implements Serializable{
 
     private int idPersonaje;
 
+    transient PersonajeRepo personajeRepo = new PersonajeRepo();
+
     private ArrayList<GameData>GuardadoPartida = new ArrayList<>();
 
 
@@ -32,6 +36,7 @@ public class Personaje implements Serializable{
     }
 
     public Personaje(String nombre) {
+        contadorPersonajes = personajeRepo.Listar();
         this.idPersonaje = contadorPersonajes.size();
         this.nombre = nombre;
         this.EstadoEstres = estadoEstres.RELAJADO;
