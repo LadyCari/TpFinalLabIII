@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.Controller.CrearPersonajeController">
    <children>
       <AnchorPane minHeight="720.0" minWidth="1280.0">
          <children>
@@ -23,8 +23,8 @@
                   <Font name="Rockwell Extra Bold" size="36.0" />
                </font>
             </Label>
-            <TextField layoutX="312.0" layoutY="420.0" prefHeight="43.0" prefWidth="657.0" />
-            <Button layoutX="543.0" layoutY="536.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="195.0" text="Siguiente">
+            <TextField fx:id="txtName" layoutX="312.0" layoutY="420.0" prefHeight="43.0" prefWidth="657.0" />
+            <Button fx:id="inicioJuego" layoutX="543.0" layoutY="536.0" mnemonicParsing="false" onAction="#showPasilloPrincipal" prefHeight="65.0" prefWidth="195.0" text="Siguiente">
                <font>
                   <Font name="Rockwell Extra Bold" size="24.0" />
                </font>
