@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.Controller.MenuPrincipalController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
    <children>
       <AnchorPane prefHeight="720.0" prefWidth="1280.0">
          <children>
@@ -22,22 +22,22 @@
                   <Font name="Rockwell Extra Bold" size="48.0" />
                </font>
             </Label>
-            <Button layoutX="571.0" layoutY="550.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="139.0" text="Intrucciones">
+            <Button layoutX="571.0" layoutY="550.0" mnemonicParsing="false" onAction="#switchToInstrucciones" prefHeight="57.0" prefWidth="139.0" text="Intrucciones">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="571.0" layoutY="477.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="139.0" text="Continuar">
+            <Button layoutX="571.0" layoutY="477.0" mnemonicParsing="false" onAction="#switchToCargarPartida" prefHeight="57.0" prefWidth="139.0" text="Continuar">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="NuevaPartida" layoutX="571.0" layoutY="405.0" mnemonicParsing="false" onAction="#showCrearPersonaje" prefHeight="57.0" prefWidth="139.0" text="Nueva Partida">
+            <Button fx:id="NuevaPartida" layoutX="571.0" layoutY="405.0" mnemonicParsing="false" onAction="#switchToCrearPersonaje" prefHeight="57.0" prefWidth="139.0" text="Nueva Partida">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="571.0" layoutY="618.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="139.0" text="Salir">
+            <Button layoutX="571.0" layoutY="618.0" mnemonicParsing="false" onAction="#switchToSalir" prefHeight="57.0" prefWidth="139.0" text="Salir">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>

@@ -4,8 +4,6 @@ module com.example.tp_final_laboraotirio_iii {
     requires com.fasterxml.jackson.databind;
 
 
-    opens com.example.tp_final_laboraotirio_iii.Controller to javafx.fxml;
     opens com.example.tp_final_laboraotirio_iii to javafx.fxml;
     exports com.example.tp_final_laboraotirio_iii;
-    exports com.example.tp_final_laboraotirio_iii.Controller;
 }
