@@ -6,4 +6,5 @@ module com.example.tp_final_laboraotirio_iii {
 
     opens com.example.tp_final_laboraotirio_iii to javafx.fxml;
     exports com.example.tp_final_laboraotirio_iii;
+    exports com.example.tp_final_laboraotirio_iii.Modelos;
 }

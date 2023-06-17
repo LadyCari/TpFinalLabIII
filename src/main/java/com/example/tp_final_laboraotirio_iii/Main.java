@@ -14,15 +14,16 @@ import java.util.ArrayList;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("MaleniaGurciaTPfinal.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AulaVaciaAdisgustinBatizi.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-        //launch();
+        launch();
 
+        //region test
         PersonajeRepo personajeRepo = new PersonajeRepo();
 
         Personaje personaje = new Personaje("Santurro03");
@@ -35,15 +36,23 @@ public class Main extends Application {
 
         gameData.setFecha(1);
 
+        GameData gameData2 = new GameData();
+
+        gameData2.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
+
+        gameData2.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+
+        gameData2.setFecha(2);
+
         ArrayList<GameData> listaGuardados = personaje.getGuardadoPartida();
 
         listaGuardados.add(gameData);
+        listaGuardados.add(gameData2);
 
         personajeRepo.Agregar(personaje);
 
         System.out.println(personaje);
-
-
+        //endregion
 
 
     }

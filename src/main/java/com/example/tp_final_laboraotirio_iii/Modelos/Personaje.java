@@ -14,7 +14,7 @@ public class Personaje implements Serializable{
         RELAJADO,NERVIOSO,ESTRESADO
     }
 
-    private String nombre;
+    private String Nombre;
 
     private int Estres;
 
@@ -28,7 +28,6 @@ public class Personaje implements Serializable{
 
     private ArrayList<GameData>GuardadoPartida = new ArrayList<>();
 
-
     transient ArrayList<Personaje>contadorPersonajes;
 
 
@@ -38,7 +37,7 @@ public class Personaje implements Serializable{
     public Personaje(String nombre) {
         contadorPersonajes = personajeRepo.Listar();
         this.idPersonaje = contadorPersonajes.size();
-        this.nombre = nombre;
+        this.Nombre = nombre;
         this.EstadoEstres = estadoEstres.RELAJADO;
         this.Estres = 0;
     }
@@ -62,11 +61,11 @@ public class Personaje implements Serializable{
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        Nombre = nombre;
     }
 
     public int getEstres() {
@@ -98,7 +97,7 @@ public class Personaje implements Serializable{
     @Override
     public String toString() {
         return "Personaje{" +
-                "nombre='" + nombre + '\'' +
+                "nombre='" + Nombre + '\'' +
                 ", Estres=" + Estres +
                 ", buffet=" + buffet +
                 ", EstadoEstres=" + EstadoEstres +

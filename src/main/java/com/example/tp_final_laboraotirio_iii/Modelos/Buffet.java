@@ -1,6 +1,8 @@
 package com.example.tp_final_laboraotirio_iii.Modelos;
 
-public enum Buffet {
+import java.io.Serializable;
+
+public enum Buffet implements Serializable {
     Cafe_con_Leche,
     Capuccino,
     Cortado,
