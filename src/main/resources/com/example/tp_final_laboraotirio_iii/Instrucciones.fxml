@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" />
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/Intrucciones.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="75.0" layoutY="139.0" text="Todos los dias tendras una clase teorica en un aula" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="235.0" text="Cada 3 clases teoricas tendras un trabajo practico evaluativo de los temas que consta de 10 pregungas" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="343.0" prefHeight="35.0" prefWidth="1164.0" text="Te podras desplazar por el campus de My Java Academy por medio de los puntos en el mapa como -&gt;" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="454.0" prefHeight="35.0" prefWidth="1095.0" text="Cuando rindas el trabajo practico cambiaras de profesor, esta rutina sera 4 veces" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="562.0" prefHeight="35.0" prefWidth="1131.0" text="Al final de la cursada se te dara una nota final, si rindes bien puede que tengas una sorpresa..." textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="1190.0" layoutY="352.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="28.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" text="RadioButton" />
+      <Button layoutX="81.0" layoutY="643.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" text="Atras">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="81.0" layoutY="26.0" text="Instrucciones:" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
