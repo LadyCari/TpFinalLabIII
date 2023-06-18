@@ -31,7 +31,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        //launch();
 
         //region test
         PersonajeRepo personajeRepo = new PersonajeRepo();

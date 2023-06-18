@@ -32,7 +32,7 @@
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="NuevaPartida" layoutX="571.0" layoutY="405.0" mnemonicParsing="false" onAction="#switchToCrearPersonaje" prefHeight="57.0" prefWidth="139.0" text="Nueva Partida">
+            <Button fx:id="NuevaPartida" layoutX="571.0" layoutY="405.0" mnemonicParsing="false" onAction="#switchToContadorDias" prefHeight="57.0" prefWidth="139.0" text="Nueva Partida">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
