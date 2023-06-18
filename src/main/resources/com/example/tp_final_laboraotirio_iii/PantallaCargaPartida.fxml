@@ -16,24 +16,50 @@
             <Image url="@Imagenes/CargarPartida.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="cargarArchivo1" layoutX="230.0" layoutY="185.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar" />
-      <Button fx:id="cargarArchivo2" layoutX="230.0" layoutY="302.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar" />
-      <Button fx:id="cargarArchivo3" layoutX="230.0" layoutY="436.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar" />
-      <Label fx:id="txtUsuario1" layoutX="418.0" layoutY="185.0" prefHeight="58.0" prefWidth="522.0" text="Usuario">
+      <Button fx:id="cargarArchivo1" layoutX="230.0" layoutY="185.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar">
          <font>
-            <Font size="36.0" />
+            <Font name="Rockwell Extra Bold" size="20.0" />
+         </font></Button>
+      <Button fx:id="cargarArchivo2" layoutX="230.0" layoutY="302.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar">
+         <font>
+            <Font name="Rockwell Extra Bold" size="20.0" />
+         </font></Button>
+      <Button fx:id="cargarArchivo3" layoutX="230.0" layoutY="436.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar">
+         <font>
+            <Font name="Rockwell Extra Bold" size="20.0" />
+         </font></Button>
+      <Label fx:id="txtUsuario1" layoutX="418.0" layoutY="185.0" prefHeight="58.0" prefWidth="522.0" text="Usuario" textFill="WHITE">
+         <font>
+            <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="txtUsuario2" layoutX="418.0" layoutY="302.0" prefHeight="58.0" prefWidth="522.0" text="Usuario">
+      <Label fx:id="txtUsuario2" layoutX="418.0" layoutY="302.0" prefHeight="58.0" prefWidth="522.0" text="Usuario" textFill="WHITE">
          <font>
-            <Font size="36.0" />
+            <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="txtUsuario3" layoutX="418.0" layoutY="436.0" prefHeight="58.0" prefWidth="522.0" text="Usuario">
+      <Label fx:id="txtUsuario3" layoutX="418.0" layoutY="436.0" prefHeight="58.0" prefWidth="522.0" text="Usuario" textFill="WHITE">
          <font>
-            <Font size="36.0" />
+            <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
       </Label>
-      <Button fx:id="cargarArchivo31" layoutX="73.0" layoutY="626.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" prefHeight="49.0" prefWidth="110.0" text="Atras" />
+      <Button fx:id="cargarArchivo31" layoutX="36.0" layoutY="641.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" prefHeight="49.0" prefWidth="110.0" text="Atras">
+         <font>
+            <Font name="Rockwell Extra Bold" size="20.0" />
+         </font></Button>
+      <Button fx:id="cargarArchivo11" layoutX="36.0" layoutY="185.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="138.0" text="Eliminar">
+         <font>
+            <Font name="Rockwell Extra Bold" size="20.0" />
+         </font></Button>
+      <Button fx:id="cargarArchivo111" layoutX="36.0" layoutY="302.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="138.0" text="Eliminar">
+         <font>
+            <Font name="Rockwell Extra Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="cargarArchivo1111" layoutX="36.0" layoutY="436.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="138.0" text="Eliminar">
+         <font>
+            <Font name="Rockwell Extra Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" />
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/BuffetVendedora.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/plantillaInterfazUsuario.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="249.0" layoutY="620.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="191.0" text="Cafe con leche">
+         <font>
+            <Font name="Rockwell Extra Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="250.0" layoutY="670.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="191.0" text="Capuccino">
+         <font>
+            <Font name="Rockwell Extra Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="volverBuffet" layoutX="983.0" layoutY="637.0" mnemonicParsing="false" onAction="#switchToBuffetPrincipal" prefHeight="57.0" prefWidth="191.0" text="Volver a la buffet">
+         <font>
+            <Font name="Rockwell Extra Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="477.0" layoutY="620.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="191.0" text="Cortado">
+         <font>
+            <Font name="Rockwell Extra Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="477.0" layoutY="670.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="191.0" text="Lagrima">
+         <font>
+            <Font name="Rockwell Extra Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="698.0" layoutY="620.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="191.0" text="Jugo">
+         <font>
+            <Font name="Rockwell Extra Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="698.0" layoutY="670.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="191.0" text="Te">
+         <font>
+            <Font name="Rockwell Extra Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
