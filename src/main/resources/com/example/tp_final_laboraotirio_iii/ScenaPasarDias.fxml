@@ -19,7 +19,7 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label fx:id="registroNumero" layoutX="694.0" layoutY="275.0" text="1">
+      <Label fx:id="registroNumero" layoutX="661.0" layoutY="275.0" prefHeight="141.0" prefWidth="142.0">
          <font>
             <Font size="96.0" />
          </font>
