@@ -19,12 +19,12 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label fx:id="registroNumero" layoutX="694.0" layoutY="275.0" text="1">
+      <Label fx:id="registroNumero" layoutX="694.0" layoutY="275.0" text="0">
          <font>
             <Font size="96.0" />
          </font>
       </Label>
-      <Button fx:id="botonDia" layoutX="1120.0" layoutY="620.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" prefHeight="58.0" prefWidth="115.0" text="Siguiente" />
+      <Button fx:id="botonDia" layoutX="1120.0" layoutY="620.0" mnemonicParsing="false" onAction="#ControlDeJugadores" prefHeight="58.0" prefWidth="115.0" text="Siguiente" />
       <Button fx:id="botonDia1" layoutX="52.0" layoutY="620.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" prefHeight="58.0" prefWidth="115.0" text="Atras" />
    </children>
 </Pane>
