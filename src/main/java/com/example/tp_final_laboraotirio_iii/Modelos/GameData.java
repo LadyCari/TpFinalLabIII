@@ -13,7 +13,7 @@ public class GameData implements Serializable {
     }
 
 
-    private int fecha;
+    private String fecha;
 
     private eventoCompletado EventoCompletado;
 
@@ -22,17 +22,17 @@ public class GameData implements Serializable {
     public GameData() {
     }
 
-    public GameData(int fecha, eventoCompletado eventoCompletado, AsistenciaClase asistenciaClase) {
+    public GameData(String fecha, eventoCompletado eventoCompletado, AsistenciaClase asistenciaClase) {
         this.fecha = fecha;
         EventoCompletado = eventoCompletado;
         this.asistenciaClase = asistenciaClase;
     }
 
-    public int getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(int fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

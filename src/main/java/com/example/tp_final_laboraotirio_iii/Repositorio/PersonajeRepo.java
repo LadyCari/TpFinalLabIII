@@ -81,5 +81,15 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
 
     @Override
     public void Modificar(Personaje objeto) {
+
+        Cargar();
+
+        for(Personaje aux : this.listaPersonajes)
+        {
+            aux.setGuardadoPartida(objeto.getGuardadoPartida());
+        }
+
+        Guardar();
+
     }
 }
