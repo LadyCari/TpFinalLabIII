@@ -24,7 +24,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class SceneController {
-
     //region atributos
     private Stage stage;
     private Scene scene;
@@ -41,6 +40,14 @@ public class SceneController {
     private Button siguientetextoclase;
     @FXML
     private Button terminarClase;
+    @FXML
+    public Button cargarArchivo1;
+    @FXML
+    public Button eliminarPJ;
+
+    @FXML
+    public Label registroNumero;
+
 //endregion
 
     //region G Y S
@@ -471,9 +478,9 @@ public class SceneController {
 
         GameData gameData = new GameData();
 
-        gameData.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
+        gameData.setAsistenciaClase(GameData.AsistenciaClase.NO_PRESENTE);
 
-        gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+        gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
 
         gameData.setFecha("1");
 
@@ -484,6 +491,28 @@ public class SceneController {
         personajeRepo.Agregar(personaje);
 
         switchToContadorDias(event);
+
+    }
+
+    public void CargarPartida()
+    {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        ArrayList<Personaje> lista = personajeRepo.Listar();
+        Personaje personaje =  lista.get(0);
+        ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
+
+
+
+
+
+
+    }
+
+    public void EliminarPartida()
+    {
+
+
+
 
     }
 
@@ -521,7 +550,7 @@ public class SceneController {
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         GameData gameData = new GameData();
         gameData.setFecha(String.valueOf(ListaDatos.size()+1));
-        gameData.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
+        gameData.setAsistenciaClase(GameData.AsistenciaClase.NO_PRESENTE);
         gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
         ListaDatos.add(gameData);
         personajeRepo.Modificar(personaje);
@@ -532,6 +561,7 @@ public class SceneController {
 
     ///Mañana enlazar cargar partida y crear metodos para cargar y eliminar usuario
 
+    
     public void CondicionDeEvento(ActionEvent event) {
         int isConditionMet = 2;
 
