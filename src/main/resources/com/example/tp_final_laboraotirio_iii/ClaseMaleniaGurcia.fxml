@@ -16,7 +16,7 @@
             <Image url="@Imagenes/AulaLaboratorio.png" />
          </image>
       </ImageView>
-      <Label fx:id="textClaseMelinaNormal" layoutX="135.0" layoutY="92.0" prefHeight="350.0" prefWidth="750.0" textAlignment="CENTER">
+      <Label fx:id="textoProfesor" layoutX="135.0" layoutY="92.0" prefHeight="350.0" prefWidth="750.0" textAlignment="CENTER">
          <font>
             <Font size="48.0" />
          </font>
@@ -31,17 +31,17 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Button layoutX="245.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Explicacion anterior">
+      <Button fx:id="textoAnteriorClase" layoutX="245.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Explicacion anterior">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="585.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Contunuar explicacion">
+      <Button fx:id="siguientetextoclase" layoutX="585.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Continuar explicacion">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="923.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Terminar clase">
+      <Button fx:id="terminarClase" layoutX="923.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Terminar clase">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>

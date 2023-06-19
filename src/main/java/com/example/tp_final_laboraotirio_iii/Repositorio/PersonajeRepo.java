@@ -14,23 +14,17 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
 
     private final ObjectMapper Mapper = new ObjectMapper();
 
-    private ArrayList<Personaje>listaPersonajes;
+    private Personaje personaje;
 
     @Override
     public void Cargar() {
-        if(file.exists())
-        {
-            try
-            {
-                CollectionType collectionType = Mapper.getTypeFactory().constructCollectionType(ArrayList.class,Personaje.class);
-                this.listaPersonajes = Mapper.readValue(file,collectionType);
-            }catch (IOException e)
-            {
-                listaPersonajes = new ArrayList<>();
+        if (file.exists()) {
+            try {
+                this.personaje = Mapper.readValue(file, Personaje.class);
+            } catch (IOException e) {
+                this.personaje = null;
             }
-        }
-        else
-        {
+        } else {
             System.out.println("No existe");
         }
     }
@@ -39,7 +33,7 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
     public void Guardar() {
         try
         {
-            Mapper.writerWithDefaultPrettyPrinter().writeValue(file,this.listaPersonajes);
+            Mapper.writerWithDefaultPrettyPrinter().writeValue(file,this.personaje);
 
         }catch (IOException e)
         {
@@ -49,23 +43,13 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
 
     @Override
     public ArrayList<Personaje> Listar() {
-
-        Cargar();
-
-        return this.listaPersonajes;
+return null;
     }
 
 
 
     @Override
     public void Agregar(Personaje... objeto) {
-
-        Cargar();
-
-        this.listaPersonajes.addAll(List.of(objeto));
-
-        Guardar();
-
     }
 
     @Override

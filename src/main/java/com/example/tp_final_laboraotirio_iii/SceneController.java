@@ -1,6 +1,7 @@
 package com.example.tp_final_laboraotirio_iii;
 
 import com.example.tp_final_laboraotirio_iii.Gestion.GestionClases;
+import com.example.tp_final_laboraotirio_iii.Modelos.Clases;
 import com.example.tp_final_laboraotirio_iii.Modelos.GameData;
 import com.example.tp_final_laboraotirio_iii.Modelos.Personaje;
 import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
@@ -18,6 +19,7 @@ import javafx.scene.Scene;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -31,7 +33,14 @@ public class SceneController {
     private Label registroDias;
     @FXML
     private TextField txtName;
-
+    @FXML
+    private Label textoProfesor;
+    @FXML
+    private Button textoAnteriorClase;
+    @FXML
+    private Button siguientetextoclase;
+    @FXML
+    private Button terminarClase;
 //endregion
 
     //region G Y S
@@ -324,32 +333,102 @@ public class SceneController {
     public void switchToaula1(ActionEvent event) {
         // Aquí va tu lógica para determinar el contexto
         GestionClases texto = new GestionClases();
-        PersonajeRepo pj2 = new PersonajeRepo();
-        ArrayList<GameData> ListaDatos = new ArrayList<>();
-        GameData pj = new GameData();
-        switch (pj.getFecha()){
-            case "1":
-                if (pj.getAsistenciaClase().equals(GameData.AsistenciaClase.NO_PRESENTE)){
+        Clases clase = new Clases();
+
+        String condicion = "no fue a clase";
+        switch (1) {
+            case 1:
+                if (condicion.equals("no fue a clase")) {
                     switchToMaleniaGurciaNormal(event);
-                    texto.submit(event);
                 } else {
                     switchToaulaGeneralVacia(event);
                 }
                 break;
-            case "2":
+            case 2:
+                if (condicion.equals("no fue a clase")) {
+                    switchToMaleniaGurciaTPfinal(event);
+                } else {
+                    switchToaulaGeneralVacia(event);
+                }
                 break;
 
         }
 
     }
+/*
+//region dialogo clases
 
+    //region atributos
 
+//endregion
 
+    //region G y S
+    public String[] getMensajes() {
+        return arregloCopia;
+    }
 
+    public void setMensajes(String[] mensajes) {
+        arregloCopia = mensajes;
+    }
+    //endregion
 
+    //region copia Arreglo
+    private int indiceMensajes = 0;
+    private String[] arregloCopia;
 
+    //copiamos del arreglo de clases al local para trabajar con los metodos
+    Clases clase = new Clases();
+
+    public void cargarArregloTeoriaParaMostrar() {
+        this.arregloCopia = Arrays.copyOf(clase.getDialogo(), clase.getDialogo().length);
+    }
+//endregion
+
+    //region metodos uso texto
+    public void submit(ActionEvent event) {
+
+        if (indiceMensajes == 0) {
+            textoProfesor.setText(arregloCopia[indiceMensajes]);
+            textoAnteriorClase.setDisable(true);
+            siguientetextoclase.setDisable(false);
+            terminarClase.setDisable(true);
+        } else if (indiceMensajes < arregloCopia.length) {
+            textoProfesor.setText(arregloCopia[indiceMensajes]);
+            indiceMensajes++;
+            updateOtrobotonState();
+        } else {
+            textoProfesor.setText("Asi concluye la clase nos veremos la proxima");
+            siguientetextoclase.setDisable(true); // Deshabilitar el botón cuando se han mostrado todos los mensajes
+            terminarClase.setDisable(false);
+            textoAnteriorClase.setDisable(false);
+        }
+    }
+
+    public void initialize() {
+
+        updateOtrobotonState();
+        if (indiceMensajes >= arregloCopia.length) {
+            switchToSalir(null);
+        }
+
+    }
+
+    private void updateOtrobotonState() {
+        siguientetextoclase.setDisable(true);
+        textoAnteriorClase.setVisible(true);
+        terminarClase.setVisible(true);
+    }
+    //endregion
+    //endregion
+*/
 
     ///Metodos de los escenarios///
+    public void CrearPersonaje(ActionEvent event) {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        Personaje personaje1 = new Personaje();
+        switchToCargarPartida(event);
+
+    }
 
     public void CargarNombreUsuario(ActionEvent event) {
         PersonajeRepo personajeRepo = new PersonajeRepo();
@@ -374,20 +453,13 @@ public class SceneController {
 
     }
 
-    public void CrearPersonaje(ActionEvent event) {
-        PersonajeRepo personajeRepo = new PersonajeRepo();
-        Personaje personaje1 = new Personaje();
-
-        switchToCargarPartida(event);
-    }
-
     public void ControlDeJugadores(ActionEvent event) {
         PersonajeRepo repo = new PersonajeRepo();
         ArrayList<Personaje> lista = repo.Listar();
 
         int cantidad = lista.size();
 
-        if (cantidad < 2) {
+        if (cantidad < 1) {
             switchToCrearPersonaje(event);
         } else {
             switchToSlotsLlenos(event);
