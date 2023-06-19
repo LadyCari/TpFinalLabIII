@@ -250,10 +250,10 @@ public class SceneController {
 
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje =  lista.get(0);
+        Personaje personaje = lista.get(0);
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         GameData gameData = new GameData();
-        gameData.setFecha(String.valueOf(ListaDatos.size()+1));
+        gameData.setFecha(String.valueOf(ListaDatos.size() + 1));
         gameData.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
         gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
         ListaDatos.add(gameData);
@@ -261,19 +261,6 @@ public class SceneController {
 
         UpdateDia();
 
-    }
-
-
-    public void CondicionDeEvento(ActionEvent event) {
-        int isConditionMet = 2;
-
-        if (isConditionMet == 0) {
-            switchToMaleniaGurciaNormal(event);
-        } else if (isConditionMet == 1) {
-            switchToMaleniaGurciaTPfinal(event);
-        } else {
-            switchToaulaGeneralVacia(event);
-        }
     }
 
     public void aula1(ActionEvent event) {
