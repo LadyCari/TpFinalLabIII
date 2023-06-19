@@ -18,6 +18,7 @@ import javafx.scene.Scene;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class SceneController {
@@ -30,11 +31,14 @@ public class SceneController {
     private Label registroDias;
     @FXML
     private TextField txtName;
+
 //endregion
 
+    //region G Y S
     public void setStage(Stage stage) {
         this.stage = stage;
     }
+//endregion
 
     //region menu principal
     public void switchToMenuPrincipal(ActionEvent event) {
@@ -89,11 +93,25 @@ public class SceneController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
     }
+
+    public void switchToSlotsLlenos(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/AdvertenciaSlotLlenos.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     //endregion
 
+    //region pasillo principal
     public void switchToPasilloPrincipal(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/PasilloPrincipal.fxml")));
+            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/PasilloPrincipal.fxml"))));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -103,23 +121,36 @@ public class SceneController {
         }
     }
 
-    //region aulas y profesores
+    public void switchToContadorDias(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaPasarDias.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToFinalizarDias(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaFinalizarDia.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+//endregion
+
+    //region aulas y profesores
     public void switchToaulaGeneralVacia(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/AulaGeneralVacia.fxml")));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void switchToMaleniaGurciaTPfinal(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/MaleniaGurciaTPfinal.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -141,6 +172,66 @@ public class SceneController {
         }
     }
 
+    public void switchToMaleniaGurciaTPfinal(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/MaleniaGurciaTPfinal.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToClaseNormalGarielChulde(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ClaseChaldu.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToGarielChuldeTPFinal(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/YouTipsTPFinal.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToClaseNormalGuceldaBuffini(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ClaseGuceldaBuffini.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToTPFinalGuceldaBuffini(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/GuceldaBuffiniTPFinal.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void switchToaulaAgustinVacia(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/AulaVaciaAdisgustinBatizi.fxml")));
@@ -152,31 +243,74 @@ public class SceneController {
             e.printStackTrace();
         }
     }
-//endregion
 
-    public void switchToBuffetPrincipal(ActionEvent event) {
+    public void switchToClaseNormalAdisgutinBatizi(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ClaseAdisgutinBatizi.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToTPFinalAdisgutinBatizi(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ClaseAdisgutinBatizi.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    //endregion
+
+    //region Buffet
+    public void switchToBuffetGeneral(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/BuffetPrincipal.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void switchToContadorDias(ActionEvent event) {
+    public void switchToMenuBuffet(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaPasarDias.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/MenuCafeteria.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    public void switchToBanioGeneral(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/BañoGeneral.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //endregion
+
 
     private void switchScene(Parent root) {
         if (stage != null) {
@@ -187,13 +321,40 @@ public class SceneController {
         }
     }
 
+    public void switchToaula1(ActionEvent event) {
+        // Aquí va tu lógica para determinar el contexto
+        GestionClases texto = new GestionClases();
+        PersonajeRepo pj2 = new PersonajeRepo();
+        ArrayList<GameData> ListaDatos = new ArrayList<>();
+        GameData pj = new GameData();
+        switch (pj.getFecha()){
+            case "1":
+                if (pj.getAsistenciaClase().equals(GameData.AsistenciaClase.NO_PRESENTE)){
+                    switchToMaleniaGurciaNormal(event);
+                    texto.submit(event);
+                } else {
+                    switchToaulaGeneralVacia(event);
+                }
+                break;
+            case "2":
+                break;
+
+        }
+
+    }
+
+
+
+
+
+
 
     ///Metodos de los escenarios///
 
     public void CargarNombreUsuario(ActionEvent event) {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         Personaje personaje = new Personaje(txtName.getText());
-        ArrayList<GameData>ListaDatos = new ArrayList<>();
+        ArrayList<GameData> ListaDatos = new ArrayList<>();
 
         GameData gameData = new GameData();
 
@@ -229,7 +390,7 @@ public class SceneController {
         if (cantidad < 2) {
             switchToCrearPersonaje(event);
         } else {
-            switchToInstrucciones(event);
+            switchToSlotsLlenos(event);
         }
     }
 
@@ -237,13 +398,12 @@ public class SceneController {
     public void UpdateDia() {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje =  lista.get(0);
+        Personaje personaje = lista.get(0);
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         //Probar aumentar los dias segun entre a este metodo
 
         registroDias.setText(String.valueOf(ListaDatos.size()));
     }
-
 
     public void CambiarDias(ActionEvent event) {
         switchToPasilloPrincipal(event);
@@ -263,25 +423,15 @@ public class SceneController {
 
     }
 
-    public void aula1(ActionEvent event) {
-        // Aquí va tu lógica para determinar el contexto
-        GestionClases texto = new GestionClases();
-        PersonajeRepo repo = new PersonajeRepo();
-        GameData pj = new GameData();
+    public void CondicionDeEvento(ActionEvent event) {
+        int isConditionMet = 2;
 
-        switch (pj.getFecha()){
-            case "1":
-                if (pj.getAsistenciaClase().equals(GameData.AsistenciaClase.NO_PRESENTE)){
-                    switchToMaleniaGurciaNormal(event);
-                    texto.submit(event);
-                } else {
-                    switchToaulaGeneralVacia(event);
-                }
-                break;
-            case "2":
-                break;
-
+        if (isConditionMet == 0) {
+            switchToMaleniaGurciaNormal(event);
+        } else if (isConditionMet == 1) {
+            switchToMaleniaGurciaTPfinal(event);
+        } else {
+            switchToaulaGeneralVacia(event);
         }
-
     }
 }

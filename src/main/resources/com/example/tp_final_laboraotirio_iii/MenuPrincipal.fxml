@@ -27,7 +27,7 @@
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="continuarPartida" layoutX="571.0" layoutY="477.0" mnemonicParsing="false" onAction="#switchToContadorDias" prefHeight="57.0" prefWidth="139.0" text="Continuar">
+            <Button fx:id="continuarPartida" layoutX="571.0" layoutY="477.0" mnemonicParsing="false" onAction="#switchToCargarPartida" prefHeight="57.0" prefWidth="139.0" text="Continuar">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>

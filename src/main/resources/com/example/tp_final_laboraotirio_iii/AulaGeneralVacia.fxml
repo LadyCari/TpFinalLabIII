@@ -19,6 +19,6 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <RadioButton fx:id="volverAulaAPasillo" layoutX="1242.0" layoutY="369.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
+      <RadioButton fx:id="volverAlPasilloPrincipalDesdeAula1" layoutX="1242.0" layoutY="369.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
    </children>
 </Pane>

@@ -43,7 +43,7 @@
          </font>
       </Label>
       <RadioButton layoutX="888.0" layoutY="383.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="28.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" text="RadioButton" />
-      <Button layoutX="36.0" layoutY="649.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" text="Atras">
+      <Button fx:id="deInstruccionesAMenuPrincipal" layoutX="36.0" layoutY="649.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" text="Atras">
          <font>
             <Font name="Rockwell Extra Bold" size="24.0" />
          </font>

@@ -16,7 +16,7 @@
             <Image url="@Imagenes/AulaLaboratorio.png" />
          </image>
       </ImageView>
-      <Label layoutX="135.0" layoutY="92.0" prefHeight="350.0" prefWidth="750.0" text="Aprende a programar bobo" textAlignment="CENTER">
+      <Label fx:id="textBenoffiClaseNormal" layoutX="135.0" layoutY="92.0" prefHeight="350.0" prefWidth="750.0" textAlignment="CENTER">
          <font>
             <Font size="48.0" />
          </font>

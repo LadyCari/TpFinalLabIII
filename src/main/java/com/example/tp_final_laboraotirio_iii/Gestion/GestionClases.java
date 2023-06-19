@@ -41,8 +41,7 @@ public class GestionClases {
     Clases clase = new Clases();
 
     public void cargarArregloTeoriaParaMostrar(GameData pj){
-        int fecha = Integer.parseInt(pj.getFecha());
-        this.arregloCopia = Arrays.copyOf(clase.getDialogo(fecha), clase.getDialogo(fecha).length);
+        this.arregloCopia = Arrays.copyOf(clase.getDialogo(pj), clase.getDialogo(pj).length);
     }
 
     public void submit(ActionEvent event) {

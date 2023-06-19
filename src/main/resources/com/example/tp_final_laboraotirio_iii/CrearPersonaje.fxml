@@ -24,7 +24,7 @@
                </font>
             </Label>
             <TextField fx:id="txtName" layoutX="312.0" layoutY="420.0" prefHeight="43.0" prefWidth="657.0" />
-            <Button fx:id="inicioJuego" layoutX="715.0" layoutY="539.0" mnemonicParsing="false" onAction="#CargarNombreUsuario" prefHeight="65.0" prefWidth="195.0" text="Siguiente">
+            <Button fx:id="cargarNombreUsarioNuevo" layoutX="715.0" layoutY="539.0" mnemonicParsing="false" onAction="#switchToContadorDias" prefHeight="65.0" prefWidth="195.0" text="Siguiente">
                <font>
                   <Font name="Rockwell Extra Bold" size="24.0" />
                </font>

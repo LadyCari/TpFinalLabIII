@@ -24,7 +24,13 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Button fx:id="botonDia" layoutX="1120.0" layoutY="620.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" prefHeight="58.0" prefWidth="115.0" text="Siguiente" />
-      <Button fx:id="botonDia1" layoutX="52.0" layoutY="620.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" prefHeight="58.0" prefWidth="115.0" text="Atras" />
+      <Button fx:id="botonPasarDia" layoutX="1078.0" layoutY="620.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" prefHeight="60.0" prefWidth="160.0" text="Siguiente">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font></Button>
+      <Button fx:id="deContadorDiasAMenuPrincipal" layoutX="52.0" layoutY="620.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" prefHeight="60.0" prefWidth="160.0" text="Atras">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font></Button>
    </children>
 </Pane>

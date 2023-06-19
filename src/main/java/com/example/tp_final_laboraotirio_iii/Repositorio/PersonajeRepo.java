@@ -82,10 +82,7 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
 
         Cargar();
 
-        for(Personaje aux : this.listaPersonajes)
-        {
-            aux.setGuardadoPartida(objeto.getGuardadoPartida());
-        }
+        objeto.setGuardadoPartida(objeto.getGuardadoPartida());
 
         Guardar();
 
