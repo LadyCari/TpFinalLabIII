@@ -20,9 +20,7 @@ public class Personaje implements Serializable{
     private estadoEstres EstadoEstres;
     private int dinero;
 
-    private static ArrayList<Integer>ListaNotas = new ArrayList<>(3);
-
-    transient PersonajeRepo personajeRepo = new PersonajeRepo();
+    private static ArrayList<Integer>ListaNotas = new ArrayList<>(4);
 
     private ArrayList<GameData>GuardadoPartida = new ArrayList<>();
     //endregion

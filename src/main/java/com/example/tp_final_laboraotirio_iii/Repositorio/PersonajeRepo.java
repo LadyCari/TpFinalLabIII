@@ -10,21 +10,27 @@ import java.util.List;
 
 public class PersonajeRepo implements IRepositorio<Personaje>{
 
-    private final File file = new File("TpFinalLabIII\\src\\main\\resources\\Archivos\\guardados.json");
+    private final File file = new File("src\\main\\resources\\Archivos\\guardados.json");
 
     private final ObjectMapper Mapper = new ObjectMapper();
 
-    private Personaje personaje;
+    private ArrayList<Personaje>listaPersonajes;
 
     @Override
     public void Cargar() {
-        if (file.exists()) {
-            try {
-                this.personaje = Mapper.readValue(file, Personaje.class);
-            } catch (IOException e) {
-                this.personaje = null;
+        if(file.exists())
+        {
+            try
+            {
+                CollectionType collectionType = Mapper.getTypeFactory().constructCollectionType(ArrayList.class,Personaje.class);
+                this.listaPersonajes = Mapper.readValue(file,collectionType);
+            }catch (IOException e)
+            {
+                listaPersonajes = new ArrayList<>();
             }
-        } else {
+        }
+        else
+        {
             System.out.println("No existe");
         }
     }
@@ -33,7 +39,7 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
     public void Guardar() {
         try
         {
-            Mapper.writerWithDefaultPrettyPrinter().writeValue(file,this.personaje);
+            Mapper.writerWithDefaultPrettyPrinter().writeValue(file,this.listaPersonajes);
 
         }catch (IOException e)
         {
@@ -43,19 +49,29 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
 
     @Override
     public ArrayList<Personaje> Listar() {
-return null;
+
+        Cargar();
+
+        return this.listaPersonajes;
     }
-
-
 
     @Override
     public void Agregar(Personaje... objeto) {
+
+        Cargar();
+
+        this.listaPersonajes.addAll(List.of(objeto));
+
+        Guardar();
+
     }
 
     @Override
     public void Eliminar(int id) {
 
         Cargar();
+
+       // this.listaPersonajes.removeIf(personaje -> personaje.getIdPersonaje() == id);
 
         Guardar();
 
@@ -66,7 +82,10 @@ return null;
 
         Cargar();
 
-        objeto.setGuardadoPartida(objeto.getGuardadoPartida());
+        for(Personaje aux : this.listaPersonajes)
+        {
+            aux.setGuardadoPartida(objeto.getGuardadoPartida());
+        }
 
         Guardar();
 

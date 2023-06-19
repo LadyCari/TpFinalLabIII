@@ -352,7 +352,6 @@ public class SceneController {
 
     //endregion
 
-
     private void switchScene(Parent root) {
         if (stage != null) {
             Scene scene = new Scene(root);
@@ -361,6 +360,8 @@ public class SceneController {
             System.out.println("Error: El stage es nulo. Asegúrate de haber asignado el stage correctamente en el controlador.");
         }
     }
+
+
 
     public void switchToaula1(ActionEvent event) {
         // Aquí va tu lógica para determinar el contexto
@@ -462,17 +463,10 @@ public class SceneController {
 
 
     ///Metodos de los escenarios///
-    public void CrearPersonaje(ActionEvent event) {
-        PersonajeRepo personajeRepo = new PersonajeRepo();
-        Personaje personaje1 = new Personaje();
-        switchToCargarPartida(event);
-
-    }
-
     public void CargarNombreUsuario(ActionEvent event) {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         Personaje personaje = new Personaje(txtName.getText());
-        ArrayList<GameData> ListaDatos = new ArrayList<>();
+        ArrayList<GameData>ListaDatos = new ArrayList<>();
 
         GameData gameData = new GameData();
 
@@ -492,13 +486,20 @@ public class SceneController {
 
     }
 
+    public void CrearPersonaje(ActionEvent event) {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        Personaje personaje1 = new Personaje();
+
+        switchToCargarPartida(event);
+    }
+
     public void ControlDeJugadores(ActionEvent event) {
         PersonajeRepo repo = new PersonajeRepo();
         ArrayList<Personaje> lista = repo.Listar();
 
         int cantidad = lista.size();
 
-        if (cantidad < 1) {
+        if (cantidad < 2) {
             switchToCrearPersonaje(event);
         } else {
             switchToSlotsLlenos(event);
@@ -509,22 +510,23 @@ public class SceneController {
     public void UpdateDia() {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje = lista.get(0);
+        Personaje personaje =  lista.get(0);
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         //Probar aumentar los dias segun entre a este metodo
 
         registroDias.setText(String.valueOf(ListaDatos.size()));
     }
 
+
     public void CambiarDias(ActionEvent event) {
         switchToPasilloPrincipal(event);
 
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje = lista.get(0);
+        Personaje personaje =  lista.get(0);
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         GameData gameData = new GameData();
-        gameData.setFecha(String.valueOf(ListaDatos.size() + 1));
+        gameData.setFecha(String.valueOf(ListaDatos.size()+1));
         gameData.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
         gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
         ListaDatos.add(gameData);
@@ -533,6 +535,8 @@ public class SceneController {
         UpdateDia();
 
     }
+
+    ///Mañana enlazar cargar partida y crear metodos para cargar y eliminar usuario
 
     public void CondicionDeEvento(ActionEvent event) {
         int isConditionMet = 2;
@@ -545,4 +549,6 @@ public class SceneController {
             switchToaulaGeneralVacia(event);
         }
     }
+
+
 }
