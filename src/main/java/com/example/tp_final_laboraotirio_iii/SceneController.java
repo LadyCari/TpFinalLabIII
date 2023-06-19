@@ -47,7 +47,39 @@ public class SceneController {
     public void setStage(Stage stage) {
         this.stage = stage;
     }
-//endregion
+
+    public Label getTextoProfesor() {
+        return textoProfesor;
+    }
+
+    public void setTextoProfesor(Label textoProfesor) {
+        this.textoProfesor = textoProfesor;
+    }
+
+    public Button getTextoAnteriorClase() {
+        return textoAnteriorClase;
+    }
+
+    public void setTextoAnteriorClase(Button textoAnteriorClase) {
+        this.textoAnteriorClase = textoAnteriorClase;
+    }
+
+    public Button getSiguientetextoclase() {
+        return siguientetextoclase;
+    }
+
+    public void setSiguientetextoclase(Button siguientetextoclase) {
+        this.siguientetextoclase = siguientetextoclase;
+    }
+
+    public Button getTerminarClase() {
+        return terminarClase;
+    }
+
+    public void setTerminarClase(Button terminarClase) {
+        this.terminarClase = terminarClase;
+    }
+    //endregion
 
     //region menu principal
     public void switchToMenuPrincipal(ActionEvent event) {
@@ -355,12 +387,8 @@ public class SceneController {
         }
 
     }
-/*
+
 //region dialogo clases
-
-    //region atributos
-
-//endregion
 
     //region G y S
     public String[] getMensajes() {
@@ -376,7 +404,6 @@ public class SceneController {
     private int indiceMensajes = 0;
     private String[] arregloCopia;
 
-    //copiamos del arreglo de clases al local para trabajar con los metodos
     Clases clase = new Clases();
 
     public void cargarArregloTeoriaParaMostrar() {
@@ -386,12 +413,12 @@ public class SceneController {
 
     //region metodos uso texto
     public void submit(ActionEvent event) {
-
-        if (indiceMensajes == 0) {
+        if (indiceMensajes == 0){
             textoProfesor.setText(arregloCopia[indiceMensajes]);
-            textoAnteriorClase.setDisable(true);
             siguientetextoclase.setDisable(false);
             terminarClase.setDisable(true);
+            textoAnteriorClase.setDisable(true);
+            indiceMensajes++;
         } else if (indiceMensajes < arregloCopia.length) {
             textoProfesor.setText(arregloCopia[indiceMensajes]);
             indiceMensajes++;
@@ -400,13 +427,25 @@ public class SceneController {
             textoProfesor.setText("Asi concluye la clase nos veremos la proxima");
             siguientetextoclase.setDisable(true); // Deshabilitar el botón cuando se han mostrado todos los mensajes
             terminarClase.setDisable(false);
-            textoAnteriorClase.setDisable(false);
+            textoAnteriorClase.setDisable(true);
+        }
+    }
+
+    public void textoAnteriorDialogoProfesor(ActionEvent event){
+        if (indiceMensajes == 0){
+            textoProfesor.setText(arregloCopia[indiceMensajes]);
+            siguientetextoclase.setDisable(false);
+            terminarClase.setDisable(true);
+            textoAnteriorClase.setDisable(true);
+        }else{
+        indiceMensajes--;
+        textoProfesor.setText(arregloCopia[indiceMensajes]);
+        updateOtrobotonState();
         }
     }
 
     public void initialize() {
-
-        updateOtrobotonState();
+        cargarArregloTeoriaParaMostrar();
         if (indiceMensajes >= arregloCopia.length) {
             switchToSalir(null);
         }
@@ -414,13 +453,13 @@ public class SceneController {
     }
 
     private void updateOtrobotonState() {
-        siguientetextoclase.setDisable(true);
-        textoAnteriorClase.setVisible(true);
-        terminarClase.setVisible(true);
+        siguientetextoclase.setDisable(false);
+        textoAnteriorClase.setDisable(false);
+        terminarClase.setDisable(true);
     }
     //endregion
     //endregion
-*/
+
 
     ///Metodos de los escenarios///
     public void CrearPersonaje(ActionEvent event) {

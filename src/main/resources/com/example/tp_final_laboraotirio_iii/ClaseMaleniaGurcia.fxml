@@ -16,11 +16,6 @@
             <Image url="@Imagenes/AulaLaboratorio.png" />
          </image>
       </ImageView>
-      <Label fx:id="textoProfesor" layoutX="135.0" layoutY="92.0" prefHeight="350.0" prefWidth="750.0" textAlignment="CENTER">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
       <ImageView fitHeight="720.0" fitWidth="333.0" layoutX="947.0">
          <image>
             <Image url="@Imagenes/MaleniaGurcia.png" />
@@ -31,17 +26,27 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Button fx:id="textoAnteriorClase" layoutX="245.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Explicacion anterior">
+      <ImageView fitHeight="487.0" fitWidth="962.0" layoutX="21.0" layoutY="12.0">
+         <image>
+            <Image url="@Imagenes/fondoTextoMelina.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="textoProfesor" alignment="CENTER" layoutX="84.0" layoutY="30.0" prefHeight="457.0" prefWidth="865.0" text="Bienvenido a clase" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="textoAnteriorClase" layoutX="245.0" layoutY="635.0" mnemonicParsing="false" onAction="#textoAnteriorDialogoProfesor" prefHeight="60.0" prefWidth="300.0" text="Explicacion anterior">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="siguientetextoclase" layoutX="585.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Continuar explicacion">
+      <Button fx:id="siguientetextoclase" layoutX="585.0" layoutY="635.0" mnemonicParsing="false" onAction="#submit" prefHeight="60.0" prefWidth="300.0" text="Continuar explicacion">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="terminarClase" layoutX="923.0" layoutY="635.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Terminar clase">
+      <Button fx:id="terminarClase" layoutX="923.0" layoutY="635.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" prefHeight="60.0" prefWidth="300.0" text="Terminar clase">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
