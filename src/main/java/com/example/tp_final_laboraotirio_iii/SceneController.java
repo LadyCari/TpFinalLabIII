@@ -1,5 +1,9 @@
 package com.example.tp_final_laboraotirio_iii;
 
+import com.example.tp_final_laboraotirio_iii.Gestion.GestionClases;
+import com.example.tp_final_laboraotirio_iii.Modelos.GameData;
+import com.example.tp_final_laboraotirio_iii.Modelos.Personaje;
+import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +28,8 @@ public class SceneController {
         this.stage = stage;
     }
 
+
+    //region swiches Clases
     //region menu principal
     public void switchToMenuPrincipal(ActionEvent event) {
         try {
@@ -273,15 +279,50 @@ public class SceneController {
         }
     }
 
-    public void handleButtonClick(ActionEvent event) {
+    public void handleButtonClick(ActionEvent event, GameData pj) {
         // Aquí va tu lógica para determinar el contexto
-        boolean isConditionMet = false;
+        GestionClases texto = new GestionClases();
 
-        if (isConditionMet) {
-            switchToMaleniaGurciaNormal(event);
-        } else {
-            switchToMaleniaGurciaTPfinal(event);
-        }
+        switch (pj.getFecha()){
+            case 1:
+                if (pj.getAsistenciaClase().equals(GameData.AsistenciaClase.NO_PRESENTE)){
+                    switchToMaleniaGurciaNormal(event);
+                    texto.submit(event);
+            }
+            break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
     }
 
+}
 }
