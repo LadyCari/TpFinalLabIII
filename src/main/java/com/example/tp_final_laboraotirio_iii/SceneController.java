@@ -44,9 +44,10 @@ public class SceneController {
     public Button cargarArchivo1;
     @FXML
     public Button eliminarPJ;
-
     @FXML
     public Label registroNumero;
+    @FXML
+    public Label txtUsuario1;
 
 //endregion
 
@@ -494,26 +495,56 @@ public class SceneController {
 
     }
 
-    public void CargarPartida()
+
+    public void VerificarPersonaje(ActionEvent event)
     {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje =  lista.get(0);
-        ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
+
+        if(lista.isEmpty())
+        {
+            switchToInstrucciones(event);
+        }
+        else
+        {
+            switchToCargarPartida(event);
+        }
+    }
 
 
+    public void UpdateNombre()
+    {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        ArrayList<Personaje> lista = personajeRepo.Listar();
+        if(!lista.isEmpty())
+        {
+            Personaje personaje = lista.get(0);
+            txtUsuario1.setText(personaje.getNombre());
+        }
+    }
 
-
-
-
+    public void VerificarLista(ActionEvent event)
+    {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        ArrayList<Personaje> lista = personajeRepo.Listar();
+        if(!lista.isEmpty())
+        {
+            switchToPasilloPrincipal(event);
+        }
+        else
+        {
+            switchToInstrucciones(event);
+        }
     }
 
     public void EliminarPartida()
     {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        ArrayList<Personaje> lista = personajeRepo.Listar();
+        Personaje personaje = lista.get(0);
+        personajeRepo.Eliminar(personaje.getId());
 
-
-
-
+        txtUsuario1.setText("");
     }
 
     public void ControlDeJugadores(ActionEvent event) {
@@ -537,7 +568,7 @@ public class SceneController {
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         //Probar aumentar los dias segun entre a este metodo
 
-        registroDias.setText(String.valueOf(ListaDatos.size()));
+        registroDias.setText(String.valueOf(ListaDatos.size()+1));
     }
 
 
