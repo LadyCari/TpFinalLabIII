@@ -16,20 +16,11 @@
             <Image url="@Imagenes/CargarPartida.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="cargarArchivo1" layoutX="230.0" layoutY="185.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar" />
-      <Button fx:id="cargarArchivo2" layoutX="230.0" layoutY="302.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar" />
-      <Button fx:id="cargarArchivo3" layoutX="230.0" layoutY="436.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar" />
-      <Label fx:id="txtUsuario1" layoutX="418.0" layoutY="185.0" prefHeight="58.0" prefWidth="522.0" text="Usuario">
+      <Button fx:id="cargarArchivo2" layoutX="285.0" layoutY="317.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" text="Cargar">
          <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Label fx:id="txtUsuario2" layoutX="418.0" layoutY="302.0" prefHeight="58.0" prefWidth="522.0" text="Usuario">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Label fx:id="txtUsuario3" layoutX="418.0" layoutY="436.0" prefHeight="58.0" prefWidth="522.0" text="Usuario">
+            <Font size="17.0" />
+         </font></Button>
+      <Label fx:id="txtUsuario2" layoutX="473.0" layoutY="317.0" prefHeight="58.0" prefWidth="522.0" text="Usuario">
          <font>
             <Font size="36.0" />
          </font>

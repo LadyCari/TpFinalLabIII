@@ -2,6 +2,9 @@
   "buffet" : null,
   "idPersonaje" : 0,
   "dinero" : 300,
+  "estres" : 0,
+  "estadoEstres" : "RELAJADO",
+  "nombre" : "Pedro",
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "PRESENTE",
@@ -10,24 +13,5 @@
     "fecha" : "2",
     "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "3",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "4",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "5",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "6",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  } ],
-  "estres" : 0,
-  "estadoEstres" : "RELAJADO",
-  "nombre" : "Pablo"
+  } ]
 } ]

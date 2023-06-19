@@ -274,6 +274,13 @@ public class SceneController {
         personajeRepo.Modificar(personaje);
 
         UpdateDia();
+    }
+
+    public void EliminarUsuario()
+    {
+
+
+
 
     }
 
