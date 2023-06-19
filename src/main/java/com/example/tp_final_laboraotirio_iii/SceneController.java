@@ -279,16 +279,20 @@ public class SceneController {
         }
     }
 
-    public void handleButtonClick(ActionEvent event, GameData pj) {
+    public void aula1(ActionEvent event) {
         // Aquí va tu lógica para determinar el contexto
         GestionClases texto = new GestionClases();
+        PersonajeRepo repo = new PersonajeRepo();
+        GameData pj = new GameData();
 
         switch (pj.getFecha()){
             case 1:
                 if (pj.getAsistenciaClase().equals(GameData.AsistenciaClase.NO_PRESENTE)){
                     switchToMaleniaGurciaNormal(event);
                     texto.submit(event);
-            }
+            } else {
+                    switchToaulaGeneralVacia(event);
+                }
             break;
             case 2:
                 break;

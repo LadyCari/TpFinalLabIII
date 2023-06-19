@@ -55,6 +55,8 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
         return this.listaPersonajes;
     }
 
+
+
     @Override
     public void Agregar(Personaje... objeto) {
 

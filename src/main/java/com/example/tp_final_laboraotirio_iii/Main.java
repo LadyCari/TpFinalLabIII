@@ -40,17 +40,17 @@ public class Main extends Application {
 
         GameData gameData = new GameData();
 
-        gameData.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
+        gameData.setAsistenciaClase(GameData.AsistenciaClase.NO_PRESENTE);
 
-        gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+        gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
 
         gameData.setFecha(1);
 
         GameData gameData2 = new GameData();
 
-        gameData2.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
+        gameData2.setAsistenciaClase(GameData.AsistenciaClase.NO_PRESENTE);
 
-        gameData2.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+        gameData2.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
 
         gameData2.setFecha(2);
 
