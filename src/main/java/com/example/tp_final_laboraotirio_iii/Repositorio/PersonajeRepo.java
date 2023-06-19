@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PersonajeRepo implements IRepositorio<Personaje>{
 
-    private final File file = new File("src\\main\\resources\\Archivos\\guardados.json");
+    private final File file = new File("TpFinalLabIII\\src\\main\\resources\\Archivos\\guardados.json");
 
     private final ObjectMapper Mapper = new ObjectMapper();
 

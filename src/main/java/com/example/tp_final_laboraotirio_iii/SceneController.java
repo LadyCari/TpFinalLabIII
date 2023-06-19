@@ -175,18 +175,6 @@ public class SceneController {
         }
     }
 
-    public void switchToSlotsLlenos(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/AdvertenciaSlotLlenos.fxml")));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void switchToFinalizarDias(ActionEvent event) {
         try {
@@ -499,20 +487,13 @@ public class SceneController {
 
     }
 
-    public void CrearPersonaje(ActionEvent event) {
-        PersonajeRepo personajeRepo = new PersonajeRepo();
-        Personaje personaje1 = new Personaje();
-
-        switchToCargarPartida(event);
-    }
-
     public void ControlDeJugadores(ActionEvent event) {
         PersonajeRepo repo = new PersonajeRepo();
         ArrayList<Personaje> lista = repo.Listar();
 
         int cantidad = lista.size();
 
-        if (cantidad < 2) {
+        if (cantidad < 1) {
             switchToCrearPersonaje(event);
         } else {
             switchToSlotsLlenos(event);

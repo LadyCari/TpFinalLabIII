@@ -1,0 +1,16 @@
+[ {
+  "buffet" : null,
+  "dinero" : 300,
+  "guardadoPartida" : [ {
+    "fecha" : "1",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "COMPLETADO"
+  }, {
+    "fecha" : "2",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  } ],
+  "estres" : 0,
+  "estadoEstres" : "RELAJADO",
+  "nombre" : "Carlitos"
+} ]
