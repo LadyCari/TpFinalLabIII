@@ -22,12 +22,12 @@
                   <Font name="Rockwell Extra Bold" size="48.0" />
                </font>
             </Label>
-            <Button layoutX="571.0" layoutY="550.0" mnemonicParsing="false" onAction="#switchToInstrucciones" prefHeight="57.0" prefWidth="139.0" text="Intrucciones">
+            <Button fx:id="instruccionesJuego" layoutX="571.0" layoutY="550.0" mnemonicParsing="false" onAction="#switchToInstrucciones" prefHeight="57.0" prefWidth="139.0" text="Intrucciones">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="571.0" layoutY="477.0" mnemonicParsing="false" onAction="#switchToCargarPartida" prefHeight="57.0" prefWidth="139.0" text="Continuar">
+            <Button fx:id="continuarPartida" layoutX="571.0" layoutY="477.0" mnemonicParsing="false" onAction="#switchToCargarPartida" prefHeight="57.0" prefWidth="139.0" text="Continuar">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
@@ -37,7 +37,7 @@
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="571.0" layoutY="618.0" mnemonicParsing="false" onAction="#switchToSalir" prefHeight="57.0" prefWidth="139.0" text="Salir">
+            <Button fx:id="salirPrograma" layoutX="571.0" layoutY="618.0" mnemonicParsing="false" onAction="#switchToSalir" prefHeight="57.0" prefWidth="139.0" text="Salir">
                <font>
                   <Font name="Rockwell Extra Bold" size="14.0" />
                </font>

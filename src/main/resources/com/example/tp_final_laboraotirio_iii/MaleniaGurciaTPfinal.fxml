@@ -26,7 +26,7 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Label layoutX="766.0" layoutY="14.0" prefHeight="564.0" prefWidth="500.0" text="Aprende a programar bobo" textAlignment="CENTER">
+      <Label fx:id="textoProfesor" layoutX="766.0" layoutY="23.0" prefHeight="564.0" prefWidth="500.0" text="Aprende a programar bobo" textAlignment="CENTER">
          <font>
             <Font size="48.0" />
          </font>

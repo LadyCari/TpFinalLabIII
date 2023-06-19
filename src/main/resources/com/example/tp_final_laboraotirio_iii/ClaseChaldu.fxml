@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
    <children>
       <AnchorPane prefHeight="720.0" prefWidth="1280.0" />
       <ImageView fitHeight="720.0" fitWidth="1280.0">
@@ -15,14 +16,14 @@
             <Image url="@Imagenes/AulaLaboratorio.png" />
          </image>
       </ImageView>
-      <Label layoutX="135.0" layoutY="92.0" prefHeight="350.0" prefWidth="750.0" text="Aprende a programar bobo" textAlignment="CENTER">
+      <Label fx:id="textChalduClaseNormal" layoutX="135.0" layoutY="92.0" prefHeight="350.0" prefWidth="750.0" textAlignment="CENTER">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <ImageView fitHeight="609.0" fitWidth="382.0" layoutX="898.0">
+      <ImageView fitHeight="609.0" fitWidth="348.0" layoutX="939.0">
          <image>
-            <Image url="@Imagenes/youtips1.png" />
+            <Image url="@Imagenes/GarielChulde.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="720.0" fitWidth="1280.0">
@@ -30,5 +31,20 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
+      <Button layoutX="256.0" layoutY="636.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Explicacion anterior">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="598.0" layoutY="636.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Contunuar explicacion">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="939.0" layoutY="636.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Terminar clase">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
