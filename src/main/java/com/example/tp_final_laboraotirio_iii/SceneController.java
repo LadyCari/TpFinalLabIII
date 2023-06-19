@@ -180,6 +180,19 @@ public class SceneController {
         }
     }
 
+    public void switchToSlotsLlenos(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/AdvertenciaSlotLlenos.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void switchToFinalizarDias(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaFinalizarDia.fxml")));
@@ -243,7 +256,7 @@ public class SceneController {
         if (cantidad < 2) {
             switchToCrearPersonaje(event);
         } else {
-            switchToInstrucciones(event);
+            switchToSlotsLlenos(event);
         }
     }
 
@@ -277,6 +290,7 @@ public class SceneController {
 
     }
 
+    ///Mañana enlazar cargar partida y crear metodos para cargar y eliminar usuario
 
     public void CondicionDeEvento(ActionEvent event) {
         int isConditionMet = 2;

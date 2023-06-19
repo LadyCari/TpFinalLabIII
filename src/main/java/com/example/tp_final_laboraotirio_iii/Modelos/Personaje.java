@@ -28,20 +28,13 @@ public class Personaje implements Serializable{
 
     private static ArrayList<Integer>ListaNotas = new ArrayList<>(3);
 
-
-    transient PersonajeRepo personajeRepo = new PersonajeRepo();
-
     private ArrayList<GameData>GuardadoPartida = new ArrayList<>();
-
-    transient ArrayList<Personaje>contadorPersonajes;
 
 
     public Personaje() {
     }
 
     public Personaje(String nombre) {
-        contadorPersonajes = personajeRepo.Listar();
-        this.idPersonaje = contadorPersonajes.size();
         this.Nombre = nombre;
         this.EstadoEstres = estadoEstres.RELAJADO;
         this.Estres = 0;
