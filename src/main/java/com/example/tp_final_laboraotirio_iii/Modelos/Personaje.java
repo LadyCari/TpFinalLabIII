@@ -24,6 +24,11 @@ public class Personaje implements Serializable{
 
     private int idPersonaje;
 
+    private int dinero;
+
+    private static ArrayList<Integer>ListaNotas = new ArrayList<>(3);
+
+
     transient PersonajeRepo personajeRepo = new PersonajeRepo();
 
     private ArrayList<GameData>GuardadoPartida = new ArrayList<>();
@@ -40,9 +45,27 @@ public class Personaje implements Serializable{
         this.Nombre = nombre;
         this.EstadoEstres = estadoEstres.RELAJADO;
         this.Estres = 0;
+        this.dinero = 300;
     }
 
     //region getset
+
+
+    public int getDinero() {
+        return dinero;
+    }
+
+    public void setDinero(int dinero) {
+        this.dinero = dinero;
+    }
+
+    public static ArrayList<Integer> getListaNotas() {
+        return ListaNotas;
+    }
+
+    public static void setListaNotas(ArrayList<Integer> listaNotas) {
+        ListaNotas = listaNotas;
+    }
 
     public estadoEstres getEstadoEstres() {
         return EstadoEstres;

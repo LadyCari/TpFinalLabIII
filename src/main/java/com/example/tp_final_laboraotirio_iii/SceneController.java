@@ -240,8 +240,8 @@ public class SceneController {
 
         int cantidad = lista.size();
 
-        if (cantidad < 3) {
-            switchToPasilloPrincipal(event);
+        if (cantidad < 2) {
+            switchToCrearPersonaje(event);
         } else {
             switchToInstrucciones(event);
         }
@@ -251,24 +251,34 @@ public class SceneController {
     public void UpdateDia() {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje = lista.get(0);
+        Personaje personaje =  lista.get(0);
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
-        //GameData gameData = ListaDatos.get(1);
+        //Probar aumentar los dias segun entre a este metodo
 
-        registroDias.setText(String.valueOf(ListaDatos.size() - 1));
+        registroDias.setText(String.valueOf(ListaDatos.size()));
     }
 
-    public void CambiarDias(ActionEvent event) {
 
+    public void CambiarDias(ActionEvent event) {
         switchToPasilloPrincipal(event);
+
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        ArrayList<Personaje> lista = personajeRepo.Listar();
+        Personaje personaje =  lista.get(0);
+        ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
+        GameData gameData = new GameData();
+        gameData.setFecha(String.valueOf(ListaDatos.size()+1));
+        gameData.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
+        gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
+        ListaDatos.add(gameData);
+        personajeRepo.Modificar(personaje);
 
         UpdateDia();
 
     }
 
 
-    public void handleButtonClick(ActionEvent event) {
-        // Aquí va tu lógica para determinar el contexto
+    public void CondicionDeEvento(ActionEvent event) {
         int isConditionMet = 2;
 
         if (isConditionMet == 0) {
