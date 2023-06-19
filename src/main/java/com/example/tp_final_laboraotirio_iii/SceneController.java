@@ -2,17 +2,22 @@ package com.example.tp_final_laboraotirio_iii;
 
 import com.example.tp_final_laboraotirio_iii.Gestion.GestionClases;
 import com.example.tp_final_laboraotirio_iii.Modelos.GameData;
+import com.example.tp_final_laboraotirio_iii.Modelos.Personaje;
 import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class SceneController {
@@ -21,6 +26,10 @@ public class SceneController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML
+    private Label registroDias;
+    @FXML
+    private TextField txtName;
 //endregion
 
     public void setStage(Stage stage) {
@@ -274,7 +283,7 @@ public class SceneController {
         GameData pj = new GameData();
 
         switch (pj.getFecha()){
-            case 1:
+            case "1":
                 if (pj.getAsistenciaClase().equals(GameData.AsistenciaClase.NO_PRESENTE)){
                     switchToMaleniaGurciaNormal(event);
                     texto.submit(event);
@@ -282,38 +291,9 @@ public class SceneController {
                     switchToaulaGeneralVacia(event);
                 }
                 break;
-            case 2:
+            case "2":
                 break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-            case 10:
-                break;
-            case 11:
-                break;
-            case 12:
-                break;
-            case 13:
-                break;
-            case 14:
-                break;
-            case 15:
-                break;
-            case 16:
-                break;
-            case 17:
-                break;
+
         }
 
     }

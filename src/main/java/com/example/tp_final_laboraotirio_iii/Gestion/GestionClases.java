@@ -39,8 +39,10 @@ public class GestionClases {
 
     //copiamos del arreglo de clases al local para trabajar con los metodos
     Clases clase = new Clases();
+
     public void cargarArregloTeoriaParaMostrar(GameData pj){
-        this.arregloCopia = Arrays.copyOf(clase.getDialogo(pj.getFecha()), clase.getDialogo(pj.getFecha()).length);
+        int fecha = Integer.parseInt(pj.getFecha());
+        this.arregloCopia = Arrays.copyOf(clase.getDialogo(fecha), clase.getDialogo(fecha).length);
     }
 
     public void submit(ActionEvent event) {

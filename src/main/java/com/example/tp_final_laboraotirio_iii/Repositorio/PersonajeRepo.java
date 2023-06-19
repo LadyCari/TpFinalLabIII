@@ -73,8 +73,6 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
 
         Cargar();
 
-        this.listaPersonajes.removeIf(personaje -> personaje.getIdPersonaje() == id);
-
         Guardar();
 
     }
