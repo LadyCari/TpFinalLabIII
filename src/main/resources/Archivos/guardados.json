@@ -1,17 +1,13 @@
 [ {
-  "buffet" : "Jugo",
+  "buffet" : "Cortado",
   "dinero" : 100,
   "id" : 1,
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "2",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "nombre" : "Caro",
-  "estres" : 0,
-  "estadoEstres" : "RELAJADO"
+  "nombre" : "caro",
+  "estadoEstres" : "RELAJADO",
+  "estres" : 0
 } ]
