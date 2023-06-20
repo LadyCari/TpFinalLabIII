@@ -12,7 +12,7 @@ public class GestionPersonaje {
     //region atributos
     Personaje personaje;
     List <GameData> gameData;
-    PersonajeRepo repo;
+    PersonajeRepo repo = new PersonajeRepo();
 //endregion
 
     //region g y s
@@ -93,14 +93,12 @@ public class GestionPersonaje {
     public void cambioEstado (int stress){
         if (stress <=45){
             personaje.setEstadoEstres(Personaje.estadoEstres.RELAJADO);
-            repo.Modificar(personaje);
         } else if (stress <= 70) {
             personaje.setEstadoEstres(Personaje.estadoEstres.ESTRESADO);
-            repo.Modificar(personaje);
         }else {
             personaje.setEstadoEstres(Personaje.estadoEstres.NERVIOSO);
-            repo.Modificar(personaje);
         }
+        repo.Modificar(personaje);
     }
 
     //obtenemos si el estado del evento completado o no
