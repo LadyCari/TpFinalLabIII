@@ -59,7 +59,6 @@ public class GestionPersonaje {
 
     //retorna personaje desde el archivo
     public Personaje cargarPersonaje(){
-
         return repo.Listar().get(0);
     }
 

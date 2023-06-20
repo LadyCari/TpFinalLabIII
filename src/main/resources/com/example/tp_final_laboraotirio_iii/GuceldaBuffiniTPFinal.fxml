@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -20,6 +21,45 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Label layoutX="44.0" layoutY="38.0" prefHeight="386.0" prefWidth="552.0" text="Label" />
+      <Label fx:id="preguntaBenoffiTPFinal" layoutX="164.0" layoutY="38.0" prefHeight="195.0" prefWidth="370.0" text="Label" wrapText="true" />
+      <ImageView fitHeight="523.0" fitWidth="601.0" layoutX="44.0">
+         <image>
+            <Image url="@Imagenes/textosExamenesBuffini.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="respuesta1BenoffiTPFinal" layoutX="201.0" layoutY="303.0" prefHeight="45.0" prefWidth="296.0" wrapText="true" />
+      <Label fx:id="respuesta2BenoffiTPFinal" layoutX="201.0" layoutY="348.0" prefHeight="45.0" prefWidth="296.0" wrapText="true" />
+      <Label fx:id="respuesta4BenoffiTPFinal" layoutX="201.0" layoutY="438.0" prefHeight="45.0" prefWidth="296.0" wrapText="true" />
+      <Label fx:id="respuesta3BenoffiTPFinal" layoutX="201.0" layoutY="393.0" prefHeight="45.0" prefWidth="296.0" wrapText="true" />
+      <Button layoutX="230.0" layoutY="617.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="1">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="230.0" layoutY="666.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="2">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="462.0" layoutY="617.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="3">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="462.0" layoutY="666.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="4">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="preguntaTpFinalBenoffi" layoutX="754.0" layoutY="643.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Siguiente">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="1007.0" layoutY="646.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Terminar Tp">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
