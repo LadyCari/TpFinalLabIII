@@ -581,13 +581,11 @@ public class SceneController {
         ArrayList<Personaje> lista = personajeRepo.Listar();
         GestionPersonaje pj = new GestionPersonaje();
 
-        String ultimoDia = String.valueOf(pj.ultimoDia());
-
         if(!lista.isEmpty())
         {
             Personaje personaje = lista.get(0);
             txtUsuario1.setText(personaje.getNombre());
-            fechaCargarPartida.setText(ultimoDia);
+            fechaCargarPartida.setText(String.valueOf(pj.ultimoDia()));
         }
     }
 

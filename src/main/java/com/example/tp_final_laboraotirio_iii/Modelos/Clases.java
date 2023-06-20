@@ -1,5 +1,6 @@
 package com.example.tp_final_laboraotirio_iii.Modelos;
 
+import com.example.tp_final_laboraotirio_iii.Gestion.GestionPersonaje;
 import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
