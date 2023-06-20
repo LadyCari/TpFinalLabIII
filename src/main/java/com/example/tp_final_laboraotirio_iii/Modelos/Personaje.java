@@ -19,9 +19,10 @@ public class Personaje implements Serializable{
     private Buffet buffet;
     private estadoEstres EstadoEstres;
     private int dinero;
+    private int id;
+
     private static ArrayList<Integer>ListaNotas = new ArrayList<>(4);
     private ArrayList<GameData>GuardadoPartida = new ArrayList<>();
-    private int id;
     //endregion
 
 //region constructor
@@ -38,15 +39,6 @@ public class Personaje implements Serializable{
 //endregion
 
     //region G y S
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getDinero() {
         return dinero;
@@ -90,18 +82,29 @@ public class Personaje implements Serializable{
     public void setGuardadoPartida(ArrayList<GameData> guardadoPartida) {
         GuardadoPartida = guardadoPartida;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     //endregion
 
     //region toString
+
     @Override
     public String toString() {
         return "Personaje{" +
-                "nombre='" + Nombre + '\'' +
+                "Nombre='" + Nombre + '\'' +
                 ", Estres=" + Estres +
                 ", buffet=" + buffet +
                 ", EstadoEstres=" + EstadoEstres +
-                ", idPersonaje=" +
+                ", dinero=" + dinero +
+                ", id=" + id +
+                ", GuardadoPartida=" + GuardadoPartida +
                 '}';
     }
-    //endregion
 }
+    //endregion

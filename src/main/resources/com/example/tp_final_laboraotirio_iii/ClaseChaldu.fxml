@@ -41,7 +41,7 @@
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="939.0" layoutY="636.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Terminar clase">
+      <Button fx:id="deaula1aPasilloprincipal" layoutX="939.0" layoutY="636.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" prefHeight="60.0" prefWidth="300.0" text="Terminar clase">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>

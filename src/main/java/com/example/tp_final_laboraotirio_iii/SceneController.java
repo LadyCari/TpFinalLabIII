@@ -1,11 +1,10 @@
 package com.example.tp_final_laboraotirio_iii;
 
-import com.example.tp_final_laboraotirio_iii.Gestion.GestionClases;
+import com.example.tp_final_laboraotirio_iii.Gestion.GestionPersonaje;
 import com.example.tp_final_laboraotirio_iii.Modelos.Clases;
 import com.example.tp_final_laboraotirio_iii.Modelos.GameData;
 import com.example.tp_final_laboraotirio_iii.Modelos.Personaje;
 import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,10 +19,10 @@ import javafx.scene.Scene;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 public class SceneController {
+
     //region atributos
     private Stage stage;
     private Scene scene;
@@ -41,14 +40,7 @@ public class SceneController {
     @FXML
     private Button terminarClase;
     @FXML
-    public Button cargarArchivo1;
-    @FXML
-    public Button eliminarPJ;
-    @FXML
-    public Label registroNumero;
-    @FXML
-    public Label txtUsuario1;
-
+    private Label txtUsuario1;
 //endregion
 
     //region G Y S
@@ -182,7 +174,6 @@ public class SceneController {
             e.printStackTrace();
         }
     }
-
 
     public void switchToFinalizarDias(ActionEvent event) {
         try {
@@ -370,34 +361,92 @@ public class SceneController {
         }
     }
 
-
-
     public void switchToaula1(ActionEvent event) {
-        // Aquí va tu lógica para determinar el contexto
-        GestionClases texto = new GestionClases();
+        GestionPersonaje pj = new GestionPersonaje();
+        PersonajeRepo repo = new PersonajeRepo();
         Clases clase = new Clases();
 
-        String condicion = "no fue a clase";
-        switch (1) {
-            case 1:
-                if (condicion.equals("no fue a clase")) {
+        GameData.AsistenciaClase asistencia = GameData.AsistenciaClase.NO_PRESENTE;
+
+        switch (pj.ultimoDia()) {
+            case 1, 2, 3 -> {
+                if (asistencia.equals(pj.getAsistenciaDia())) {
                     switchToMaleniaGurciaNormal(event);
                 } else {
                     switchToaulaGeneralVacia(event);
                 }
-                break;
-            case 2:
-                if (condicion.equals("no fue a clase")) {
+            }
+            case 4 -> {
+                if (asistencia.equals(pj.getAsistenciaDia())) {
                     switchToMaleniaGurciaTPfinal(event);
                 } else {
                     switchToaulaGeneralVacia(event);
                 }
-                break;
-
+            }
+            case 5, 6, 7 -> {
+                if (asistencia.equals(pj.getAsistenciaDia())) {
+                    switchToClaseNormalGuceldaBuffini(event);
+                } else {
+                    switchToaulaGeneralVacia(event);
+                }
+            }
+            case 8 -> {
+                if (asistencia.equals(pj.getAsistenciaDia())) {
+                    switchToTPFinalGuceldaBuffini(event);
+                } else {
+                    switchToaulaGeneralVacia(event);
+                }
+            }
+            case 9, 10, 11, 12, 17 -> {
+                switchToaulaGeneralVacia(event);
+            }
+            case 13, 14, 15 -> {
+                if (asistencia.equals(pj.getAsistenciaDia())) {
+                    switchToClaseNormalGarielChulde(event);
+                } else {
+                    switchToaulaGeneralVacia(event);
+                }
+            }
+            case 16 -> {
+                if (asistencia.equals(pj.getAsistenciaDia())) {
+                    switchToGarielChuldeTPFinal(event);
+                } else {
+                    switchToaulaGeneralVacia(event);
+                }
+            }
         }
-
     }
 
+    //region aula 2
+    public void switchToaula2(ActionEvent event) {
+        GestionPersonaje pj = new GestionPersonaje();
+        PersonajeRepo repo = new PersonajeRepo();
+        Clases clase = new Clases();
+
+        GameData.AsistenciaClase asistencia = GameData.AsistenciaClase.NO_PRESENTE;
+
+        switch (pj.ultimoDia()) {
+            case 1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17 -> {
+                switchToaulaGeneralVacia(event);
+            }
+            case 9, 10, 11 -> {
+                if (asistencia.equals(pj.getAsistenciaDia())) {
+                    switchToClaseNormalAdisgutinBatizi(event);
+                } else {
+                    switchToaulaAgustinVacia(event);
+                }
+            }
+            case 12 -> {
+                if (asistencia.equals(pj.getAsistenciaDia())) {
+                    switchToTPFinalAdisgutinBatizi(event);
+                } else {
+                    switchToaulaAgustinVacia(event);
+                }
+            }
+        }
+    }
+
+    //endregion
 //region dialogo clases
 
     //region G y S
@@ -423,7 +472,7 @@ public class SceneController {
 
     //region metodos uso texto
     public void submit(ActionEvent event) {
-        if (indiceMensajes == 0){
+        if (indiceMensajes == 0) {
             textoProfesor.setText(arregloCopia[indiceMensajes]);
             siguientetextoclase.setDisable(false);
             terminarClase.setDisable(true);
@@ -441,16 +490,16 @@ public class SceneController {
         }
     }
 
-    public void textoAnteriorDialogoProfesor(ActionEvent event){
-        if (indiceMensajes == 0){
+    public void textoAnteriorDialogoProfesor(ActionEvent event) {
+        if (indiceMensajes == 0) {
             textoProfesor.setText(arregloCopia[indiceMensajes]);
             siguientetextoclase.setDisable(false);
             terminarClase.setDisable(true);
             textoAnteriorClase.setDisable(true);
-        }else{
-        indiceMensajes--;
-        textoProfesor.setText(arregloCopia[indiceMensajes]);
-        updateOtrobotonState();
+        } else {
+            indiceMensajes--;
+            textoProfesor.setText(arregloCopia[indiceMensajes]);
+            updateOtrobotonState();
         }
     }
 
@@ -590,20 +639,7 @@ public class SceneController {
 
     }
 
-    ///Mañana enlazar cargar partida y crear metodos para cargar y eliminar usuario
 
-    
-    public void CondicionDeEvento(ActionEvent event) {
-        int isConditionMet = 2;
-
-        if (isConditionMet == 0) {
-            switchToMaleniaGurciaNormal(event);
-        } else if (isConditionMet == 1) {
-            switchToMaleniaGurciaTPfinal(event);
-        } else {
-            switchToaulaGeneralVacia(event);
-        }
-    }
 
 
 }
