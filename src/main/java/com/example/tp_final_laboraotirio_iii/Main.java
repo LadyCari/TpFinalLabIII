@@ -31,50 +31,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        //region test
-        /*
-        PersonajeRepo personajeRepo = new PersonajeRepo();
-
-        Personaje personaje = new Personaje("Santurro03");
-
-        GameData gameData = new GameData();
-
-        gameData.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
-
-        gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
-
-        gameData.setFecha("1");
-
-        GameData gameData2 = new GameData();
-
-        gameData2.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
-
-        gameData2.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
-
-        gameData2.setFecha("2");
-
-        GameData gameData3 = new GameData();
-
-        gameData2.setAsistenciaClase(GameData.AsistenciaClase.PRESENTE);
-
-        gameData2.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
-
-        gameData3.setFecha("3");
-
-        ArrayList<GameData> listaGuardados = personaje.getGuardadoPartida();
-
-        listaGuardados.add(gameData);
-        listaGuardados.add(gameData2);
-        listaGuardados.add(gameData3);
-
-        //personajeRepo.Agregar(personaje);
-
-        System.out.println(personaje);
-        //endregion
-
-         */
-//endregion
-
         launch();
 
     }
