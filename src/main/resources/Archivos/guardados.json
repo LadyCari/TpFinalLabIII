@@ -1,5 +1,5 @@
 [ {
-  "buffet" : "Te",
+  "buffet" : "Cortado",
   "dinero" : 100,
   "id" : 1,
   "guardadoPartida" : [ {
@@ -7,7 +7,7 @@
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "nombre" : "Pepe",
+  "nombre" : "caro",
   "estadoEstres" : "RELAJADO",
   "estres" : 0
 } ]

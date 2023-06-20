@@ -10,15 +10,12 @@ import java.util.List;
 public class GestionPersonaje {
 
     //region atributos
-    //region atributos
     Personaje personaje;
     List <GameData> gameData;
-    PersonajeRepo repo = new PersonajeRepo();
-//endregion
+    PersonajeRepo repo;
 //endregion
 
     //region g y s
-
 
     public Personaje getPersonaje() {
         return personaje;
@@ -51,43 +48,75 @@ public class GestionPersonaje {
     //endregion
 
     //region metodo
+
+    //retorna personaje desde el archivo
     public Personaje cargarPersonaje(){
+
         return repo.Listar().get(0);
     }
 
+    //trae el personaje y retorna una lista de GameData
     public List<GameData> listaGameData(){
 
         return cargarPersonaje().getGuardadoPartida();
     }
 
+    //retorna dia actual
+    //usa el tamaño de la lista para ver el dia que esta
     public int ultimoDia(){
 
         return listaGameData().size();
     }
 
+    //retorna que asistencia tiene a la clase
     public GameData.AsistenciaClase getAsistenciaDia(){
 
         return listaGameData().get(ultimoDia()-1).getAsistenciaClase();
     }
 
+    //se le guarda al personaje la asistencia el ultimo dia
     public void setAsistenciaDia(GameData.AsistenciaClase asistencia){
+
         listaGameData().get(ultimoDia()-1).setAsistenciaClase(asistencia);
-
+        repo.Modificar(personaje);
     }
 
-/*
-    public void descontarDinero ( gasto){
-       Personaje pj = cargarPersonaje();
+//sacar dinero del personaje y actualizarlo
+    public void descontarDinero (int gasto){
 
-       if (pj.getDinero() > gasto){
-
-
-           pj.setDinero(pj.getDinero()-gasto);
+       if (personaje.getDinero() > gasto){
+           personaje.setDinero(personaje.getDinero()-gasto);
+           repo.Modificar(personaje);
        }
-*/
-
-//endregion
     }
+
+    public void cambioEstado (int stress){
+        if (stress <=45){
+            personaje.setEstadoEstres(Personaje.estadoEstres.RELAJADO);
+            repo.Modificar(personaje);
+        } else if (stress <= 70) {
+            personaje.setEstadoEstres(Personaje.estadoEstres.ESTRESADO);
+            repo.Modificar(personaje);
+        }else {
+            personaje.setEstadoEstres(Personaje.estadoEstres.NERVIOSO);
+            repo.Modificar(personaje);
+        }
+    }
+
+    //obtenemos si el estado del evento completado o no
+    public GameData.eventoCompletado getStadoEvento(){
+
+        return listaGameData().get(ultimoDia()-1).getEventoCompletado();
+    }
+
+    //se le guarda al personaje la asistencia al evento el ultimo dia
+    public void setStadoEvento(GameData.eventoCompletado asistencia){
+
+        listaGameData().get(ultimoDia()-1).setEventoCompletado(asistencia);
+        repo.Modificar(personaje);
+    }
+    //endregion
+}
 
 
 
