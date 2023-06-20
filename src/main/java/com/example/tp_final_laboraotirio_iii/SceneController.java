@@ -48,6 +48,10 @@ public class SceneController {
     private Label dineroGanadoEnElDia1;
     @FXML
     private Label dineroGanadoEnElDia2;
+    @FXML
+    private Label muetraNombreUsuarioCreacionPj;
+    @FXML
+    private Label muetraBebidaFavoritaEnCreacionPj;
 
 //endregion
 
@@ -698,6 +702,16 @@ public class SceneController {
         personajeRepo.Modificar(personaje);
 
         UpdateDia();
-
     }
+
+    public void UpdateInformacionCreacionPJ()
+    {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        ArrayList<Personaje> lista = personajeRepo.Listar();
+        Personaje personaje = lista.get(0);
+        muetraNombreUsuarioCreacionPj.setText(personaje.getNombre());
+        muetraBebidaFavoritaEnCreacionPj.setText(personaje.getBuffet().name());
+    }
+
+
 }

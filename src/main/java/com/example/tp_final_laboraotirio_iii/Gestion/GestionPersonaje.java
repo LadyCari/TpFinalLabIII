@@ -10,11 +10,15 @@ import java.util.List;
 public class GestionPersonaje {
 
     //region atributos
+    //region atributos
     Personaje personaje;
     List <GameData> gameData;
+    PersonajeRepo repo = new PersonajeRepo();
+//endregion
 //endregion
 
     //region g y s
+
 
     public Personaje getPersonaje() {
         return personaje;
@@ -48,9 +52,6 @@ public class GestionPersonaje {
 
     //region metodo
     public Personaje cargarPersonaje(){
-
-        PersonajeRepo repo = new PersonajeRepo();
-
         return repo.Listar().get(0);
     }
 
@@ -70,8 +71,6 @@ public class GestionPersonaje {
     }
 
     public void setAsistenciaDia(GameData.AsistenciaClase asistencia){
-        PersonajeRepo repo = new PersonajeRepo();
-
         listaGameData().get(ultimoDia()-1).setAsistenciaClase(asistencia);
 
     }

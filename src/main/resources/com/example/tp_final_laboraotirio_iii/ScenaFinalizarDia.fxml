@@ -12,12 +12,12 @@
                 <Image url="@Imagenes/57994cd5bb15dcfa44f7657fc90d8473.jpg" />
             </image>
         </ImageView>
-        <Label layoutX="483.0" layoutY="99.0" prefHeight="221.0" prefWidth="157.0" text="Día" textFill="WHITE">
+        <Label layoutX="503.0" layoutY="197.0" prefHeight="221.0" prefWidth="157.0" text="Día">
             <font>
                 <Font size="96.0" />
             </font>
         </Label>
-        <Label fx:id="registroDias" layoutX="640.0" layoutY="139.0" onMouseEntered="#UpdateDia" onMouseMoved="#UpdateDia" prefHeight="141.0" prefWidth="117.0" textFill="WHITE">
+        <Label fx:id="registroDias" layoutX="660.0" layoutY="237.0" onMouseEntered="#UpdateDia" onMouseMoved="#UpdateDia" prefHeight="141.0" prefWidth="117.0">
             <font>
                 <Font size="96.0" />
             </font>
@@ -26,22 +26,22 @@
          <font>
             <Font name="Rockwell Extra Bold" size="20.0" />
          </font></Button>
-      <Label fx:id="dineroGanadoEnElDia11" alignment="CENTER" layoutX="206.0" layoutY="418.0" prefHeight="68.0" prefWidth="173.0" text="Saldo: $" textFill="WHITE" wrapText="true">
+      <Label fx:id="dineroGanadoEnElDia11" alignment="CENTER" layoutX="206.0" layoutY="418.0" prefHeight="68.0" prefWidth="173.0" text="Saldo: $" textFill="#d7d7d7" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="dineroGanadoEnElDia" alignment="CENTER" layoutX="657.0" layoutY="418.0" prefHeight="68.0" prefWidth="200.0" text="Estado:" textFill="WHITE" wrapText="true">
+      <Label fx:id="dineroGanadoEnElDia" alignment="CENTER" layoutX="733.0" layoutY="418.0" prefHeight="68.0" prefWidth="200.0" text="Estado:" textFill="#d7d7d7" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="dineroGanadoEnElDia1" layoutX="379.0" layoutY="418.0" prefHeight="68.0" prefWidth="138.0" textFill="WHITE" wrapText="true">
+      <Label fx:id="dineroGanadoEnElDia1" layoutX="379.0" layoutY="418.0" prefHeight="68.0" prefWidth="138.0" textFill="#d7d7d7" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="dineroGanadoEnElDia2" layoutX="852.0" layoutY="418.0" prefHeight="68.0" prefWidth="383.0" textFill="WHITE" wrapText="true">
+      <Label fx:id="dineroGanadoEnElDia2" layoutX="928.0" layoutY="418.0" prefHeight="68.0" prefWidth="383.0" textFill="#d7d7d7" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
