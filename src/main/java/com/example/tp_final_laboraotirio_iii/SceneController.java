@@ -44,6 +44,10 @@ public class SceneController {
     private Label txtUsuario1;
     @FXML
     private Label fechaCargarPartida;
+    @FXML
+    private Label dineroGanadoEnElDia1;
+    @FXML
+    private Label dineroGanadoEnElDia2;
 
 //endregion
 
@@ -673,6 +677,8 @@ public class SceneController {
         //Probar aumentar los dias segun entre a este metodo
 
         registroDias.setText(String.valueOf(ListaDatos.size() + 1));
+        dineroGanadoEnElDia1.setText(String.valueOf(personaje.getDinero()));
+        dineroGanadoEnElDia2.setText(personaje.getEstadoEstres().name());
     }
 
 
