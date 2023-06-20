@@ -11,16 +11,16 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
    <children>
       <AnchorPane prefHeight="720.0" prefWidth="1280.0" />
-      <ImageView fx:id="atrasCargarPartida" fitHeight="720.0" fitWidth="1280.0" onMouseEntered="#UpdateNombre"  pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="atrasCargarPartida" fitHeight="720.0" fitWidth="1280.0" onMouseEntered="#UpdateNombre" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/CargarPartida.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="cargarArchivo1" layoutX="230.0" layoutY="331.0" mnemonicParsing="false" onAction="#VerificarLista" prefHeight="58.0" prefWidth="120.0" text="Cargar">
+      <Button fx:id="cargarArchivo1" layoutX="299.0" layoutY="331.0" mnemonicParsing="false" onAction="#VerificarLista" prefHeight="58.0" prefWidth="120.0" text="Cargar">
          <font>
             <Font name="Rockwell Extra Bold" size="20.0" />
          </font></Button>
-      <Label fx:id="txtUsuario1" layoutX="436.0" layoutY="331.0" prefHeight="58.0" prefWidth="736.0" text=" " textFill="WHITE">
+      <Label fx:id="txtUsuario1" layoutX="454.0" layoutY="331.0" prefHeight="58.0" prefWidth="736.0" text=" " textFill="WHITE">
          <font>
             <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
@@ -29,9 +29,19 @@
          <font>
             <Font name="Rockwell Extra Bold" size="20.0" />
          </font></Button>
-      <Button fx:id="eliminarPJ" layoutX="63.0" layoutY="331.0" mnemonicParsing="false" onAction="#EliminarPartida" prefHeight="58.0" prefWidth="138.0" text="Eliminar">
+      <Button fx:id="eliminarPJ" layoutX="138.0" layoutY="331.0" mnemonicParsing="false" onAction="#EliminarPartida" prefHeight="58.0" prefWidth="138.0" text="Eliminar">
          <font>
             <Font name="Rockwell Extra Bold" size="20.0" />
          </font></Button>
+      <ImageView fitHeight="90.0" fitWidth="85.0" layoutX="27.0" layoutY="315.0">
+         <image>
+            <Image url="@Imagenes/calendario.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="fechaCargarPartida" alignment="CENTER" layoutX="34.0" layoutY="355.0" prefHeight="37.0" prefWidth="68.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

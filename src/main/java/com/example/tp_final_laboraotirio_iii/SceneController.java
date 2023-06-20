@@ -41,6 +41,8 @@ public class SceneController {
     private Button terminarClase;
     @FXML
     private Label txtUsuario1;
+    @FXML
+    private Label fechaCargarPartida;
 //endregion
 
     //region G Y S
@@ -143,6 +145,18 @@ public class SceneController {
             stage.setScene(scene);
             stage.show();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToAdvertenciaSlotVacio(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaAdvertenciaCrearPj.fxml"))));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -427,7 +441,7 @@ public class SceneController {
 
         switch (pj.ultimoDia()) {
             case 1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17 -> {
-                switchToaulaGeneralVacia(event);
+                switchToaulaAgustinVacia(event);
             }
             case 9, 10, 11 -> {
                 if (asistencia.equals(pj.getAsistenciaDia())) {
@@ -472,6 +486,9 @@ public class SceneController {
 
     //region metodos uso texto
     public void submit(ActionEvent event) {
+        GestionPersonaje pj = new GestionPersonaje();
+        PersonajeRepo repo = new PersonajeRepo();
+
         if (indiceMensajes == 0) {
             textoProfesor.setText(arregloCopia[indiceMensajes]);
             siguientetextoclase.setDisable(false);
@@ -524,7 +541,7 @@ public class SceneController {
     public void CargarNombreUsuario(ActionEvent event) {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         Personaje personaje = new Personaje(txtName.getText());
-        ArrayList<GameData>ListaDatos = new ArrayList<>();
+        ArrayList<GameData> ListaDatos = new ArrayList<>();
 
         GameData gameData = new GameData();
 
@@ -545,55 +562,48 @@ public class SceneController {
     }
 
 
-    public void VerificarPersonaje(ActionEvent event)
-    {
+    public void VerificarPersonaje(ActionEvent event) {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
 
-        if(lista.isEmpty())
-        {
-            switchToInstrucciones(event);
-        }
-        else
-        {
+        if (lista.isEmpty()) {
+            switchToAdvertenciaSlotVacio(event);
+        } else {
             switchToCargarPartida(event);
         }
     }
 
 
-    public void UpdateNombre()
-    {
+    public void UpdateNombre() {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        if(!lista.isEmpty())
-        {
+        GestionPersonaje pj = new GestionPersonaje();
+
+        if (!lista.isEmpty()) {
             Personaje personaje = lista.get(0);
             txtUsuario1.setText(personaje.getNombre());
+            fechaCargarPartida.setText(String.valueOf(pj.ultimoDia()));
         }
     }
 
-    public void VerificarLista(ActionEvent event)
-    {
+    public void VerificarLista(ActionEvent event) {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        if(!lista.isEmpty())
-        {
+        if (!lista.isEmpty()) {
             switchToPasilloPrincipal(event);
-        }
-        else
-        {
-            switchToInstrucciones(event);
+        } else {
+            switchToAdvertenciaSlotVacio(event);
         }
     }
 
-    public void EliminarPartida()
-    {
+    public void EliminarPartida() {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
         Personaje personaje = lista.get(0);
         personajeRepo.Eliminar(personaje.getId());
 
         txtUsuario1.setText("");
+        fechaCargarPartida.setText("");
     }
 
     public void ControlDeJugadores(ActionEvent event) {
@@ -613,11 +623,11 @@ public class SceneController {
     public void UpdateDia() {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje =  lista.get(0);
+        Personaje personaje = lista.get(0);
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         //Probar aumentar los dias segun entre a este metodo
 
-        registroDias.setText(String.valueOf(ListaDatos.size()+1));
+        registroDias.setText(String.valueOf(ListaDatos.size() + 1));
     }
 
 
@@ -626,10 +636,10 @@ public class SceneController {
 
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje =  lista.get(0);
+        Personaje personaje = lista.get(0);
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         GameData gameData = new GameData();
-        gameData.setFecha(String.valueOf(ListaDatos.size()+1));
+        gameData.setFecha(String.valueOf(ListaDatos.size() + 1));
         gameData.setAsistenciaClase(GameData.AsistenciaClase.NO_PRESENTE);
         gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
         ListaDatos.add(gameData);
@@ -638,8 +648,4 @@ public class SceneController {
         UpdateDia();
 
     }
-
-
-
-
 }
