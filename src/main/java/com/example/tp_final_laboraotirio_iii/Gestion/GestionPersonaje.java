@@ -10,49 +10,14 @@ import java.util.List;
 public class GestionPersonaje {
 
     //region atributos
-    //region atributos
-    Personaje personaje;
-    List <GameData> gameData;
     PersonajeRepo repo = new PersonajeRepo();
-//endregion
-//endregion
+    Personaje personaje = repo.Listar().get(0);
 
-    //region g y s
-
-
-    public Personaje getPersonaje() {
-        return personaje;
-    }
-
-    public void setPersonaje(Personaje personaje) {
-        this.personaje = personaje;
-    }
-
-    public List<GameData> getGameData() {
-        return gameData;
-    }
-
-    public void setGameData(List<GameData> gameData) {
-        this.gameData = gameData;
-    }
-
-//endregion
-
-    //region construccion
-
-
-    public GestionPersonaje(Personaje personaje, List<GameData> gameData) {
-        this.personaje = personaje;
-        this.gameData = gameData;
-    }
-
-    public GestionPersonaje() {
-    }
     //endregion
 
     //region metodo
     public Personaje cargarPersonaje(){
-        return repo.Listar().get(0);
+        return personaje;
     }
 
     public List<GameData> listaGameData(){
@@ -73,6 +38,26 @@ public class GestionPersonaje {
     public void setAsistenciaDia(GameData.AsistenciaClase asistencia){
         listaGameData().get(ultimoDia()-1).setAsistenciaClase(asistencia);
 
+    }
+
+    public boolean descontarDinero (int gasto){
+
+        if (personaje.getDinero() >= gasto){
+            personaje.setDinero(personaje.getDinero()-gasto);
+            repo.Modificar(personaje);
+            return true;
+        }
+        return false;
+    }
+    public void cambioEstado (int stress){
+        if (stress <=45){
+            personaje.setEstadoEstres(Personaje.estadoEstres.RELAJADO);
+        } else if (stress <= 70) {
+            personaje.setEstadoEstres(Personaje.estadoEstres.NERVIOSO);
+        }else {
+            personaje.setEstadoEstres(Personaje.estadoEstres.ESTRESADO);
+        }
+        repo.Modificar(personaje);
     }
 
 /*

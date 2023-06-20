@@ -1,13 +1,45 @@
 [ {
-  "buffet" : "Te",
-  "dinero" : 100,
+  "buffet" : "Lagrima",
+  "dinero" : 830,
   "id" : 1,
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "2",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "3",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "4",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "5",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "6",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "7",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "8",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "9",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "nombre" : "Pepe",
   "estadoEstres" : "RELAJADO",
-  "estres" : 0
+  "nombre" : "Pepe",
+  "estres" : 40
 } ]
