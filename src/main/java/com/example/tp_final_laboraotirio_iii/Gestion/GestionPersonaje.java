@@ -77,11 +77,11 @@ public class GestionPersonaje {
 /*
     public void descontarDinero (double gasto){
        Personaje pj = cargarPersonaje();
-
+       Double dinero = Double
        if (pj.getDinero() > gasto){
 
 
-           pj.setDinero(pj.getDinero()-gasto);
+           pj.setDinero(pj.(double)getDinero()-gasto);
        }
 */
 
