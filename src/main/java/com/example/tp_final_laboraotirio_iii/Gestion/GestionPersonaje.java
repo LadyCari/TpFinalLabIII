@@ -70,18 +70,20 @@ public class GestionPersonaje {
     }
 
     public void setAsistenciaDia(GameData.AsistenciaClase asistencia){
+        PersonajeRepo repo = new PersonajeRepo();
 
         listaGameData().get(ultimoDia()-1).setAsistenciaClase(asistencia);
 
     }
+
 /*
-    public void descontarDinero (double gasto){
+    public void descontarDinero ( gasto){
        Personaje pj = cargarPersonaje();
-       Double dinero = Double
+
        if (pj.getDinero() > gasto){
 
 
-           pj.setDinero(pj.(double)getDinero()-gasto);
+           pj.setDinero(pj.getDinero()-gasto);
        }
 */
 

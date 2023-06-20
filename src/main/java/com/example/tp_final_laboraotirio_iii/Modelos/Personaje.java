@@ -6,6 +6,7 @@ import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Personaje implements Serializable{
 
@@ -25,7 +26,7 @@ public class Personaje implements Serializable{
     private ArrayList<GameData>GuardadoPartida = new ArrayList<>();
     //endregion
 
-//region constructor
+    //region constructor
     public Personaje() {
     }
 
@@ -34,7 +35,8 @@ public class Personaje implements Serializable{
         this.Nombre = nombre;
         this.EstadoEstres = estadoEstres.RELAJADO;
         this.Estres = 0;
-        this.dinero = 300;
+        this.dinero = 100;
+        this.buffet = getBuffet();
     }
 //endregion
 
@@ -71,7 +73,14 @@ public class Personaje implements Serializable{
         Estres = estres;
     }
     public Buffet getBuffet() {
-        return buffet;
+
+        Buffet[]comidas = Buffet.values();
+
+        Random random = new Random();
+        int numero = random.nextInt(6);
+        Buffet comida = comidas[numero];
+
+        return comida;
     }
     public void setBuffet(Buffet buffet) {
         this.buffet = buffet;
@@ -107,4 +116,4 @@ public class Personaje implements Serializable{
                 '}';
     }
 }
-    //endregion
+//endregion

@@ -10,11 +10,11 @@ import java.util.List;
 
 public class PersonajeRepo implements IRepositorio<Personaje>{
 
-    private final File file = new File("src\\main\\resources\\Archivos\\guardados.json");
+    private final File file = new File("src/main/resources/Archivos/guardados.json");
 
     private final ObjectMapper Mapper = new ObjectMapper();
 
-    private ArrayList<Personaje>listaPersonajes;
+    private ArrayList<Personaje>listaPersonajes; //Actualmente estamos trabajando con un solo dato, pero estamos utilizando un arreglo porque al principio teniamos la idea de que sean varios jugadores, pero por complicaciones tuvimos que reducir la cantidad y modificar en este momento el atributo nos llevaria a muchos errores y nos atrasaria.
 
     @Override
     public void Cargar() {
