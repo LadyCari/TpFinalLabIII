@@ -15,7 +15,7 @@ public class GestionPersonaje {
     PersonajeRepo repo = new PersonajeRepo();
 //endregion
 
-    //region g y s
+   //region g y s
 
     public Personaje getPersonaje() {
         return personaje;
@@ -33,6 +33,13 @@ public class GestionPersonaje {
         this.gameData = gameData;
     }
 
+    public PersonajeRepo getRepo() {
+        return repo;
+    }
+
+    public void setRepo(PersonajeRepo repo) {
+        this.repo = repo;
+    }
 //endregion
 
     //region construccion
