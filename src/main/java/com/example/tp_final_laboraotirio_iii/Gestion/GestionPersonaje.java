@@ -12,7 +12,7 @@ public class GestionPersonaje {
     //region atributos
     Personaje personaje;
     List <GameData> gameData;
-    PersonajeRepo repo;
+    PersonajeRepo repo  = new PersonajeRepo();
 //endregion
 
     //region g y s
