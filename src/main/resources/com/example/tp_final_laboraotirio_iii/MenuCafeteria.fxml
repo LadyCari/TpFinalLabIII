@@ -19,32 +19,32 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Button layoutX="237.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Cafe con leche $130">
+      <Button fx:id="cafeConLecheCafeteria" layoutX="237.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Cafe con leche $130">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="237.0" layoutY="667.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Cappuchino $250">
+      <Button fx:id="cappuchinoCafeteria" layoutX="237.0" layoutY="667.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Cappuchino $250">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="510.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Cortado $140">
+      <Button fx:id="cortadoCafeteria" layoutX="510.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Cortado $140">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="510.0" layoutY="667.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Lagrima $160">
+      <Button fx:id="lagrimaCafeteria" layoutX="510.0" layoutY="667.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Lagrima $160">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="784.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Jugo $ 130">
+      <Button fx:id="jugoCafeteria" layoutX="784.0" layoutY="622.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Jugo $ 130">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="784.0" layoutY="667.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Te $ 120">
+      <Button fx:id="teCafeteria" layoutX="784.0" layoutY="667.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="260.0" text="Te $ 120">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
