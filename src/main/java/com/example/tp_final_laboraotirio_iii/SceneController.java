@@ -41,6 +41,8 @@ public class SceneController {
     private Button terminarClase;
     @FXML
     private Label txtUsuario1;
+    @FXML
+    private Label fechaCargarPartida;
 //endregion
 
     //region G Y S
@@ -143,6 +145,18 @@ public class SceneController {
             stage.setScene(scene);
             stage.show();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToAdvertenciaSlotVacio(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaAdvertenciaCrearPj.fxml"))));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -427,7 +441,7 @@ public class SceneController {
 
         switch (pj.ultimoDia()) {
             case 1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17 -> {
-                switchToaulaGeneralVacia(event);
+                switchToaulaAgustinVacia(event);
             }
             case 9, 10, 11 -> {
                 if (asistencia.equals(pj.getAsistenciaDia())) {
@@ -552,7 +566,7 @@ public class SceneController {
 
         if(lista.isEmpty())
         {
-            switchToInstrucciones(event);
+            switchToAdvertenciaSlotVacio(event);
         }
         else
         {
@@ -565,10 +579,15 @@ public class SceneController {
     {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
+        GestionPersonaje pj = new GestionPersonaje();
+
+        String ultimoDia = String.valueOf(pj.ultimoDia());
+
         if(!lista.isEmpty())
         {
             Personaje personaje = lista.get(0);
             txtUsuario1.setText(personaje.getNombre());
+            fechaCargarPartida.setText(ultimoDia);
         }
     }
 
@@ -582,7 +601,7 @@ public class SceneController {
         }
         else
         {
-            switchToInstrucciones(event);
+            switchToAdvertenciaSlotVacio(event);
         }
     }
 
@@ -594,6 +613,7 @@ public class SceneController {
         personajeRepo.Eliminar(personaje.getId());
 
         txtUsuario1.setText("");
+        fechaCargarPartida.setText("");
     }
 
     public void ControlDeJugadores(ActionEvent event) {
