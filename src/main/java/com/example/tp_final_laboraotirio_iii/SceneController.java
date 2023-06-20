@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -43,6 +44,7 @@ public class SceneController {
     private Label txtUsuario1;
     @FXML
     private Label fechaCargarPartida;
+
 //endregion
 
     //region G Y S
@@ -99,6 +101,18 @@ public class SceneController {
     public void switchToCrearPersonaje(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/CrearPersonaje.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToInformacionPjCredo(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/informacionCreacionPj.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -366,6 +380,34 @@ public class SceneController {
 
     //endregion
 
+    //region Patio
+
+    public void switchToPatioFacultad(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/patioJuegos.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToEscenarioEscolar(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/patioJuegos.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //endregion
+
     private void switchScene(Parent root) {
         if (stage != null) {
             Scene scene = new Scene(root);
@@ -375,6 +417,7 @@ public class SceneController {
         }
     }
 
+    //region aula 1
     public void switchToaula1(ActionEvent event) {
         GestionPersonaje pj = new GestionPersonaje();
         PersonajeRepo repo = new PersonajeRepo();
@@ -430,6 +473,7 @@ public class SceneController {
             }
         }
     }
+    //endregion
 
     //region aula 2
     public void switchToaula2(ActionEvent event) {
@@ -461,6 +505,7 @@ public class SceneController {
     }
 
     //endregion
+
 //region dialogo clases
 
     //region G y S
@@ -557,7 +602,7 @@ public class SceneController {
 
         personajeRepo.Agregar(personaje);
 
-        switchToContadorDias(event);
+        switchToInformacionPjCredo(event);
 
     }
 

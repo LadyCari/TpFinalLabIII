@@ -47,7 +47,7 @@ public class Clases {
             String[] dialogoTPFinalMelina = {};
             String[] dialogoClase1Benoffi = {};
 
-            switch (gestionPersonaje.ultimoDia()) {
+            switch (1) {
                 case 1 -> {
                     return dialogoClase1Melina;
                 }

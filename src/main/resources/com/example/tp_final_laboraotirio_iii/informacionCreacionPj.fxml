@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/fondoCrearPj.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1036.0" layoutY="642.0" mnemonicParsing="false" onAction="#switchToContadorDias" prefHeight="50.0" prefWidth="200.0" text="Continuar">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="351.0" layoutY="69.0" text="Informacion de personaje:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="479.0" fitWidth="792.0" layoutX="206.0" layoutY="146.0">
+         <image>
+            <Image url="@Imagenes/fondoCreacionPjDatos.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="318.0" layoutY="184.0" prefHeight="43.0" prefWidth="258.0" text="Nombre:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="318.0" layoutY="325.0" prefHeight="43.0" prefWidth="258.0" text="Dinero:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="muetraDineroPjEnCreacionPj" alignment="CENTER" layoutX="330.0" layoutY="360.0" prefHeight="43.0" prefWidth="258.0" text="\$100" textFill="RED">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="677.0" layoutY="184.0" prefHeight="43.0" prefWidth="258.0" text="Bebida favorita:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="muetraBebidaFavoritaEnCreacionPj" alignment="CENTER" layoutX="682.0" layoutY="217.0" prefHeight="43.0" prefWidth="258.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="325.0" prefHeight="43.0" prefWidth="258.0" text="Estado:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="MuestraSaludEnCreacionPj" alignment="CENTER" layoutX="677.0" layoutY="360.0" prefHeight="43.0" prefWidth="258.0" text="Relajado" textAlignment="CENTER" textFill="RED" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="muetraNombreUsuarioCreacionPj1" alignment="CENTER" layoutX="330.0" layoutY="254.0" prefHeight="76.0" prefWidth="258.0" text="Este es tu nombre de personaje" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="muetraNombreUsuarioCreacionPj11" alignment="CENTER" layoutX="689.0" layoutY="254.0" prefHeight="76.0" prefWidth="258.0" text="Si consumes esta bebida en la cafeteria bajaras mas stress" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="muetraNombreUsuarioCreacionPj12" alignment="CENTER" layoutX="320.0" layoutY="396.0" prefHeight="196.0" prefWidth="282.0" text="Este dinero te servira para comprar bebidas, al finalizar los dias tus padres te daran algo de dinero para sobrevivir" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="muetraNombreUsuarioCreacionPj" alignment="CENTER" layoutX="330.0" layoutY="217.0" prefHeight="43.0" prefWidth="258.0" textFill="RED" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="muetraNombreUsuarioCreacionPj121" alignment="CENTER" layoutX="677.0" layoutY="396.0" prefHeight="190.0" prefWidth="282.0" text="Las clases te subiran stress, el stress empeorara tu estado, puede bajarlo con bebidas y juegos, trata de no llegar a los tps finales con mucho stress o no lo pasaras bien" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
