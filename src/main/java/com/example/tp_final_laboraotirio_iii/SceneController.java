@@ -44,6 +44,14 @@ public class SceneController {
     private Label txtUsuario1;
     @FXML
     private Label fechaCargarPartida;
+    @FXML
+    private Label dineroGanadoEnElDia1;
+    @FXML
+    private Label dineroGanadoEnElDia2;
+    @FXML
+    private Label muetraNombreUsuarioCreacionPj;
+    @FXML
+    private Label muetraBebidaFavoritaEnCreacionPj;
 
 //endregion
 
@@ -673,6 +681,8 @@ public class SceneController {
         //Probar aumentar los dias segun entre a este metodo
 
         registroDias.setText(String.valueOf(ListaDatos.size() + 1));
+        dineroGanadoEnElDia1.setText(String.valueOf(personaje.getDinero()));
+        dineroGanadoEnElDia2.setText(personaje.getEstadoEstres().name());
     }
 
 
@@ -684,6 +694,7 @@ public class SceneController {
         Personaje personaje = lista.get(0);
         ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
         GameData gameData = new GameData();
+        personaje.setDinero(personaje.getDinero()+50);
         gameData.setFecha(String.valueOf(ListaDatos.size() + 1));
         gameData.setAsistenciaClase(GameData.AsistenciaClase.NO_PRESENTE);
         gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
@@ -691,6 +702,16 @@ public class SceneController {
         personajeRepo.Modificar(personaje);
 
         UpdateDia();
-
     }
+
+    public void UpdateInformacionCreacionPJ()
+    {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        ArrayList<Personaje> lista = personajeRepo.Listar();
+        Personaje personaje = lista.get(0);
+        muetraNombreUsuarioCreacionPj.setText(personaje.getNombre());
+        muetraBebidaFavoritaEnCreacionPj.setText(personaje.getBuffet().name());
+    }
+
+
 }
