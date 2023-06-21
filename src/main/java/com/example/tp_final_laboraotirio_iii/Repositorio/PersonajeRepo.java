@@ -86,6 +86,8 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
         {
             aux.setGuardadoPartida(objeto.getGuardadoPartida());
             aux.setDinero(objeto.getDinero());
+            aux.setEstres(objeto.getEstres());
+            aux.setEstadoEstres(objeto.getEstadoEstres());
         }
 
         Guardar();

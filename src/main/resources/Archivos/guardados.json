@@ -1,25 +1,17 @@
 [ {
-  "buffet" : "Cafe_con_Leche",
-  "dinero" : 250,
+  "buffet" : "Capuccino",
+  "dinero" : 150,
   "id" : 1,
-  "nombre" : "Caro",
   "guardadoPartida" : [ {
     "fecha" : "1",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "2",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "3",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "4",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
   } ],
+  "nombre" : "Pepe",
   "estadoEstres" : "RELAJADO",
   "estres" : 0
 } ]

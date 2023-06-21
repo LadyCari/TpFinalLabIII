@@ -88,12 +88,12 @@
          <font>
             <Font size="25.0" />
          </font></Label>
-      <Label fx:id="mostrarBebidaFavorita1" alignment="CENTER" layoutX="113.0" layoutY="181.0" prefHeight="74.0" prefWidth="277.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="mostrarCordura" alignment="CENTER" layoutX="113.0" layoutY="181.0" prefHeight="74.0" prefWidth="277.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label fx:id="mostrarBebidaFavorita2" alignment="CENTER" layoutX="103.0" layoutY="289.0" prefHeight="74.0" prefWidth="200.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="mostrarDinero" alignment="CENTER" layoutX="103.0" layoutY="289.0" prefHeight="74.0" prefWidth="200.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="25.0" />
          </font>

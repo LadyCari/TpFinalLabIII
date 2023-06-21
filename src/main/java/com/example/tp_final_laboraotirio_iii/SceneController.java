@@ -52,44 +52,35 @@ public class SceneController {
     private Label muetraNombreUsuarioCreacionPj;
     @FXML
     private Label muetraBebidaFavoritaEnCreacionPj;
+    @FXML
+    public Label mostrarBebidaFavorita;
+    @FXML
+    public Label mostrarCordura;
+    @FXML
+    public Label mostrarDinero;
+
+    //region cafeteria
+    @FXML
+    public Button cafeConLecheCafeteria;
+    @FXML
+    public Button cappuchinoCafeteria;
+    @FXML
+    public Button cortadoCafeteria;
+    @FXML
+    public Button lagrimaCafeteria;
+    @FXML
+    public Button jugoCafeteria;
+    @FXML
+    public Button teCafeteria;
+    @FXML
+    public Button deCafeteriaABuffetGeneral;
+    //endregion
 
 //endregion
 
     //region G Y S
     public void setStage(Stage stage) {
         this.stage = stage;
-    }
-
-    public Label getTextoProfesor() {
-        return textoProfesor;
-    }
-
-    public void setTextoProfesor(Label textoProfesor) {
-        this.textoProfesor = textoProfesor;
-    }
-
-    public Button getTextoAnteriorClase() {
-        return textoAnteriorClase;
-    }
-
-    public void setTextoAnteriorClase(Button textoAnteriorClase) {
-        this.textoAnteriorClase = textoAnteriorClase;
-    }
-
-    public Button getSiguientetextoclase() {
-        return siguientetextoclase;
-    }
-
-    public void setSiguientetextoclase(Button siguientetextoclase) {
-        this.siguientetextoclase = siguientetextoclase;
-    }
-
-    public Button getTerminarClase() {
-        return terminarClase;
-    }
-
-    public void setTerminarClase(Button terminarClase) {
-        this.terminarClase = terminarClase;
     }
     //endregion
 
@@ -542,6 +533,7 @@ public class SceneController {
         GestionPersonaje pj = new GestionPersonaje();
         PersonajeRepo repo = new PersonajeRepo();
 
+
         if (indiceMensajes == 0) {
             textoProfesor.setText(arregloCopia[indiceMensajes]);
             siguientetextoclase.setDisable(false);
@@ -557,6 +549,7 @@ public class SceneController {
             siguientetextoclase.setDisable(true); // Deshabilitar el botón cuando se han mostrado todos los mensajes
             terminarClase.setDisable(false);
             textoAnteriorClase.setDisable(true);
+            pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
         }
     }
 
@@ -630,9 +623,8 @@ public class SceneController {
     public void UpdateNombre() {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         ArrayList<Personaje> lista = personajeRepo.Listar();
-        GestionPersonaje pj = new GestionPersonaje();
-
         if (!lista.isEmpty()) {
+            GestionPersonaje pj = new GestionPersonaje();
             Personaje personaje = lista.get(0);
             txtUsuario1.setText(personaje.getNombre());
             fechaCargarPartida.setText(String.valueOf(pj.ultimoDia()));
@@ -681,7 +673,7 @@ public class SceneController {
         //Probar aumentar los dias segun entre a este metodo
 
         registroDias.setText(String.valueOf(ListaDatos.size() + 1));
-        dineroGanadoEnElDia1.setText(String.valueOf(personaje.getDinero()));
+        dineroGanadoEnElDia1.setText(String.valueOf(personaje.getDinero()+50));
         dineroGanadoEnElDia2.setText(personaje.getEstadoEstres().name());
     }
 
@@ -712,6 +704,186 @@ public class SceneController {
         muetraNombreUsuarioCreacionPj.setText(personaje.getNombre());
         muetraBebidaFavoritaEnCreacionPj.setText(personaje.getBuffet().name());
     }
+
+    public void UpdateInformacionCafeteria()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        gestionPersonaje.cambioEstado(personaje.getEstres());
+
+        mostrarBebidaFavorita.setText(personaje.getBuffet().name());
+        mostrarCordura.setText(personaje.getEstadoEstres().name());
+        mostrarDinero.setText(String.valueOf(personaje.getDinero()));
+    }
+
+   //region bebidasBuffet
+    public void CafeConLeche()
+    {
+       GestionPersonaje gestionPersonaje = new GestionPersonaje();
+
+       PersonajeRepo repo = new PersonajeRepo();
+
+       Personaje personaje = gestionPersonaje.cargarPersonaje();
+
+       if(gestionPersonaje.descontarDinero(130))
+       {
+           if(personaje.getBuffet().name().equals("Cafe_con_Leche"))
+           {
+               personaje.setEstres(personaje.getEstres()-10);
+           }
+           else
+           {
+               personaje.setEstres(personaje.getEstres()-5);
+           }
+       }
+
+       if(personaje.getEstres() < 0)
+       {
+           personaje.setEstres(0);
+       }
+
+
+       repo.Modificar(personaje);
+    }
+
+    public void Capuccino()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+
+        PersonajeRepo repo = new PersonajeRepo();
+
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+
+        if(gestionPersonaje.descontarDinero(250))
+        {
+            if(personaje.getBuffet().name().equals("Capuccino"))
+            {
+                personaje.setEstres(personaje.getEstres()-10);
+            }
+            else
+            {
+                personaje.setEstres(personaje.getEstres()-5);
+            }
+        }
+        if(personaje.getEstres() < 0)
+        {
+            personaje.setEstres(0);
+        }
+
+        repo.Modificar(personaje);
+    }
+    public void Cortado()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+
+        PersonajeRepo repo = new PersonajeRepo();
+
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+
+        if(gestionPersonaje.descontarDinero(140))
+        {
+            if(personaje.getBuffet().name().equals("Cortado"))
+            {
+                personaje.setEstres(personaje.getEstres()-10);
+            }
+            else
+            {
+                personaje.setEstres(personaje.getEstres()-5);
+            }
+        }
+
+        if(personaje.getEstres() < 0)
+        {
+            personaje.setEstres(0);
+        }
+
+        repo.Modificar(personaje);
+    }
+    public void Lagrima()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+
+        PersonajeRepo repo = new PersonajeRepo();
+
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+
+       if(gestionPersonaje.descontarDinero(160))
+       {
+           if(personaje.getBuffet().name().equals("Lagrima"))
+           {
+               personaje.setEstres(personaje.getEstres()-10);
+           }
+           else
+           {
+               personaje.setEstres(personaje.getEstres()-5);
+           }
+       }
+
+        if(personaje.getEstres() < 0)
+        {
+            personaje.setEstres(0);
+        }
+
+        repo.Modificar(personaje);
+    }
+    public void Jugo()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+
+        PersonajeRepo repo = new PersonajeRepo();
+
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+
+        if(gestionPersonaje.descontarDinero(130))
+        {
+            if(personaje.getBuffet().name().equals("Jugo"))
+            {
+                personaje.setEstres(personaje.getEstres()-10);
+            }
+            else
+            {
+                personaje.setEstres(personaje.getEstres()-5);
+            }
+        }
+
+        if(personaje.getEstres() < 0)
+        {
+            personaje.setEstres(0);
+        }
+
+        repo.Modificar(personaje);
+    }
+    public void Te()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+
+        PersonajeRepo repo = new PersonajeRepo();
+
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+
+        if(gestionPersonaje.descontarDinero(120))
+        {
+            if(personaje.getBuffet().name().equals("Te"))
+            {
+                personaje.setEstres(personaje.getEstres()-10);
+            }
+            else
+            {
+                personaje.setEstres(personaje.getEstres()-5);
+            }
+
+        }
+
+        if(personaje.getEstres() < 0)
+        {
+            personaje.setEstres(0);
+        }
+
+        repo.Modificar(personaje);
+    }
+
+    //endregion
 
 
 }
