@@ -59,18 +59,12 @@ public class GestionPersonaje {
         }
         repo.Modificar(personaje);
     }
-
 /*
-    public void descontarDinero ( gasto){
-       Personaje pj = cargarPersonaje();
-
-       if (pj.getDinero() > gasto){
-
-
-           pj.setDinero(pj.getDinero()-gasto);
-       }
+public void calcularNota (int notaParcial, int cantidadmaterias){
+       double notaExamen = notaParcial/cantidadmaterias;
+       personaje.
+}
 */
-
 //endregion
     }
 
