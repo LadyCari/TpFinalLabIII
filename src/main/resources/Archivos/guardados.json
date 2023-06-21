@@ -1,23 +1,22 @@
 [ {
-  "buffet" : "Jugo",
-  "dinero" : 700,
+  "buffet" : "Cafe_con_Leche",
+  "dinero" : 10,
   "id" : 1,
-  "estadoEstres" : "RELAJADO",
   "guardadoPartida" : [ {
     "fecha" : "1",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "2",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "3",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "4",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "5",
@@ -29,33 +28,11 @@
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "7",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "8",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "9",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "10",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "11",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "12",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "13",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "nombre" : "Caro",
-  "estres" : 0
+  "estres" : 70,
+  "listaNotas" : [ 0, 0, 0, 0 ],
+  "estadoEstres" : "NERVIOSO",
+  "nombre" : "rtrttrt"
 } ]
