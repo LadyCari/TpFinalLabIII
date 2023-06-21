@@ -37,7 +37,7 @@ public class GestionPersonaje {
 
     public void setAsistenciaDia(GameData.AsistenciaClase asistencia){
         listaGameData().get(ultimoDia()-1).setAsistenciaClase(asistencia);
-
+        repo.Modificar(personaje);
     }
 
     public boolean descontarDinero (int gasto){

@@ -533,6 +533,7 @@ public class SceneController {
         GestionPersonaje pj = new GestionPersonaje();
         PersonajeRepo repo = new PersonajeRepo();
 
+
         if (indiceMensajes == 0) {
             textoProfesor.setText(arregloCopia[indiceMensajes]);
             siguientetextoclase.setDisable(false);
@@ -548,6 +549,7 @@ public class SceneController {
             siguientetextoclase.setDisable(true); // Deshabilitar el botón cuando se han mostrado todos los mensajes
             terminarClase.setDisable(false);
             textoAnteriorClase.setDisable(true);
+            pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
         }
     }
 
