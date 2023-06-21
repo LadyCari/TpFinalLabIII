@@ -863,6 +863,9 @@ public class SceneController {
         mostrarDinero.setText(String.valueOf(personaje.getDinero()));
     }
 
+
+
+
     //region bebidasBuffet
     public void CafeConLeche() {
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
