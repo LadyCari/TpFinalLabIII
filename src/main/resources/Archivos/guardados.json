@@ -1,0 +1,16 @@
+[ {
+  "buffet" : null,
+  "dinero" : 300,
+  "guardadoPartida" : [ {
+    "fecha" : "1",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "2",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  } ],
+  "estadoEstres" : "RELAJADO",
+  "nombre" : "axel",
+  "estres" : 0
+} ]
