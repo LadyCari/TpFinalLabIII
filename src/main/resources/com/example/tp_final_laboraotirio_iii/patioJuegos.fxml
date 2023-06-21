@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
    <children>
@@ -22,5 +24,20 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="250.0" layoutX="81.0" layoutY="25.0">
+         <image>
+            <Image url="@Imagenes/rectangulo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="113.0" fitWidth="133.0" layoutX="14.0" layoutY="14.0">
+         <image>
+            <Image url="@Imagenes/cordura.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="mostrarCorduraPatio" alignment="CENTER" layoutX="124.0" layoutY="48.0" prefHeight="74.0" prefWidth="193.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="25.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
