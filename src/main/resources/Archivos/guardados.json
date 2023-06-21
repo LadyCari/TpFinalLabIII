@@ -1,18 +1,21 @@
 [ {
-  "buffet" : "Cafe_con_Leche",
-  "dinero" : 10,
+  "buffet" : "Cortado",
+  "dinero" : 450,
   "id" : 1,
+  "estres" : 35,
+  "listaNotas" : [ 0, 0, 0, 0 ],
+  "nombre" : "",
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "2",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "3",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "4",
@@ -20,19 +23,20 @@
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "5",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "6",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "7",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "8",
     "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "estres" : 70,
-  "listaNotas" : [ 0, 0, 0, 0 ],
-  "estadoEstres" : "NERVIOSO",
-  "nombre" : "rtrttrt"
+  "estadoEstres" : "RELAJADO"
 } ]

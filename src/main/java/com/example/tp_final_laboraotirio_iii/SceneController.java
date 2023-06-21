@@ -38,6 +38,7 @@ public class SceneController {
     private int estresParciales = 35;
 
     private int notaTPMelina;
+    int notaTPBuffini;
 
     private int iteradorExamenBuffini = 0;
     private String[] arregloCopiaTeoria;
@@ -593,14 +594,12 @@ public class SceneController {
             tpFinalMaleniarespuesta3.setText(copiaArregloRespuesta3ExamenMelina[iteradorExamenMelina]);
             tpFinalMaleniarespuesta4.setText(copiaArregloRespuesta4ExamenMelina[iteradorExamenMelina]);
             String respuesta = respuestaUsuarioTPFinalMelina.getText();
-            System.out.println(respuestasTPFinalMelina[iteradorExamenMelina]);
             if (respuesta.equals(respuestasTPFinalMelina[iteradorExamenMelina-1])) {
                 notaTPMelina += 1;
             }
             iteradorExamenMelina++;
             actualizarBotonesTpFinalMalenia();
             ActualizarTextRespuestas();
-            System.out.println(notaTPMelina);
         } else {
             String respuesta = respuestaUsuarioTPFinalMelina.getText();
             if (respuesta.equals(respuestasTPFinalMelina[iteradorExamenMelina-1])) {
@@ -661,7 +660,7 @@ public class SceneController {
     public void MenuExamenBuffini(ActionEvent event) {
         GestionPersonaje pj = new GestionPersonaje();
         PersonajeRepo repo = new PersonajeRepo();
-        int notaTPBuffini = 0;
+
 
         if (iteradorExamenBuffini == 0) {
             preguntaBenoffiTPFinal.setText(copiaArregloPreguntaExamenBuffini[iteradorExamenBuffini]);
@@ -673,21 +672,26 @@ public class SceneController {
             elegirRespuestaTpFinalBuffini.setDisable(false);
             tpFinalBuffiniTerminarTp.setDisable(true);
             iteradorExamenBuffini++;
-            if (respuestaUsuarioTPFinalBuffini.equals(respuestasTPFinalBuffini[iteradorExamenBuffini])) {
-                notaTPBuffini += 1;
-            }
+            ActualizarTextRespuestasBuffini();
         } else if (iteradorExamenBuffini < copiaArregloPreguntaExamenBuffini.length) {
             preguntaBenoffiTPFinal.setText(copiaArregloPreguntaExamenBuffini[iteradorExamenBuffini]);
             respuesta1BenoffiTPFinal.setText(copiaArregloRespuesta1ExamenBuffini[iteradorExamenBuffini]);
             respuesta2BenoffiTPFinal.setText(copiaArregloRespuesta2ExamenBuffini[iteradorExamenBuffini]);
             respuesta3BenoffiTPFinal.setText(copiaArregloRespuesta3ExamenBuffini[iteradorExamenBuffini]);
             respuesta4BenoffiTPFinal.setText(copiaArregloRespuesta4ExamenBuffini[iteradorExamenBuffini]);
-            if (respuestaUsuarioTPFinalBuffini.equals(respuestasTPFinalBuffini[iteradorExamenBuffini])) {
+            String respuesta = respuestaUsuarioTPFinalBuffini.getText();
+            ActualizarTextRespuestasBuffini();
+            if (respuesta.equals(respuestasTPFinalBuffini[iteradorExamenBuffini-1])) {
                 notaTPBuffini += 1;
             }
             iteradorExamenBuffini++;
             actualizarBotonesTpFinalBuffini();
+            ActualizarTextRespuestasBuffini();
         } else {
+            String respuesta = respuestaUsuarioTPFinalBuffini.getText();
+            if (respuesta.equals(respuestasTPFinalBuffini[iteradorExamenBuffini-1])) {
+                notaTPBuffini += 1;
+            }
             preguntaBenoffiTPFinal.setText("Bueno terminaron el TP para la proxima semana se los corrijo");
             respuesta1BenoffiTPFinal.setText("");
             respuesta2BenoffiTPFinal.setText("");
@@ -698,13 +702,29 @@ public class SceneController {
             comenzarTpFinalBuffini.setDisable(true);
             pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
 
+            Personaje personaje = pj.cargarPersonaje();
+            ArrayList<Integer>Notas = personaje.getListaNotas();
+            Notas.set(1,notaTPBuffini);
+            personaje.setEstres(personaje.getEstres()+estresParciales);
+            if(personaje.getEstres() >= 100)
+            {
+                personaje.setEstres(100);
+            }
+            repo.Modificar(personaje);
+            pj.cambioEstado(personaje.getEstres());
         }
-    }
+        }
+
 
     private void actualizarBotonesTpFinalBuffini() {
         elegirRespuestaTpFinalBuffini.setDisable(false);
         tpFinalBuffiniTerminarTp.setDisable(true);
         comenzarTpFinalBuffini.setDisable(true);
+    }
+
+    private void ActualizarTextRespuestasBuffini()
+    {
+        respuestaUsuarioTPFinalBuffini.setText(" ");
     }
 
     private String[] respuestasTPFinalBuffini = Arrays.copyOf(textoBuffini.getArregloRespuestas(), textoBuffini.getArregloRespuestas().length);
