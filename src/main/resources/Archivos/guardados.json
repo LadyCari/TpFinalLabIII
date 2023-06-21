@@ -1,13 +1,61 @@
 [ {
   "buffet" : "Jugo",
-  "dinero" : 100,
+  "dinero" : 700,
   "id" : 1,
+  "estadoEstres" : "RELAJADO",
   "guardadoPartida" : [ {
     "fecha" : "1",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "2",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "3",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "4",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "5",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "6",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "7",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "8",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "9",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "10",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "11",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "12",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "13",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "estres" : 0,
-  "estadoEstres" : "RELAJADO",
-  "nombre" : "Caro"
+  "nombre" : "Caro",
+  "estres" : 0
 } ]
