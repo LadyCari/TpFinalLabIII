@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
    <children>
       <AnchorPane layoutX="6.0" prefHeight="720.0" prefWidth="1280.0" />
       <ImageView fitHeight="720.0" fitWidth="1280.0">
@@ -25,6 +27,45 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Label layoutX="58.0" layoutY="57.0" prefHeight="268.0" prefWidth="508.0" text="Label" />
+      <Label fx:id="textPreguntasChalduTpFinal" alignment="CENTER" layoutX="42.0" layoutY="57.0" prefHeight="120.0" prefWidth="615.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Button fx:id="elegirRespuestaTpFinalChulde" layoutX="698.0" layoutY="645.0" mnemonicParsing="false" onAction="#MenuExamenChulde" prefHeight="40.0" prefWidth="200.0" text="Elegir numero">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="tpFinalChuldeTerminarTp" layoutX="945.0" layoutY="665.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" prefHeight="40.0" prefWidth="200.0" text="Terminar Tp">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="respuestasTpFinalChandlu1" layoutX="42.0" layoutY="177.0" prefHeight="60.0" prefWidth="615.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="respuestasTpFinalChandlu2" layoutX="42.0" layoutY="237.0" prefHeight="60.0" prefWidth="615.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="respuestasTpFinalChandlu3" layoutX="42.0" layoutY="297.0" prefHeight="60.0" prefWidth="615.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="respuestasTpFinalChandlu4" layoutX="46.0" layoutY="360.0" prefHeight="60.0" prefWidth="607.0" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="respuestaUsuarioTPFinalChulde" alignment="CENTER" layoutX="225.0" layoutY="632.0" prefHeight="66.0" prefWidth="439.0" promptText="You Tips">
+         <font>
+            <Font name="Rockwell Extra Bold" size="34.0" />
+         </font>
+      </TextField>
+      <Button fx:id="comenzarTpFinalChulde" layoutX="945.0" layoutY="619.0" mnemonicParsing="false" onAction="#MenuExamenChulde" prefHeight="40.0" prefWidth="200.0" text="Comenzar Tp">
+         <font>
+            <Font name="Rockwell Extra Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

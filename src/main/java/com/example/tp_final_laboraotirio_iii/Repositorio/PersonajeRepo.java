@@ -85,6 +85,9 @@ public class PersonajeRepo implements IRepositorio<Personaje>{
         for(Personaje aux : this.listaPersonajes)
         {
             aux.setGuardadoPartida(objeto.getGuardadoPartida());
+            aux.setDinero(objeto.getDinero());
+            aux.setEstres(objeto.getEstres());
+            aux.setEstadoEstres(objeto.getEstadoEstres());
         }
 
         Guardar();

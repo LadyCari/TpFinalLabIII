@@ -36,7 +36,7 @@ public class Personaje implements Serializable{
         this.EstadoEstres = estadoEstres.RELAJADO;
         this.Estres = 0;
         this.dinero = 100;
-        this.buffet = getBuffet();
+        this.buffet = Random();
     }
 //endregion
 
@@ -73,14 +73,7 @@ public class Personaje implements Serializable{
         Estres = estres;
     }
     public Buffet getBuffet() {
-
-        Buffet[]comidas = Buffet.values();
-
-        Random random = new Random();
-        int numero = random.nextInt(6);
-        Buffet comida = comidas[numero];
-
-        return comida;
+        return buffet;
     }
     public void setBuffet(Buffet buffet) {
         this.buffet = buffet;
@@ -100,6 +93,15 @@ public class Personaje implements Serializable{
         this.id = id;
     }
     //endregion
+
+    //Metodo para generar una bebida favorita random
+    private Buffet Random()
+    {
+        Buffet[]comidas = Buffet.values();
+        Random random = new Random();
+
+        return comidas[random.nextInt(6)];
+    }
 
     //region toString
 
