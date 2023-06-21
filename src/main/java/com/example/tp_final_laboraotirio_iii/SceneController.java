@@ -31,15 +31,23 @@ public class SceneController {
     private Scene scene;
     private Parent root;
     private int indiceMensajesTeoria = 0;
-    private int iteradorExamenMelina = 0;
+    private int iteradorExamenMelina;
+
+    private int estresClases = 25;
+
+    private int estresParciales = 35;
+
+    private int notaTPMelina;
+
+    private int iteradorExamenBuffini = 0;
     private String[] arregloCopiaTeoria;
     //region FXML
     @FXML
-    public Label registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
+    private Label registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
     @FXML
-    public TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalBuffini;
+    private TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalBuffini;
     @FXML
-    public Button textoAnteriorClase, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
+    private Button textoAnteriorClase, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
     //endregion
     //endregion
 
@@ -509,6 +517,14 @@ public class SceneController {
             terminarClase.setDisable(false);
             textoAnteriorClase.setDisable(true);
             pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
+            Personaje personaje = pj.cargarPersonaje();
+            personaje.setEstres(personaje.getEstres()+estresClases);
+            if(personaje.getEstres() >= 100)
+            {
+                personaje.setEstres(100);
+            }
+            repo.Modificar(personaje);
+            pj.cambioEstado(personaje.getEstres());
         }
     }
 
@@ -559,8 +575,6 @@ public class SceneController {
     public void MenuExamenMelina(ActionEvent event) {
         GestionPersonaje pj = new GestionPersonaje();
         PersonajeRepo repo = new PersonajeRepo();
-        int notaTPMelina = 0;
-
         if (iteradorExamenMelina == 0) {
             preguntaTPFinalMalenia.setText(copiaArregloPreguntaExamenMelina[iteradorExamenMelina]);
             tpFinalMaleniarespuesta1.setText(copiaArregloRespuesta1ExamenMelina[iteradorExamenMelina]);
@@ -571,21 +585,27 @@ public class SceneController {
             elegirRespuestaTpFinalMalenia.setDisable(false);
             tpFinalMeleniaTerminarTp.setDisable(true);
             iteradorExamenMelina++;
-            if (respuestaUsuarioTPFinalMelina.equals(respuestasTPFinalMelina[iteradorExamenMelina])) {
-                notaTPMelina += 1;
-            }
+            ActualizarTextRespuestas();
         } else if (iteradorExamenMelina < copiaArregloPreguntaExamenMelina.length) {
             preguntaTPFinalMalenia.setText(copiaArregloPreguntaExamenMelina[iteradorExamenMelina]);
             tpFinalMaleniarespuesta1.setText(copiaArregloRespuesta1ExamenMelina[iteradorExamenMelina]);
             tpFinalMaleniarespuesta2.setText(copiaArregloRespuesta2ExamenMelina[iteradorExamenMelina]);
             tpFinalMaleniarespuesta3.setText(copiaArregloRespuesta3ExamenMelina[iteradorExamenMelina]);
             tpFinalMaleniarespuesta4.setText(copiaArregloRespuesta4ExamenMelina[iteradorExamenMelina]);
-            if (respuestaUsuarioTPFinalMelina.equals(respuestasTPFinalMelina[iteradorExamenMelina])) {
+            String respuesta = respuestaUsuarioTPFinalMelina.getText();
+            System.out.println(respuestasTPFinalMelina[iteradorExamenMelina]);
+            if (respuesta.equals(respuestasTPFinalMelina[iteradorExamenMelina-1])) {
                 notaTPMelina += 1;
             }
             iteradorExamenMelina++;
             actualizarBotonesTpFinalMalenia();
+            ActualizarTextRespuestas();
+            System.out.println(notaTPMelina);
         } else {
+            String respuesta = respuestaUsuarioTPFinalMelina.getText();
+            if (respuesta.equals(respuestasTPFinalMelina[iteradorExamenMelina-1])) {
+                notaTPMelina += 1;
+            }
             preguntaTPFinalMalenia.setText("Bueno terminaron el TP para la proxima semana se los corrijo");
             tpFinalMaleniarespuesta1.setText("");
             tpFinalMaleniarespuesta2.setText("");
@@ -595,6 +615,17 @@ public class SceneController {
             tpFinalMeleniaTerminarTp.setDisable(false);
             elegirRespuestaTpFinalMalenia.setDisable(true);
             pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
+
+            Personaje personaje = pj.cargarPersonaje();
+            ArrayList<Integer>Notas = personaje.getListaNotas();
+            Notas.set(0,notaTPMelina);
+            personaje.setEstres(personaje.getEstres()+estresParciales);
+            if(personaje.getEstres() >= 100)
+            {
+                personaje.setEstres(100);
+            }
+            repo.Modificar(personaje);
+            pj.cambioEstado(personaje.getEstres());
         }
     }
 
@@ -602,6 +633,11 @@ public class SceneController {
         elegirRespuestaTpFinalMalenia.setDisable(false);
         tpFinalMeleniaTerminarTp.setDisable(true);
         comenzarTpFinalMalenia.setDisable(true);
+    }
+
+    private void ActualizarTextRespuestas()
+    {
+        respuestaUsuarioTPFinalMelina.setText(" ");
     }
 
     private String[] respuestasTPFinalMelina = Arrays.copyOf(textoMelina.getArregloRespuestasMelinaTPFinal(), textoMelina.getArregloRespuestasMelinaTPFinal().length);
@@ -613,7 +649,6 @@ public class SceneController {
 
     //region copia Arreglo
     ExamenBuffini textoBuffini = new ExamenBuffini();
-    private int iteradorExamenBuffini = 0;
 
     private String[] copiaArregloPreguntaExamenBuffini = Arrays.copyOf(textoBuffini.getPreguntas(), textoBuffini.getPreguntas().length);
     private String[] copiaArregloRespuesta1ExamenBuffini = Arrays.copyOf(textoBuffini.getRespuestas1(), textoBuffini.getRespuestas1().length);

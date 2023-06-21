@@ -6,6 +6,7 @@ import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Personaje implements Serializable{
@@ -22,7 +23,7 @@ public class Personaje implements Serializable{
     private int dinero;
     private int id;
 
-    private static ArrayList<Integer>ListaNotas = new ArrayList<>(4);
+    private ArrayList<Integer>ListaNotas = new ArrayList<>(Arrays.asList(0,0,0,0));
     private ArrayList<GameData>GuardadoPartida = new ArrayList<>();
     //endregion
 
@@ -42,16 +43,17 @@ public class Personaje implements Serializable{
 
     //region G y S
 
+
     public int getDinero() {
         return dinero;
     }
     public void setDinero(int dinero) {
         this.dinero = dinero;
     }
-    public static ArrayList<Integer> getListaNotas() {
+    public ArrayList<Integer> getListaNotas() {
         return ListaNotas;
     }
-    public static void setListaNotas(ArrayList<Integer> listaNotas) {
+    public void setListaNotas(ArrayList<Integer> listaNotas) {
         ListaNotas = listaNotas;
     }
     public estadoEstres getEstadoEstres() {
@@ -114,8 +116,9 @@ public class Personaje implements Serializable{
                 ", EstadoEstres=" + EstadoEstres +
                 ", dinero=" + dinero +
                 ", id=" + id +
-                ", GuardadoPartida=" + GuardadoPartida +
+                ", ListaNotas=" + ListaNotas +
                 '}';
     }
+
 }
 //endregion
