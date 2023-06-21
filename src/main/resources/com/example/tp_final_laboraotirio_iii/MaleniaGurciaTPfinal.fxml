@@ -17,7 +17,7 @@
             <Image url="@Imagenes/aulaTpSus.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="669.0" fitWidth="1280.0" layoutX="117.0">
+      <ImageView fitHeight="780.0" fitWidth="1502.0" layoutX="101.0" layoutY="-95.0">
          <image>
             <Image url="@Imagenes/MaleniaGurciaTPfinal2.png" />
          </image>
@@ -27,27 +27,27 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Label fx:id="tpFinalMaleniarespuesta1" alignment="CENTER" layoutX="218.0" layoutY="306.0" prefHeight="64.0" prefWidth="452.0" text="1-Respuesta" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="tpFinalMaleniarespuesta1" alignment="CENTER" layoutX="215.0" layoutY="257.0" prefHeight="84.0" prefWidth="538.0" text="1-Respuesta" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="tpFinalMaleniarespuesta2" alignment="CENTER" layoutX="218.0" layoutY="378.0" prefHeight="64.0" prefWidth="452.0" text="2-Respuesta" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="tpFinalMaleniarespuesta2" alignment="CENTER" layoutX="215.0" layoutY="341.0" prefHeight="84.0" prefWidth="538.0" text="2-Respuesta" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="tpFinalMaleniarespuesta3" alignment="CENTER" layoutX="218.0" layoutY="448.0" prefHeight="64.0" prefWidth="452.0" text="3-Respuesta" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="tpFinalMaleniarespuesta3" alignment="CENTER" layoutX="215.0" layoutY="425.0" prefHeight="84.0" prefWidth="538.0" text="3-Respuesta" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="tpFinalMaleniarespuesta4" alignment="CENTER" layoutX="218.0" layoutY="521.0" prefHeight="64.0" prefWidth="452.0" text="4-Respuesta" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="tpFinalMaleniarespuesta4" alignment="CENTER" layoutX="215.0" layoutY="509.0" prefHeight="84.0" prefWidth="538.0" text="4-Respuesta" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="preguntaTPFinalMalenia" alignment="CENTER" layoutX="225.0" layoutY="189.0" prefHeight="100.0" prefWidth="439.0" text="Pone el numero de la respuestas que crees correcta, exitos, me inspire para este examen" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="preguntaTPFinalMalenia" alignment="CENTER" layoutX="225.0" layoutY="118.0" prefHeight="136.0" prefWidth="527.0" text="Pone el numero de la respuestas que crees correcta, exitos, me inspire para este examen" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="21.0" />
          </font>

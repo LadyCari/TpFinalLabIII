@@ -17,7 +17,7 @@
             <Image url="@Imagenes/GuceldaBuffiniTPFinal.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="573.0" fitWidth="658.0">
+      <ImageView fitHeight="589.0" fitWidth="739.0" layoutX="-22.0" layoutY="-13.0">
          <image>
             <Image url="@Imagenes/textosExamenesBuffini.png" />
          </image>
@@ -27,23 +27,23 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Label fx:id="preguntaBenoffiTPFinal" alignment="CENTER" layoutX="133.0" layoutY="46.0" prefHeight="205.0" prefWidth="399.0" text="Exitos en el examen" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Label fx:id="preguntaBenoffiTPFinal" alignment="CENTER" layoutX="124.0" layoutY="30.0" prefHeight="221.0" prefWidth="456.0" text="Exitos en el examen" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="21.0" />
          </font></Label>
-      <Label fx:id="respuesta1BenoffiTPFinal" layoutX="174.0" layoutY="329.0" prefHeight="50.0" prefWidth="320.0" text="1-Respuesta" textFill="#002cff" wrapText="true">
+      <Label fx:id="respuesta1BenoffiTPFinal" alignment="CENTER" layoutX="166.0" layoutY="320.0" prefHeight="55.0" prefWidth="372.0" text="1-Respuesta" textFill="#002cff" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="respuesta2BenoffiTPFinal" layoutX="174.0" layoutY="379.0" prefHeight="50.0" prefWidth="320.0" text="2-Respuesta" textFill="#ae0000" wrapText="true">
+      <Label fx:id="respuesta2BenoffiTPFinal" alignment="CENTER" layoutX="166.0" layoutY="375.0" prefHeight="55.0" prefWidth="372.0" text="2-Respuesta" textFill="#ae0000" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="respuesta4BenoffiTPFinal" layoutX="174.0" layoutY="479.0" prefHeight="50.0" prefWidth="320.0" text="4-Respuesta" textFill="#e1ff00" wrapText="true">
+      <Label fx:id="respuesta4BenoffiTPFinal" alignment="CENTER" layoutX="166.0" layoutY="485.0" prefHeight="55.0" prefWidth="372.0" text="4-Respuesta" textFill="#e1ff00" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="respuesta3BenoffiTPFinal" layoutX="173.0" layoutY="429.0" prefHeight="50.0" prefWidth="320.0" text="3-Respuesta" textFill="#00ff55" wrapText="true">
+      <Label fx:id="respuesta3BenoffiTPFinal" alignment="CENTER" layoutX="166.0" layoutY="430.0" prefHeight="55.0" prefWidth="372.0" text="3-Respuesta" textFill="#00ff55" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="14.0" />
          </font></Label>

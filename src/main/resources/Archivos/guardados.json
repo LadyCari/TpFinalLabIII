@@ -1,13 +1,13 @@
 [ {
-  "buffet" : "Cafe_con_Leche",
+  "buffet" : "Jugo",
   "dinero" : 100,
   "id" : 1,
   "guardadoPartida" : [ {
     "fecha" : "1",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "nombre" : "cas",
+  "estres" : 0,
   "estadoEstres" : "RELAJADO",
-  "estres" : 0
+  "nombre" : "Caro"
 } ]
