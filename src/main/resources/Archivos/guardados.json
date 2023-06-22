@@ -2,8 +2,8 @@
   "buffet" : "Capuccino",
   "dinero" : 900,
   "id" : 1,
-  "listaNotas" : [ 0, 0, 0, 0 ],
-  "estres" : -10,
+  "listaNotas" : [ 10, 5, 5, 1 ],
+  "estres" : 0,
   "estadoEstres" : "RELAJADO",
   "guardadoPartida" : [ {
     "fecha" : "1",
