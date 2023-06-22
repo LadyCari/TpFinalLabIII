@@ -20,12 +20,12 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Button fx:id="siJugarCartas" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" onAction="#switchToPatioFacultad" prefHeight="40.0" prefWidth="1002.0" text="Obvio, hoy me siento con suerte">
+      <Button fx:id="siJugarCartas" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" onAction="#AceptarCartas" prefHeight="40.0" prefWidth="1002.0" text="Obvio, hoy me siento con suerte">
          <font>
             <Font name="Rockwell Extra Bold" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="nojugarCartas" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" onAction="#switchToPatioFacultad" prefHeight="40.0" prefWidth="1002.0" text="No disculpa, no se jugar al truco">
+      <Button fx:id="nojugarCartas" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" onAction="#RechazarCartas" prefHeight="40.0" prefWidth="1002.0" text="No disculpa, no se jugar al truco">
          <font>
             <Font name="Rockwell Extra Bold" size="21.0" />
          </font>
