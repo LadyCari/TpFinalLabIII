@@ -1,10 +1,9 @@
 [ {
-  "buffet" : "Cortado",
+  "buffet" : "Capuccino",
   "dinero" : 300,
   "id" : 1,
   "listaNotas" : [ 0, 0, 0, 0 ],
   "estres" : 0,
-  "nombre" : "rtgr",
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "NO_PRESENTE",
@@ -66,5 +65,6 @@
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "COMPLETADO"
   } ],
+  "nombre" : "jygjjyt",
   "estadoEstres" : "RELAJADO"
 } ]

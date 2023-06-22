@@ -38,13 +38,13 @@ public class SceneController {
     private String[] arregloCopiaTeoria;
     //region FXML
     @FXML
-    private RadioButton jugarMetegol, juegarPingPong, jugarCartas;
+    private RadioButton salida,jugarMetegol, juegarPingPong, jugarCartas;
     @FXML
-    private Label mostrarDineroEvento,mostrarCorduraPatio, textPreguntasChalduTpFinal, respuestasTpFinalChandlu1, respuestasTpFinalChandlu2, respuestasTpFinalChandlu3, respuestasTpFinalChandlu4, preguntaTPFinalBatizi, preguntaTPFinalBatizi1, preguntaTPFinalBatizi11, preguntaTPFinalBatizi12, preguntaTPFinalBatizi121, registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
+    private Label finalJuegoNota1BE,finalJuegoNota2BE,finalJuegoNota3BE,finalJuegoNota4BE, finalJuegoNota4,finalJuegoNota3,finalJuegoNota2,finalJuegoNota1,mostrarDineroEvento,mostrarCorduraPatio, textPreguntasChalduTpFinal, respuestasTpFinalChandlu1, respuestasTpFinalChandlu2, respuestasTpFinalChandlu3, respuestasTpFinalChandlu4, preguntaTPFinalBatizi, preguntaTPFinalBatizi1, preguntaTPFinalBatizi11, preguntaTPFinalBatizi12, preguntaTPFinalBatizi121, registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
     @FXML
     private TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalChulde, respuestaUsuarioTPFinalBuffini, respuestaUsuarioTPFinalBtzz;
     @FXML
-    private Button NoDarPlantaEventoRespuestas,siDarPlataEventoRespuestas,rechazoEventoBuffini,aceptarEventoBuffini,siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, comenzarTpFinalChulde, tpFinalChuldeTerminarTp, elegirRespuestaTpFinalChulde, elegirRespuestaTpFinalBatizzi, tpFinalBatizziTerminarTp, comenzarTpFinalBatizzi, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
+    private Button noCupongAyudemi,siCupongAyudemi,NoDarPlantaEventoRespuestas,siDarPlataEventoRespuestas,rechazoEventoBuffini,aceptarEventoBuffini,siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, comenzarTpFinalChulde, tpFinalChuldeTerminarTp, elegirRespuestaTpFinalChulde, elegirRespuestaTpFinalBatizzi, tpFinalBatizziTerminarTp, comenzarTpFinalBatizzi, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
     //endregion
     //endregion
 
@@ -461,6 +461,42 @@ public class SceneController {
     public void switchToEventoRespuestas2(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/segundaScenaEventoRespuestas_1.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToGoodEnding(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/FinalGoodEnding.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToBadEnding(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/FinalJuegoBadEnding.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToEventoBatiziAyudemi(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/eventoBatiziAyudemi.fxml"))));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -1588,6 +1624,114 @@ public class SceneController {
             ContadorIntentosEventos++;
         }
     }
+
+    public void Gimnasio(ActionEvent event)
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        int ultimodia = gestionPersonaje.ultimoDia();
+        double promedio = PromedioNotas();
+
+        if (ultimodia == 17 && promedio >= 6) {
+            switchToGoodEnding(event);
+        } else if(ultimodia == 17 && promedio < 6) {
+            switchToBadEnding(event);
+        }
+        else
+        {
+            switchToEscenarioEscolar(event);
+        }
+    }
+
+    public void ActualizarBotonSalida()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        int ultimodia = gestionPersonaje.ultimoDia();
+        salida.setVisible(ultimodia != 17);
+    }
+
+    public void UpdateParciales()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        ArrayList<Integer>listaNotas = personaje.getListaNotas();
+
+        finalJuegoNota1.setText(String.valueOf(listaNotas.get(0)));
+        finalJuegoNota2.setText(String.valueOf(listaNotas.get(1)));
+        finalJuegoNota3.setText(String.valueOf(listaNotas.get(2)));
+        finalJuegoNota4.setText(String.valueOf(listaNotas.get(3)));
+    }
+
+    public void UpdateParciales2()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        ArrayList<Integer>listaNotas = personaje.getListaNotas();
+
+        finalJuegoNota1BE.setText(String.valueOf(listaNotas.get(0)));
+        finalJuegoNota2BE.setText(String.valueOf(listaNotas.get(1)));
+        finalJuegoNota3BE.setText(String.valueOf(listaNotas.get(2)));
+        finalJuegoNota4BE.setText(String.valueOf(listaNotas.get(3)));
+    }
+
+    private double PromedioNotas()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        int total = 0;
+        double promedio = 0;
+        int i = 0;
+
+
+        for(i = 0;i<personaje.getListaNotas().size();i++)
+        {
+            total+=personaje.getListaNotas().get(i);
+        }
+
+        promedio = (double) total /i;
+
+        return promedio;
+    }
+
+    public void VerificarAula2YEvento(ActionEvent event)
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        int ultimodia = gestionPersonaje.ultimoDia();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        if (ultimodia == 13 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoBatiziAyudemi(event);
+        }
+        else
+        {
+            switchToaula2(event);
+        }
+    }
+
+    public void RechazarUdemy(ActionEvent event)
+    {
+        if (event.getSource().equals(noCupongAyudemi)) {
+            switchToPasilloPrincipal(event);
+        }
+    }
+
+    public void AceptarUdemy(ActionEvent event)
+    {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (event.getSource().equals(siCupongAyudemi)) {
+            personaje.setEstres(personaje.getEstres()-10);
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            repo.Modificar(personaje);
+        }
+        switchToaula2(event);
+    }
+
+
+
 
     public void PatioJuegos() {
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
