@@ -25,12 +25,12 @@
             <Font name="Rockwell Extra Bold" size="33.0" />
          </font>
       </Label>
-      <Button fx:id="siCupongAyudemi" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="1002.0" text="Obvio profe ahi busco el control">
+      <Button fx:id="siCupongAyudemi" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" onAction="#AceptarUdemy" prefHeight="40.0" prefWidth="1002.0" text="Obvio profe ahi busco el control">
          <font>
             <Font name="Rockwell Extra Bold" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="noCupongAyudemi" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="1002.0" text="Disculpa se me va el bondi">
+      <Button fx:id="noCupongAyudemi" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" onAction="#RechazarUdemy" prefHeight="40.0" prefWidth="1002.0" text="Disculpa se me va el bondi">
          <font>
             <Font name="Rockwell Extra Bold" size="21.0" />
          </font>
