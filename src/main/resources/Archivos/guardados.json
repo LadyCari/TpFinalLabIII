@@ -1,9 +1,18 @@
 [ {
+<<<<<<< HEAD
   "buffet" : "Cafe_con_Leche",
   "dinero" : 850,
   "id" : 1,
   "listaNotas" : [ 0, 0, 0, 0 ],
   "estres" : 100,
+=======
+  "buffet" : "Te",
+  "dinero" : 400,
+  "id" : 1,
+  "estres" : 0,
+  "listaNotas" : [ 0, 0, 0, 0 ],
+  "nombre" : "caro",
+>>>>>>> e598e7086a4f6913752be1c893d62f8dc1bdf0a3
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "NO_PRESENTE",
@@ -18,7 +27,7 @@
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "4",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "5",
@@ -32,6 +41,7 @@
     "fecha" : "7",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
+<<<<<<< HEAD
   }, {
     "fecha" : "8",
     "asistenciaClase" : "PRESENTE",
@@ -68,6 +78,8 @@
     "fecha" : "16",
     "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
+=======
+>>>>>>> e598e7086a4f6913752be1c893d62f8dc1bdf0a3
   } ],
   "estadoEstres" : "ESTRESADO",
   "nombre" : "Caro"
