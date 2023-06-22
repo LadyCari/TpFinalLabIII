@@ -55,7 +55,7 @@ public class SceneController {
     @FXML
     private TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalBuffini;
     @FXML
-    private Button textoAnteriorClase, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
+    private Button siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
     //endregion
     //endregion
 
@@ -912,19 +912,38 @@ public class SceneController {
 
     ///EVENTO PING PONG
     public void EventoPingPong(ActionEvent event) {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (ultimodia == 3 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoPingPong(event);
+        } else {
+            switchToBuffetGeneral(event);
+        }
+    }
+
+    public void AceptarPingPong(ActionEvent event)
+    {
         PersonajeRepo repo = new PersonajeRepo();
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
         List<GameData> Listadata = gestionPersonaje.listaGameData();
         int ultimodia = gestionPersonaje.ultimoDia();
 
-        if (ultimodia == 3 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
-            switchToEventoPingPong(event);
+        if (event.getSource().equals(siJugarPingpong)) {
+
             GameData gameData = Listadata.get(ultimodia - 1);
             gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
             repo.Modificar(personaje);
-        } else {
-            switchToBuffetGeneral(event);
+        }
+        switchToPatioFacultad(event);
+    }
+
+    public void RechazarPingPong(ActionEvent event)
+    {
+        if (event.getSource().equals(nojugarpingpong)) {
+           switchToBuffetGeneral(event);
         }
     }
 
@@ -934,58 +953,94 @@ public class SceneController {
 
     ///EVENTO CARTAS
     public void EventoCartas(ActionEvent event) {
-        PersonajeRepo repo = new PersonajeRepo();
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
-        List<GameData> Listadata = gestionPersonaje.listaGameData();
         int ultimodia = gestionPersonaje.ultimoDia();
 
         if (ultimodia == 5 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
             switchToEventoCartas(event);
-            GameData gameData = Listadata.get(ultimodia - 1);
-            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
-            repo.Modificar(personaje);
         } else {
             switchToPatioFacultad(event);
         }
     }
 
-    private void UpdateBotonCartas()
+    public void AceptarCartas(ActionEvent event)
     {
-        jugarCartas.setVisible(false);
-    }
-
-    //EVENTO METEGOL
-    public void EventoMetegol(ActionEvent event) {
         PersonajeRepo repo = new PersonajeRepo();
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
         List<GameData> Listadata = gestionPersonaje.listaGameData();
         int ultimodia = gestionPersonaje.ultimoDia();
 
-        if (ultimodia == 11 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
-            switchToEventoMeteGol(event);
+        if (event.getSource().equals(siJugarCartas)) {
+
             GameData gameData = Listadata.get(ultimodia - 1);
             gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
             repo.Modificar(personaje);
+        }
+        switchToPatioFacultad(event);
+    }
+
+    public void RechazarCartas(ActionEvent event)
+    {
+        if (event.getSource().equals(nojugarCartas)) {
+            switchToPatioFacultad(event);
+        }
+    }
+
+
+
+    private void UpdateBotonCartas() {
+        jugarCartas.setVisible(false);
+    }
+
+    //EVENTO METEGOL
+    public void EventoMetegol(ActionEvent event) {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (ultimodia == 11 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoMeteGol(event);
         } else {
             switchToBanioGeneral(event);
         }
     }
-
-    private void UpdateMetegol()
+    public void AceptarMetegol(ActionEvent event)
     {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (event.getSource().equals(siJugarMetegol)) {
+
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            repo.Modificar(personaje);
+        }
+        switchToPatioFacultad(event);
+    }
+
+    public void RechazarMetegol(ActionEvent event)
+    {
+        if (event.getSource().equals(nojugarMetegol)) {
+            switchToBanioGeneral(event);
+        }
+    }
+
+    private void UpdateMetegol() {
         jugarMetegol.setVisible(false);
     }
 
-    public void RestarEstresEventos()
-    {
+    public void RestarEstresEventos() {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
-        if(ContadorIntentosEventos < MaximoIntentosEventos)
-        {
-            personaje.setEstres(personaje.getEstres()-15);
+        if (ContadorIntentosEventos < MaximoIntentosEventos) {
+            personaje.setEstres(personaje.getEstres() - 15);
             if (personaje.getEstres() < 0) {
                 personaje.setEstres(0);
             }
@@ -995,61 +1050,42 @@ public class SceneController {
         }
     }
 
-    public void PatioJuegos()
-    {
+    public void PatioJuegos() {
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         List<GameData> Listadata = gestionPersonaje.listaGameData();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
         int ultimoDia = gestionPersonaje.ultimoDia();
         mostrarCorduraPatio.setText(personaje.getEstadoEstres().name());
 
-         if(Integer.parseInt(Listadata.get(ultimoDia-1).getFecha()) > 2)
-         {
-             if(Listadata.get(2).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO))
-             {
-                 juegarPingPong.setVisible(true);
-             }
-             else
-             {
-                 UpdateBotonPingPong();
-             }
-         }
-         else
-         {
-             UpdateBotonPingPong();
-         }
+        if (Integer.parseInt(Listadata.get(ultimoDia - 1).getFecha()) > 2) {
+            if (Listadata.get(2).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO)) {
+                juegarPingPong.setVisible(true);
+            } else {
+                UpdateBotonPingPong();
+            }
+        } else {
+            UpdateBotonPingPong();
+        }
 
-         if(Integer.parseInt(Listadata.get(ultimoDia-1).getFecha()) > 4)
-         {
-             if(Listadata.get(4).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO))
-             {
-                 jugarCartas.setVisible(true);
-             }
-             else
-             {
-                 UpdateBotonCartas();
-             }
-         }
-         else
-         {
-             UpdateBotonCartas();
-         }
+        if (Integer.parseInt(Listadata.get(ultimoDia - 1).getFecha()) > 4) {
+            if (Listadata.get(4).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO)) {
+                jugarCartas.setVisible(true);
+            } else {
+                UpdateBotonCartas();
+            }
+        } else {
+            UpdateBotonCartas();
+        }
 
-         if(Integer.parseInt(Listadata.get(ultimoDia-1).getFecha()) > 10)
-         {
-             if(Listadata.get(10).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO))
-             {
-                 jugarMetegol.setVisible(true);
-             }
-             else
-             {
-                 UpdateMetegol();
-             }
-         }
-         else
-         {
-             UpdateMetegol();
-         }
+        if (Integer.parseInt(Listadata.get(ultimoDia - 1).getFecha()) > 10) {
+            if (Listadata.get(10).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO)) {
+                jugarMetegol.setVisible(true);
+            } else {
+                UpdateMetegol();
+            }
+        } else {
+            UpdateMetegol();
+        }
     }
 
     //endregion
