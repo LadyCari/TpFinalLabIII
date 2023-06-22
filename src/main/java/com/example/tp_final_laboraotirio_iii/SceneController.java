@@ -14,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
@@ -22,14 +23,18 @@ import javafx.scene.Scene;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class SceneController {
-
     //region atributos
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+    private static final int MaximoIntentosEventos = 2;
+
+    private int ContadorIntentosEventos = 0;
     private int indiceMensajesTeoria = 0;
     private int iteradorExamenMelina;
 
@@ -44,7 +49,9 @@ public class SceneController {
     private String[] arregloCopiaTeoria;
     //region FXML
     @FXML
-    private Label registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
+    private RadioButton jugarMetegol, juegarPingPong, jugarCartas;
+    @FXML
+    private Label mostrarCorduraPatio, registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
     @FXML
     private TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalBuffini;
     @FXML
@@ -56,9 +63,11 @@ public class SceneController {
     public void setStage(Stage stage) {
         this.stage = stage;
     }
+
     public String[] getMensajes() {
         return arregloCopiaTeoria;
     }
+
     public void setMensajes(String[] mensajes) {
         arregloCopiaTeoria = mensajes;
     }
@@ -326,7 +335,6 @@ public class SceneController {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -376,7 +384,7 @@ public class SceneController {
 
     public void switchToEscenarioEscolar(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/patioJuegos.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/GimnacioGraduacion.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -424,6 +432,7 @@ public class SceneController {
             e.printStackTrace();
         }
     }
+
     //endregion
 
     private void switchScene(Parent root) {
@@ -557,9 +566,8 @@ public class SceneController {
             textoAnteriorClase.setDisable(true);
             pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
             Personaje personaje = pj.cargarPersonaje();
-            personaje.setEstres(personaje.getEstres()+estresClases);
-            if(personaje.getEstres() >= 100)
-            {
+            personaje.setEstres(personaje.getEstres() + estresClases);
+            if (personaje.getEstres() >= 100) {
                 personaje.setEstres(100);
             }
             repo.Modificar(personaje);
@@ -595,7 +603,6 @@ public class SceneController {
     }
     //endregion
     //endregion
-
 
 
     //region examenes
@@ -634,7 +641,7 @@ public class SceneController {
             tpFinalMaleniarespuesta3.setText(copiaArregloRespuesta3ExamenMelina[iteradorExamenMelina]);
             tpFinalMaleniarespuesta4.setText(copiaArregloRespuesta4ExamenMelina[iteradorExamenMelina]);
             String respuesta = respuestaUsuarioTPFinalMelina.getText();
-            if (respuesta.equals(respuestasTPFinalMelina[iteradorExamenMelina-1])) {
+            if (respuesta.equals(respuestasTPFinalMelina[iteradorExamenMelina - 1])) {
                 notaTPMelina += 1;
             }
             iteradorExamenMelina++;
@@ -642,7 +649,7 @@ public class SceneController {
             ActualizarTextRespuestas();
         } else {
             String respuesta = respuestaUsuarioTPFinalMelina.getText();
-            if (respuesta.equals(respuestasTPFinalMelina[iteradorExamenMelina-1])) {
+            if (respuesta.equals(respuestasTPFinalMelina[iteradorExamenMelina - 1])) {
                 notaTPMelina += 1;
             }
             preguntaTPFinalMalenia.setText("Bueno terminaron el TP para la proxima semana se los corrijo");
@@ -656,11 +663,10 @@ public class SceneController {
             pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
 
             Personaje personaje = pj.cargarPersonaje();
-            ArrayList<Integer>Notas = personaje.getListaNotas();
-            Notas.set(0,notaTPMelina);
-            personaje.setEstres(personaje.getEstres()+estresParciales);
-            if(personaje.getEstres() >= 100)
-            {
+            ArrayList<Integer> Notas = personaje.getListaNotas();
+            Notas.set(0, notaTPMelina);
+            personaje.setEstres(personaje.getEstres() + estresParciales);
+            if (personaje.getEstres() >= 100) {
                 personaje.setEstres(100);
             }
             repo.Modificar(personaje);
@@ -674,8 +680,7 @@ public class SceneController {
         comenzarTpFinalMalenia.setDisable(true);
     }
 
-    private void ActualizarTextRespuestas()
-    {
+    private void ActualizarTextRespuestas() {
         respuestaUsuarioTPFinalMelina.setText(" ");
     }
 
@@ -721,7 +726,7 @@ public class SceneController {
             respuesta4BenoffiTPFinal.setText(copiaArregloRespuesta4ExamenBuffini[iteradorExamenBuffini]);
             String respuesta = respuestaUsuarioTPFinalBuffini.getText();
             ActualizarTextRespuestasBuffini();
-            if (respuesta.equals(respuestasTPFinalBuffini[iteradorExamenBuffini-1])) {
+            if (respuesta.equals(respuestasTPFinalBuffini[iteradorExamenBuffini - 1])) {
                 notaTPBuffini += 1;
             }
             iteradorExamenBuffini++;
@@ -729,7 +734,7 @@ public class SceneController {
             ActualizarTextRespuestasBuffini();
         } else {
             String respuesta = respuestaUsuarioTPFinalBuffini.getText();
-            if (respuesta.equals(respuestasTPFinalBuffini[iteradorExamenBuffini-1])) {
+            if (respuesta.equals(respuestasTPFinalBuffini[iteradorExamenBuffini - 1])) {
                 notaTPBuffini += 1;
             }
             preguntaBenoffiTPFinal.setText("Bueno terminaron el TP para la proxima semana se los corrijo");
@@ -743,17 +748,16 @@ public class SceneController {
             pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
 
             Personaje personaje = pj.cargarPersonaje();
-            ArrayList<Integer>Notas = personaje.getListaNotas();
-            Notas.set(1,notaTPBuffini);
-            personaje.setEstres(personaje.getEstres()+estresParciales);
-            if(personaje.getEstres() >= 100)
-            {
+            ArrayList<Integer> Notas = personaje.getListaNotas();
+            Notas.set(1, notaTPBuffini);
+            personaje.setEstres(personaje.getEstres() + estresParciales);
+            if (personaje.getEstres() >= 100) {
                 personaje.setEstres(100);
             }
             repo.Modificar(personaje);
             pj.cambioEstado(personaje.getEstres());
         }
-        }
+    }
 
 
     private void actualizarBotonesTpFinalBuffini() {
@@ -762,8 +766,7 @@ public class SceneController {
         comenzarTpFinalBuffini.setDisable(true);
     }
 
-    private void ActualizarTextRespuestasBuffini()
-    {
+    private void ActualizarTextRespuestasBuffini() {
         respuestaUsuarioTPFinalBuffini.setText(" ");
     }
 
@@ -869,17 +872,19 @@ public class SceneController {
     public void CambiarDias(ActionEvent event) {
         switchToPasilloPrincipal(event);
 
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
         PersonajeRepo personajeRepo = new PersonajeRepo();
-        ArrayList<Personaje> lista = personajeRepo.Listar();
-        Personaje personaje = lista.get(0);
-        ArrayList<GameData> ListaDatos = personaje.getGuardadoPartida();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        List<GameData> ListaDatos = gestionPersonaje.listaGameData();
         GameData gameData = new GameData();
         personaje.setDinero(personaje.getDinero() + 50);
         gameData.setFecha(String.valueOf(ListaDatos.size() + 1));
         gameData.setAsistenciaClase(GameData.AsistenciaClase.NO_PRESENTE);
         gameData.setEventoCompletado(GameData.eventoCompletado.NO_COMPLETADO);
+        gestionPersonaje.cambioEstado(personaje.getEstres());
         ListaDatos.add(gameData);
         personajeRepo.Modificar(personaje);
+        ContadorIntentosEventos = 0;
 
         UpdateDia();
     }
@@ -903,7 +908,151 @@ public class SceneController {
         mostrarDinero.setText(String.valueOf(personaje.getDinero()));
     }
 
+    //region eventos
 
+    ///EVENTO PING PONG
+    public void EventoPingPong(ActionEvent event) {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (ultimodia == 3 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoPingPong(event);
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            repo.Modificar(personaje);
+        } else {
+            switchToBuffetGeneral(event);
+        }
+    }
+
+    private void UpdateBotonPingPong() {
+        juegarPingPong.setVisible(false);
+    }
+
+    ///EVENTO CARTAS
+    public void EventoCartas(ActionEvent event) {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (ultimodia == 5 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoCartas(event);
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            repo.Modificar(personaje);
+        } else {
+            switchToPatioFacultad(event);
+        }
+    }
+
+    private void UpdateBotonCartas()
+    {
+        jugarCartas.setVisible(false);
+    }
+
+    //EVENTO METEGOL
+    public void EventoMetegol(ActionEvent event) {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (ultimodia == 11 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoMeteGol(event);
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            repo.Modificar(personaje);
+        } else {
+            switchToBanioGeneral(event);
+        }
+    }
+
+    private void UpdateMetegol()
+    {
+        jugarMetegol.setVisible(false);
+    }
+
+    public void RestarEstresEventos()
+    {
+        PersonajeRepo personajeRepo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        if(ContadorIntentosEventos < MaximoIntentosEventos)
+        {
+            personaje.setEstres(personaje.getEstres()-15);
+            if (personaje.getEstres() < 0) {
+                personaje.setEstres(0);
+            }
+            personajeRepo.Modificar(personaje);
+            gestionPersonaje.cambioEstado(personaje.getEstres());
+            ContadorIntentosEventos++;
+        }
+    }
+
+    public void PatioJuegos()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        int ultimoDia = gestionPersonaje.ultimoDia();
+        mostrarCorduraPatio.setText(personaje.getEstadoEstres().name());
+
+         if(Integer.parseInt(Listadata.get(ultimoDia-1).getFecha()) > 2)
+         {
+             if(Listadata.get(2).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO))
+             {
+                 juegarPingPong.setVisible(true);
+             }
+             else
+             {
+                 UpdateBotonPingPong();
+             }
+         }
+         else
+         {
+             UpdateBotonPingPong();
+         }
+
+         if(Integer.parseInt(Listadata.get(ultimoDia-1).getFecha()) > 4)
+         {
+             if(Listadata.get(4).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO))
+             {
+                 jugarCartas.setVisible(true);
+             }
+             else
+             {
+                 UpdateBotonCartas();
+             }
+         }
+         else
+         {
+             UpdateBotonCartas();
+         }
+
+         if(Integer.parseInt(Listadata.get(ultimoDia-1).getFecha()) > 10)
+         {
+             if(Listadata.get(10).getEventoCompletado().equals(GameData.eventoCompletado.COMPLETADO))
+             {
+                 jugarMetegol.setVisible(true);
+             }
+             else
+             {
+                 UpdateMetegol();
+             }
+         }
+         else
+         {
+             UpdateMetegol();
+         }
+    }
+
+    //endregion
 
 
     //region bebidasBuffet

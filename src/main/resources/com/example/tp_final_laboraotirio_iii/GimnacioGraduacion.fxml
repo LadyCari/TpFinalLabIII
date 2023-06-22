@@ -18,6 +18,6 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <RadioButton layoutX="1236.0" layoutY="309.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
+      <RadioButton layoutX="1236.0" layoutY="309.0" mnemonicParsing="false" onAction="#switchToPatioFacultad" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
    </children>
 </Pane>
