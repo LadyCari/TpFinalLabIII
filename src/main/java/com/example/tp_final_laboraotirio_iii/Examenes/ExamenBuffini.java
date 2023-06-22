@@ -11,7 +11,7 @@ public class ExamenBuffini {
     //endregion
 
     //region arreglo respuestas
-    String[] respuestasTPFinal = {" 2"," 4"," 4"," 4"," 2"," 2"," 3"," 1"," 3"," 4"};
+    String[] respuestasTPFinal = {" 2"," 4"," 2"," 4"," 2"," 2"," 3"," 1"," 3"," 4"};
     //endregion
 
     //region G y S strings

@@ -12,7 +12,7 @@ public class ExamenMalenia {
     //endregion
 
     //region arreglo respuestas
-    String[] respuestasTPFinal = {" 3"," 2"," 3"," 1"," 2"," 3"," 1"," 2"," 1"," 2"};
+    String[] respuestasTPFinal = {" 3"," 2"," 3"," 2"," 2"," 3"," 1"," 2"," 1"," 2"};
     //endregion
 
     //region G y S strings

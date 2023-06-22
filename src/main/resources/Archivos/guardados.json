@@ -1,86 +1,14 @@
 [ {
-<<<<<<< HEAD
-  "buffet" : "Cafe_con_Leche",
-  "dinero" : 850,
-  "id" : 1,
-  "listaNotas" : [ 0, 0, 0, 0 ],
-  "estres" : 100,
-=======
-  "buffet" : "Te",
-  "dinero" : 400,
+  "buffet" : "Capuccino",
+  "dinero" : 100,
   "id" : 1,
   "estres" : 0,
   "listaNotas" : [ 0, 0, 0, 0 ],
-  "nombre" : "caro",
->>>>>>> e598e7086a4f6913752be1c893d62f8dc1bdf0a3
+  "nombre" : "Caro",
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "2",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "3",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "4",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "5",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "6",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "7",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-<<<<<<< HEAD
-  }, {
-    "fecha" : "8",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "9",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "10",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "11",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "12",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "13",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "14",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "15",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "16",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-=======
->>>>>>> e598e7086a4f6913752be1c893d62f8dc1bdf0a3
   } ],
-  "estadoEstres" : "ESTRESADO",
-  "nombre" : "Caro"
+  "estadoEstres" : "RELAJADO"
 } ]
