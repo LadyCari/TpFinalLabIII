@@ -4,7 +4,6 @@ import com.example.tp_final_laboraotirio_iii.Modelos.GameData;
 import com.example.tp_final_laboraotirio_iii.Modelos.Personaje;
 import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GestionPersonaje {
@@ -52,7 +51,7 @@ public class GestionPersonaje {
     public void cambioEstado (int stress){
         if (stress <=45){
             personaje.setEstadoEstres(Personaje.estadoEstres.RELAJADO);
-        } else if (stress <= 70) {
+        } else if (stress <= 75) {
             personaje.setEstadoEstres(Personaje.estadoEstres.NERVIOSO);
         }else {
             personaje.setEstadoEstres(Personaje.estadoEstres.ESTRESADO);

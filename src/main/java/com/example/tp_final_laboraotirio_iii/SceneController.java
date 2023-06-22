@@ -36,6 +36,7 @@ public class SceneController {
     private static final int MaximoIntentosEventos = 2;
     private int ContadorIntentosEventos = 0, notaTPBuffini, notaChulde, notaTPBatizzi, iteradorExamenChulde = 0,iteradorExamenBatizzi = 0, iteradorExamenBuffini = 0, iteradorExamenMelina, indiceMensajesTeoria = 0, estresClases = 25, estresParciales = 35, notaTPMelina;
     private String[] arregloCopiaTeoria;
+
     //region FXML
     @FXML
     private RadioButton salida,jugarMetegol, juegarPingPong, jugarCartas;
@@ -44,7 +45,7 @@ public class SceneController {
     @FXML
     private TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalChulde, respuestaUsuarioTPFinalBuffini, respuestaUsuarioTPFinalBtzz;
     @FXML
-    private Button noCupongAyudemi,siCupongAyudemi,NoDarPlantaEventoRespuestas,siDarPlataEventoRespuestas,rechazoEventoBuffini,aceptarEventoBuffini,siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, comenzarTpFinalChulde, tpFinalChuldeTerminarTp, elegirRespuestaTpFinalChulde, elegirRespuestaTpFinalBatizzi, tpFinalBatizziTerminarTp, comenzarTpFinalBatizzi, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
+    private Button noCupongAyudemi,siCupongAyudemi,NoDarPlantaEventoRespuestas,siDarPlataEventoRespuestas,rechazoEventoBuffini,aceptarEventoBuffini,siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, comenzarTpFinalChulde, tpFinalChuldeTerminarTp, elegirRespuestaTpFinalChulde, elegirRespuestaTpFinalBatizzi, tpFinalBatizziTerminarTp, comenzarTpFinalBatizzi, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
     //endregion
     //endregion
 
@@ -52,18 +53,11 @@ public class SceneController {
     public void setStage(Stage stage) {
         this.stage = stage;
     }
-
-    public String[] getMensajes() {
-        return arregloCopiaTeoria;
-    }
-
-    public void setMensajes(String[] mensajes) {
-        arregloCopiaTeoria = mensajes;
-    }
     //endregion
 
     //region scenarios
     //region menu principal
+
     public void switchToMenuPrincipal(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/MenuPrincipal.fxml")));
@@ -551,8 +545,6 @@ public class SceneController {
     //region aula 1
     public void switchToaula1(ActionEvent event) {
         GestionPersonaje pj = new GestionPersonaje();
-        PersonajeRepo repo = new PersonajeRepo();
-        Clases clase = new Clases();
 
         GameData.AsistenciaClase asistencia = GameData.AsistenciaClase.NO_PRESENTE;
 
@@ -585,9 +577,8 @@ public class SceneController {
                     switchToaulaGeneralVacia(event);
                 }
             }
-            case 9, 10, 11, 12, 17 -> {
-                switchToaulaGeneralVacia(event);
-            }
+            case 9, 10, 11, 12, 17 -> switchToaulaGeneralVacia(event);
+
             case 13, 14, 15 -> {
                 if (asistencia.equals(pj.getAsistenciaDia())) {
                     switchToClaseNormalGarielChulde(event);
@@ -609,15 +600,11 @@ public class SceneController {
     //region aula 2
     public void switchToaula2(ActionEvent event) {
         GestionPersonaje pj = new GestionPersonaje();
-        PersonajeRepo repo = new PersonajeRepo();
-        Clases clase = new Clases();
 
         GameData.AsistenciaClase asistencia = GameData.AsistenciaClase.NO_PRESENTE;
 
         switch (pj.ultimoDia()) {
-            case 1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17 -> {
-                switchToaulaAgustinVacia(event);
-            }
+            case 1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17 -> switchToaulaAgustinVacia(event);
             case 9, 10, 11 -> {
                 if (asistencia.equals(pj.getAsistenciaDia())) {
                     switchToClaseNormalAdisgutinBatizi(event);
@@ -1678,8 +1665,8 @@ public class SceneController {
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
         int total = 0;
-        double promedio = 0;
-        int i = 0;
+        double promedio;
+        int i;
 
 
         for(i = 0;i<personaje.getListaNotas().size();i++)

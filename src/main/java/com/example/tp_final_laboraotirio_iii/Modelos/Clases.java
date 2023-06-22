@@ -2,13 +2,7 @@ package com.example.tp_final_laboraotirio_iii.Modelos;
 
 import com.example.tp_final_laboraotirio_iii.Gestion.GestionPersonaje;
 import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Clases {
@@ -65,7 +59,7 @@ public class Clases {
             ///endregion
 
             ///region Dialogos Agustin
-            String[] dialogoAgustin={"Hola soy Adisgustin Batizi, su profe del tercer cuatrimestre. Me gusta el anime, los patitos de ule, regalar cupones de Ayudemi, tocar el piano y no me gusta que me interrumpa gente en mis clases con brazos rotos,lentes,pelados, etc. Se comenta por los pasillos que soy el mejor profe de la NTU",
+            String[] dialogoAgustin={"Hola soy Adisgustin Batizi, su profe del tercer cuatrimestre. Me gusta el anime, los patitos de ule, regalar cupones de Ayudemi, tocar el piano. Se comenta por los pasillos que soy el mejor profe de la NTU",
                     "Primero comencemos con Tabla Hash, para que mas adelante puedas entender el Hashcode. Esta es una estructura de datos, la cual agrupa claves-valor.Cabe destacar que no poseen un orden y esta compuesta por buckets o slots","Los objetos poseen un hashcode, el cual java transforma en entero para usarlo como entero (utilizado como indice en el bucket). Esto lo hace java con el metodo de dispersion",
                     "Metodo hashcode: Quiza fue chino lo que te dijimos pero ahora cobra sentido. El metodo hashcode permite que un objeto posea un codigo hash.Por defecto si no lo implementamos, Java usa como Hashcode la direccion de memoria algo malo ya que puede generar colisiones (guardar en un mismo bucket diferentes objetos)",
                     "Cuando implementamos el metodo Hashcode debemos elegir los atributos que hagan unico a nuestro objeto ya sea, por ejemplo un Dni, un ID etc.El metodo se creo para ser implementado junto al Equals, un metodo que determina si dos objetos son iguales",
@@ -94,6 +88,8 @@ public class Clases {
             String[] dialogoChaldu3={"Hoy es nuestra ultima clase y veremos Serializacion y Json","Serializacion es la capacidad de transformar un objeto en un flujo de datos para poder ser leido por un programa o ser enviado por red.JSON es un formato de intercambio de datos ligero y de fácil lectura (tanto para los humanos como para las máquinas) que se utiliza para enviar y recibir datos entre distintos contextos (aplicaciones, sistemas, etc)",
                     "Para manejar Json tenemos dos librerias: JACKSON Y GSON\n"+"JACKSON: Para serializar con Jackson se debe utilizar un objeto de tipo ObjectMapper que permite mapear\n"+"GSON:Para serializar con Gson se utilizan las clases BufferedWriter y BufferedReader. "};
             ///endregion
+
+            //region swich dia dialogos
 
             switch (gestionPersonaje.ultimoDia()) {
                 case 1 -> {
@@ -143,7 +139,10 @@ public class Clases {
                     return dialogoChaldu3;
                 }
             }
+            //endregion
+
         }
+
         return auxiliar;
     }
 }
