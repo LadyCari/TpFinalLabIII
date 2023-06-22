@@ -1,31 +1,30 @@
 [ {
-  "buffet" : "Cortado",
-  "dinero" : 300,
+  "buffet" : "Capuccino",
+  "dinero" : 400,
   "id" : 1,
-  "estadoEstres" : "ESTRESADO",
-  "estres" : 100,
-  "listaNotas" : [ 0, 0, 0, 0 ],
-  "nombre" : "Caro",
+  "estres" : 25,
+  "estadoEstres" : "RELAJADO",
+  "listaNotas" : [ 3, 5, 5, 10],
   "guardadoPartida" : [ {
     "fecha" : "1",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "2",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "3",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "COMPLETADO"
   }, {
     "fecha" : "4",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "5",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
+    "eventoCompletado" : "COMPLETADO"
   }, {
     "fecha" : "6",
     "asistenciaClase" : "NO_PRESENTE",
@@ -33,7 +32,7 @@
   }, {
     "fecha" : "7",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
+    "eventoCompletado" : "COMPLETADO"
   }, {
     "fecha" : "8",
     "asistenciaClase" : "NO_PRESENTE",
@@ -49,7 +48,7 @@
   }, {
     "fecha" : "11",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
+    "eventoCompletado" : "COMPLETADO"
   }, {
     "fecha" : "12",
     "asistenciaClase" : "NO_PRESENTE",
@@ -57,7 +56,7 @@
   }, {
     "fecha" : "13",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
+    "eventoCompletado" : "COMPLETADO"
   }, {
     "fecha" : "14",
     "asistenciaClase" : "NO_PRESENTE",
@@ -66,5 +65,14 @@
     "fecha" : "15",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "COMPLETADO"
-  } ]
+  }, {
+    "fecha" : "16",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "17",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  } ],
+  "nombre" : "rgrg"
 } ]
