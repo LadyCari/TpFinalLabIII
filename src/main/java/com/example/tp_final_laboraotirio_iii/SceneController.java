@@ -448,7 +448,7 @@ public class SceneController {
 
     public void switchToEventoRespuestas2(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/segundaScenaEventoRespuestas_1.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/segundaScenaEventoRespuestas (1).fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -458,46 +458,12 @@ public class SceneController {
         }
     }
 
-    public void switchToEventoBatiziAyudemi(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("com/example/tp_final_laboraotirio_iii/eventoBatiziAyudemi.fxml"))));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
+
+
 
     //endregion
 
-
-    //region final
-    public void switchToGoodEnding(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/FinalGoodEnding.fxml")));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void switchToBadEnding(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/FinalJuegoBadEnding.fxml")));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    //endregion
     private void switchScene(Parent root) {
         if (stage != null) {
             Scene scene = new Scene(root);
