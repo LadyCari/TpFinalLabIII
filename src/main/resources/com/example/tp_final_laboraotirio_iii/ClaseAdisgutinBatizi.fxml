@@ -26,12 +26,12 @@
             <Image url="@Imagenes/pantallaClaseAgustin.png" />
          </image>
       </ImageView>
-      <Label fx:id="textAgustinClaseNormal" alignment="CENTER" layoutX="599.0" layoutY="96.0" prefHeight="401.0" prefWidth="527.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="textoProfesor" alignment="CENTER" layoutX="599.0" layoutY="96.0" prefHeight="401.0" prefWidth="527.0" text="Buenas Buenas, como les va? hoy veremos..." textAlignment="CENTER" wrapText="true">
          <font>
-            <Font size="36.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="siguientetextoclase" layoutX="574.0" layoutY="637.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Contunuar explicacion">
+      <Button fx:id="siguientetextoclase" layoutX="574.0" layoutY="637.0" mnemonicParsing="false" onAction="#submit" prefHeight="60.0" prefWidth="300.0" text="Contunuar explicacion">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
@@ -41,7 +41,7 @@
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="textoAnteriorClase" layoutX="234.0" layoutY="637.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Explicacion anterior">
+      <Button fx:id="textoAnteriorClase" layoutX="234.0" layoutY="637.0" mnemonicParsing="false" onAction="#textoAnteriorDialogoProfesor" prefHeight="60.0" prefWidth="300.0" text="Explicacion anterior">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>

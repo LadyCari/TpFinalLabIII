@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/ClaseAdisgutinBatizi.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/plantillaInterfazUsuario.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="622.0" layoutY="54.0" prefHeight="267.0" prefWidth="611.0" text="Me apagarias la pantalla por favor? sono el timbre y se fueron y me dejaron prendido. Tengo un cupon de mas de Ayudemi si me das una mano" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="siCupongAyudemi" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="1002.0" text="Obvio profe ahi busco el control">
+         <font>
+            <Font name="Rockwell Extra Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="noCupongAyudemi" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="1002.0" text="Disculpa se me va el bondi">
+         <font>
+            <Font name="Rockwell Extra Bold" size="21.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

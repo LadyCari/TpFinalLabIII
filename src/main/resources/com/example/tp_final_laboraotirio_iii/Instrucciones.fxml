@@ -17,60 +17,55 @@
             <Image url="@Imagenes/Intrucciones.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="75.0" layoutY="149.0" text="Todos los dias tendras una clase teorica en un aula" textFill="WHITE">
+      <Label layoutX="37.0" layoutY="118.0" prefHeight="67.0" prefWidth="1207.0" text="Desde el dia 1 hasta el 16 tendras una clase en el aula 1 o 2 y con eso te aumentara el stress +25" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
-            <Font name="Rockwell Extra Bold" size="30.0" />
+            <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="75.0" layoutY="223.0" text="Cada 3 clases teoricas tendras un trabajo practico evaluativo" textFill="WHITE">
+      <Label layoutX="37.0" layoutY="184.0" prefHeight="114.0" prefWidth="1207.0" text="Cada 3 clases teoricas tendras un trabajo practico evaluativo de los temas que consta de 10 pregungas y aumentara tu stress +35, trata de no estar estresado o no lo pasaras muy bien" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
-            <Font name="Rockwell Extra Bold" size="30.0" />
+            <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="75.0" layoutY="331.0" prefHeight="35.0" prefWidth="1164.0" text="Te podras desplazar por el campus de My Java Academy" textFill="WHITE">
+      <Label layoutX="37.0" layoutY="364.0" prefHeight="88.0" prefWidth="1207.0" text="Te podras desplazar por el campus de NTU, por medio de los puntos en el mapa como -&gt;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
-            <Font name="Rockwell Extra Bold" size="30.0" />
+            <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="447.0" prefHeight="35.0" prefWidth="1095.0" text="Cuando rindas el trabajo practico cambiaras de profesor" textFill="WHITE">
+      <Label layoutX="37.0" layoutY="293.0" prefHeight="88.0" prefWidth="1207.0" text="Cuando rindas el trabajo practico cambiaras de profesor esta rutina sera 4 veces" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
-            <Font name="Rockwell Extra Bold" size="30.0" />
+            <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="544.0" prefHeight="35.0" prefWidth="1131.0" text="Al final de la cursada se te dara una nota final" textFill="WHITE">
+      <Label layoutX="37.0" layoutY="585.0" prefHeight="75.0" prefWidth="1207.0" text="Al final de la cursada se te dara una nota final si rindes bien puede que tengas una sorpresa..." textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
-            <Font name="Rockwell Extra Bold" size="30.0" />
+            <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
       </Label>
-      <RadioButton layoutX="888.0" layoutY="383.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="28.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" text="RadioButton" />
+      <RadioButton layoutX="778.0" layoutY="417.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="28.0" scaleX="2.0" scaleY="2.0" scaleZ="2.0" text="RadioButton" />
       <Button fx:id="deInstruccionesAMenuPrincipal" layoutX="36.0" layoutY="649.0" mnemonicParsing="false" onAction="#switchToMenuPrincipal" text="Atras">
          <font>
             <Font name="Rockwell Extra Bold" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="36.0" layoutY="46.0" text="Instrucciones:" textFill="WHITE">
+      <Label layoutX="426.0" layoutY="29.0" prefHeight="59.0" prefWidth="428.0" text="Instrucciones:" textFill="WHITE">
          <font>
             <Font name="Rockwell Extra Bold" size="48.0" />
          </font>
       </Label>
-      <Label layoutX="75.0" layoutY="260.0" text="de los temas que consta de 10 pregungas" textFill="WHITE">
+      <Label layoutX="75.0" layoutY="260.0" textFill="WHITE">
          <font>
             <Font name="Rockwell Extra Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="75.0" layoutY="373.0" prefHeight="35.0" prefWidth="1164.0" text="por medio de los puntos en el mapa como -&gt;" textFill="WHITE">
+      <Label layoutX="37.0" layoutY="439.0" prefHeight="88.0" prefWidth="1207.0" text="En el campus tendras eventos escondidos en algunos dias si los cumples tendras recompensas!!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
-            <Font name="Rockwell Extra Bold" size="30.0" />
+            <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="480.0" prefHeight="35.0" prefWidth="1095.0" text="esta rutina sera 4 veces" textFill="WHITE">
+      <Label layoutX="38.0" layoutY="510.0" prefHeight="88.0" prefWidth="1207.0" text="Para bajar estres podras comprar bebidas y jugar juegos que desbloquees" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
-            <Font name="Rockwell Extra Bold" size="30.0" />
-         </font>
-      </Label>
-      <Label layoutX="70.0" layoutY="575.0" prefHeight="35.0" prefWidth="1131.0" text="si rindes bien puede que tengas una sorpresa..." textFill="WHITE">
-         <font>
-            <Font name="Rockwell Extra Bold" size="30.0" />
+            <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
       </Label>
    </children>

@@ -27,9 +27,9 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <Label fx:id="textPreguntasChalduTpFinal" alignment="CENTER" layoutX="42.0" layoutY="57.0" prefHeight="120.0" prefWidth="615.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Label fx:id="textPreguntasChalduTpFinal" alignment="CENTER" layoutX="42.0" layoutY="57.0" prefHeight="120.0" prefWidth="615.0" text="Espero que repasaras este examen va a estar dificil" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
-            <Font size="21.0" />
+            <Font name="Rockwell Extra Bold" size="21.0" />
          </font></Label>
       <Button fx:id="elegirRespuestaTpFinalChulde" layoutX="698.0" layoutY="645.0" mnemonicParsing="false" onAction="#MenuExamenChulde" prefHeight="40.0" prefWidth="200.0" text="Elegir numero">
          <font>
@@ -41,21 +41,21 @@
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="respuestasTpFinalChandlu1" layoutX="42.0" layoutY="177.0" prefHeight="60.0" prefWidth="615.0" textFill="WHITE">
+      <Label fx:id="respuestasTpFinalChandlu1" alignment="CENTER" layoutX="42.0" layoutY="177.0" prefHeight="60.0" prefWidth="615.0" text="1-Respuesta" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Rockwell Extra Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="respuestasTpFinalChandlu2" layoutX="42.0" layoutY="237.0" prefHeight="60.0" prefWidth="615.0" textFill="WHITE">
+      <Label fx:id="respuestasTpFinalChandlu2" alignment="CENTER" layoutX="42.0" layoutY="237.0" prefHeight="60.0" prefWidth="615.0" text="2-Respuesta" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Rockwell Extra Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="respuestasTpFinalChandlu3" layoutX="42.0" layoutY="297.0" prefHeight="60.0" prefWidth="615.0" textFill="WHITE">
+      <Label fx:id="respuestasTpFinalChandlu3" alignment="CENTER" layoutX="42.0" layoutY="297.0" prefHeight="60.0" prefWidth="615.0" text="3-Respuesta" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Rockwell Extra Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="respuestasTpFinalChandlu4" layoutX="46.0" layoutY="360.0" prefHeight="60.0" prefWidth="607.0" textFill="WHITE">
+      <Label fx:id="respuestasTpFinalChandlu4" alignment="CENTER" layoutX="46.0" layoutY="360.0" prefHeight="60.0" prefWidth="607.0" text="4-Respuesta" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Rockwell Extra Bold" size="16.0" />
          </font></Label>
       <TextField fx:id="respuestaUsuarioTPFinalChulde" alignment="CENTER" layoutX="225.0" layoutY="632.0" prefHeight="66.0" prefWidth="439.0" promptText="You Tips">
          <font>
