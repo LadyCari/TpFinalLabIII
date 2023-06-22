@@ -1,24 +1,26 @@
 [ {
-  "buffet" : "Capuccino",
+  "buffet" : "Cortado",
   "dinero" : 300,
   "id" : 1,
+  "estadoEstres" : "ESTRESADO",
+  "estres" : 100,
   "listaNotas" : [ 0, 0, 0, 0 ],
-  "estres" : 0,
+  "nombre" : "Caro",
   "guardadoPartida" : [ {
     "fecha" : "1",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "2",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "3",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "4",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "5",
@@ -64,7 +66,5 @@
     "fecha" : "15",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "COMPLETADO"
-  } ],
-  "nombre" : "jygjjyt",
-  "estadoEstres" : "RELAJADO"
+  } ]
 } ]

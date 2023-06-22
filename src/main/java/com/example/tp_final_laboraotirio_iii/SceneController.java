@@ -424,7 +424,7 @@ public class SceneController {
 
     public void switchToEventoBatiziAyudemi(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("com/example/tp_final_laboraotirio_iii/eventoBatiziAyudemi.fxml"))));
+            Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/eventoBatiziAyudemi.fxml"))));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
