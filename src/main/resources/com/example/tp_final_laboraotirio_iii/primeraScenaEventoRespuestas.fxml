@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" onMouseEntered="#ActualizarDineroBanio">
+         <image>
+            <Image url="@Imagenes/BañoGeneral.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="164.0" layoutX="50.0" layoutY="14.0">
+         <image>
+            <Image url="@Imagenes/rectangulo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="627.0" fitWidth="323.0" layoutX="704.0">
+         <image>
+            <Image url="@Imagenes/marceloContrabando.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="82.0" fitWidth="82.0" layoutX="9.0" layoutY="33.0">
+         <image>
+            <Image url="@Imagenes/1200px-Dollar_Sign.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mostrarDineroEnBañoEvento" fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/plantillaInterfazUsuario.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="mostrarDineroEvento" alignment="CENTER" layoutX="82.0" layoutY="36.0" prefHeight="74.0" prefWidth="122.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="98.0" prefHeight="242.0" prefWidth="398.0" text="Si me das $500 te paso las respuestas al tp de Chulde" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="siDarPlataEventoRespuestas" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" onAction="#AceptarRespuestas" prefHeight="40.0" prefWidth="1002.0" text="Toma mis $500 *llora*">
+         <font>
+            <Font name="Rockwell Extra Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="NoDarPlantaEventoRespuestas" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" onAction="#RechazarRespuestas" prefHeight="40.0" prefWidth="1002.0" text="Anda pasha bobo">
+         <font>
+            <Font name="Rockwell Extra Bold" size="21.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

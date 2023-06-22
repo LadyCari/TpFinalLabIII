@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/juegosTemporal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="614.0" fitWidth="678.0" layoutX="602.0" layoutY="14.0">
+         <image>
+            <Image url="@Imagenes/GuceldaBuffini.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/plantillaInterfazUsuario.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="385.0" layoutY="55.0" prefHeight="266.0" prefWidth="395.0" text="Aca a la vuelta esta la raid de un pokemon legendario me das una mano?" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Rockwell Extra Bold" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="aceptarEventoBuffini" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" onAction="#AceptarBenoffi" prefHeight="40.0" prefWidth="1002.0" text="Que estas esperando!! vamos o perderemos cupo">
+         <font>
+            <Font name="Rockwell Extra Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="rechazoEventoBuffini" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" onAction="#RechazarBenoffi" prefHeight="40.0" prefWidth="1002.0" text="Disculpame no tengo eso instalado">
+         <font>
+            <Font name="Rockwell Extra Bold" size="21.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

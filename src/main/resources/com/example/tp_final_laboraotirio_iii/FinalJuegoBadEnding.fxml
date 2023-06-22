@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" onMouseEntered="#UpdateParciales2">
+         <image>
+            <Image url="@Imagenes/FondoGraduacion.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="348.0" fitWidth="371.0" layoutX="464.0" layoutY="127.0">
+         <image>
+            <Image url="@Imagenes/badEndingEsoNoEsFino.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="470.0" fitWidth="369.0" layoutX="42.0" layoutY="38.0">
+         <image>
+            <Image url="@Imagenes/diplomaNotas.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/plantillaInterfazUsuario.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="104.0" layoutY="127.0" text="Notas TPs:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="194.0" text="Nota 1:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="250.0" text="Nota 2:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="297.0" text="Nota 3:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="344.0" text="Nota 4:">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="finalJuegoNota1BE" layoutX="266.0" layoutY="194.0" prefHeight="47.0" prefWidth="104.0">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="finalJuegoNota2BE" layoutX="266.0" layoutY="254.0" prefHeight="47.0" prefWidth="104.0">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="finalJuegoNota3BE" layoutX="266.0" layoutY="297.0" prefHeight="47.0" prefWidth="104.0">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="finalJuegoNota4BE" layoutX="266.0" layoutY="344.0" prefHeight="47.0" prefWidth="104.0">
+         <font>
+            <Font name="Rockwell Extra Bold" size="39.0" />
+         </font>
+      </Label>
+      <Button fx:id="salirBadEnding" layoutX="505.0" layoutY="630.0" mnemonicParsing="false" onAction="#switchToSalir" prefHeight="64.0" prefWidth="289.0" text="Final de la carrera">
+         <font>
+            <Font name="Rockwell Extra Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

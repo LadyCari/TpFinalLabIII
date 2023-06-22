@@ -33,7 +33,7 @@
       </ImageView>
       <Label fx:id="textoProfesor" alignment="CENTER" layoutX="14.0" layoutY="24.0" prefHeight="466.0" prefWidth="673.0" text="Buenas chicos" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font size="48.0" />
+            <Font size="30.0" />
          </font>
       </Label>
       <Button fx:id="textoAnteriorClase" layoutX="254.0" layoutY="635.0" mnemonicParsing="false" onAction="#textoAnteriorDialogoProfesor" prefHeight="60.0" prefWidth="300.0" text="Explicacion anterior">
