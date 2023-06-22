@@ -93,9 +93,9 @@
             <Font name="Rockwell Extra Bold" size="41.0" />
          </font>
       </Label>
-      <ImageView fitHeight="107.0" fitWidth="93.0" layoutX="31.0" layoutY="163.0">
+      <ImageView fitHeight="113.0" fitWidth="133.0" layoutX="11.0" layoutY="142.0">
          <image>
-            <Image url="@../../../../../../../zyro-image%20(1).png" />
+            <Image url="@Imagenes/cordura.png" />
          </image>
       </ImageView>
    </children>
