@@ -2,6 +2,7 @@ package com.example.tp_final_laboraotirio_iii;
 
 import com.example.tp_final_laboraotirio_iii.Examenes.ExamenBatizi;
 import com.example.tp_final_laboraotirio_iii.Examenes.ExamenBuffini;
+import com.example.tp_final_laboraotirio_iii.Examenes.ExamenChulde;
 import com.example.tp_final_laboraotirio_iii.Examenes.ExamenMalenia;
 import com.example.tp_final_laboraotirio_iii.Gestion.GestionPersonaje;
 import com.example.tp_final_laboraotirio_iii.Modelos.Clases;
@@ -33,29 +34,17 @@ public class SceneController {
     private Parent root;
 
     private static final int MaximoIntentosEventos = 2;
-
-    private int ContadorIntentosEventos = 0;
-    private int indiceMensajesTeoria = 0;
-    private int iteradorExamenMelina;
-
-    private int estresClases = 25;
-
-    private int estresParciales = 35;
-
-    private int notaTPMelina;
-    int notaTPBuffini;
-
-    private int iteradorExamenBuffini = 0;
+    private int ContadorIntentosEventos = 0, notaTPBuffini, notaChulde, notaTPBatizzi, iteradorExamenChulde = 0,iteradorExamenBatizzi = 0, iteradorExamenBuffini = 0, iteradorExamenMelina, indiceMensajesTeoria = 0, estresClases = 25, estresParciales = 35, notaTPMelina;
     private String[] arregloCopiaTeoria;
     //region FXML
     @FXML
     private RadioButton jugarMetegol, juegarPingPong, jugarCartas;
     @FXML
-    private Label mostrarCorduraPatio, registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
+    private Label mostrarDineroEvento,mostrarCorduraPatio, textPreguntasChalduTpFinal, respuestasTpFinalChandlu1, respuestasTpFinalChandlu2, respuestasTpFinalChandlu3, respuestasTpFinalChandlu4, preguntaTPFinalBatizi, preguntaTPFinalBatizi1, preguntaTPFinalBatizi11, preguntaTPFinalBatizi12, preguntaTPFinalBatizi121, registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
     @FXML
-    private TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalBuffini;
+    private TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalChulde, respuestaUsuarioTPFinalBuffini, respuestaUsuarioTPFinalBtzz;
     @FXML
-    private Button siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
+    private Button NoDarPlantaEventoRespuestas,siDarPlataEventoRespuestas,rechazoEventoBuffini,aceptarEventoBuffini,siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, comenzarTpFinalChulde, tpFinalChuldeTerminarTp, elegirRespuestaTpFinalChulde, elegirRespuestaTpFinalBatizzi, tpFinalBatizziTerminarTp, comenzarTpFinalBatizzi, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
     //endregion
     //endregion
 
@@ -316,7 +305,7 @@ public class SceneController {
 
     public void switchToTPFinalAdisgutinBatizi(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ClaseAdisgutinBatizi.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/AdisgustinBatiziTPFinal.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -432,6 +421,46 @@ public class SceneController {
             e.printStackTrace();
         }
     }
+
+    public void switchToEventoBenoffi(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/EventoBuffiniPokemonGo.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToEventoRespuestas(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/primeraScenaEventoRespuestas.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToEventoRespuestas2(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/segundaScenaEventoRespuestas (1).fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
 
     //endregion
 
@@ -684,12 +713,11 @@ public class SceneController {
         respuestaUsuarioTPFinalMelina.setText(" ");
     }
 
-    private String[] respuestasTPFinalMelina = Arrays.copyOf(textoMelina.getArregloRespuestasMelinaTPFinal(), textoMelina.getArregloRespuestasMelinaTPFinal().length);
+    private String[] respuestasTPFinalMelina = Arrays.copyOf(textoMelina.getArregloRespuestas(), textoMelina.getArregloRespuestas().length);
     //endregion
     //endregion
 
     //region examen Buffini
-    //region examenes
 
     //region copia Arreglo
     ExamenBuffini textoBuffini = new ExamenBuffini();
@@ -772,6 +800,171 @@ public class SceneController {
 
     private String[] respuestasTPFinalBuffini = Arrays.copyOf(textoBuffini.getArregloRespuestas(), textoBuffini.getArregloRespuestas().length);
     //endregion
+    //endregion
+
+    //region Examen Batizi
+
+    //region copia Arreglo
+    ExamenBatizi textoBatizi = new ExamenBatizi();
+
+    private String[] copiaArregloPreguntaExamenBatizi = Arrays.copyOf(textoBatizi.getPreguntas(), textoBatizi.getPreguntas().length);
+    private String[] copiaArregloRespuesta1ExamenBatizi = Arrays.copyOf(textoBatizi.getRespuestas1(), textoBatizi.getRespuestas1().length);
+    private String[] copiaArregloRespuesta2ExamenBatizi = Arrays.copyOf(textoBatizi.getRespuestas2(), textoBatizi.getRespuestas2().length);
+    private String[] copiaArregloRespuesta3ExamenBatizi = Arrays.copyOf(textoBatizi.getRespuestas3(), textoBatizi.getRespuestas3().length);
+    private String[] copiaArregloRespuesta4ExamenBatizi = Arrays.copyOf(textoBatizi.getRespuestas4(), textoBatizi.getRespuestas4().length);
+//endregion
+
+    //region metodos uso texto
+    public void MenuExamenBatizzi(ActionEvent event) {
+        GestionPersonaje pj = new GestionPersonaje();
+        PersonajeRepo repo = new PersonajeRepo();
+
+        if (iteradorExamenBatizzi == 0) {
+            preguntaTPFinalBatizi.setText(copiaArregloPreguntaExamenBatizi[iteradorExamenBatizzi]);
+            preguntaTPFinalBatizi1.setText(copiaArregloRespuesta1ExamenBatizi[iteradorExamenBatizzi]);
+            preguntaTPFinalBatizi11.setText(copiaArregloRespuesta2ExamenBatizi[iteradorExamenBatizzi]);
+            preguntaTPFinalBatizi12.setText(copiaArregloRespuesta3ExamenBatizi[iteradorExamenBatizzi]);
+            preguntaTPFinalBatizi121.setText(copiaArregloRespuesta4ExamenBatizi[iteradorExamenBatizzi]);
+            comenzarTpFinalBatizzi.setDisable(true);
+            elegirRespuestaTpFinalBatizzi.setDisable(false);
+            tpFinalBatizziTerminarTp.setDisable(true);
+            iteradorExamenBatizzi++;
+            ActualizarTextRespuestasBatizzi();
+        } else if (iteradorExamenBatizzi < copiaArregloPreguntaExamenBatizi.length) {
+            preguntaTPFinalBatizi.setText(copiaArregloPreguntaExamenBatizi[iteradorExamenBatizzi]);
+            preguntaTPFinalBatizi1.setText(copiaArregloRespuesta1ExamenBatizi[iteradorExamenBatizzi]);
+            preguntaTPFinalBatizi11.setText(copiaArregloRespuesta2ExamenBatizi[iteradorExamenBatizzi]);
+            preguntaTPFinalBatizi12.setText(copiaArregloRespuesta3ExamenBatizi[iteradorExamenBatizzi]);
+            preguntaTPFinalBatizi121.setText(copiaArregloRespuesta4ExamenBatizi[iteradorExamenBatizzi]);
+            String respuesta = respuestaUsuarioTPFinalBtzz.getText();
+            ActualizarTextRespuestasBatizzi();
+            if (respuesta.equals(respuestasTPFinalBatizzi[iteradorExamenBatizzi - 1])) {
+                notaTPBatizzi += 1;
+            }
+            iteradorExamenBatizzi++;
+            actualizarBotonesTpFinalBatizzi();
+            ActualizarTextRespuestasBatizzi();
+        } else {
+            String respuesta = respuestaUsuarioTPFinalBtzz.getText();
+            if (respuesta.equals(respuestasTPFinalBatizzi[iteradorExamenBatizzi - 1])) {
+                notaTPBatizzi += 1;
+            }
+            preguntaTPFinalBatizi.setText("Bueno terminaron el TP para la proxima semana se los corrijo");
+            preguntaTPFinalBatizi1.setText("");
+            preguntaTPFinalBatizi11.setText("");
+            preguntaTPFinalBatizi12.setText("");
+            preguntaTPFinalBatizi121.setText("");
+            elegirRespuestaTpFinalBatizzi.setDisable(true); // Deshabilitar el botón cuando se han mostrado todos los mensajes
+            tpFinalBatizziTerminarTp.setDisable(false);
+            comenzarTpFinalBatizzi.setDisable(true);
+            pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
+
+            Personaje personaje = pj.cargarPersonaje();
+            ArrayList<Integer> Notas = personaje.getListaNotas();
+            Notas.set(2, notaTPBatizzi);
+            personaje.setEstres(personaje.getEstres() + estresParciales);
+            if (personaje.getEstres() >= 100) {
+                personaje.setEstres(100);
+            }
+            repo.Modificar(personaje);
+            pj.cambioEstado(personaje.getEstres());
+        }
+    }
+
+
+    private void actualizarBotonesTpFinalBatizzi() {
+        elegirRespuestaTpFinalBatizzi.setDisable(false);
+        tpFinalBatizziTerminarTp.setDisable(true);
+        comenzarTpFinalBatizzi.setDisable(true);
+    }
+
+    private void ActualizarTextRespuestasBatizzi() {
+        respuestaUsuarioTPFinalBtzz.setText(" ");
+    }
+    private String[] respuestasTPFinalBatizzi = Arrays.copyOf(textoBatizi.getArregloRespuestas(), textoBatizi.getArregloRespuestas().length);
+    //endregion
+    //endregion
+
+    //region Examen chulde
+
+    //region copia Arreglo
+    ExamenChulde textoChulde = new ExamenChulde();
+
+    private String[] copiaArregloPreguntaExamenBChulde = Arrays.copyOf(textoChulde.getPreguntas(), textoChulde.getPreguntas().length);
+    private String[] copiaArregloRespuesta1ExamenChulde = Arrays.copyOf(textoChulde.getRespuestas1(), textoChulde.getRespuestas1().length);
+    private String[] copiaArregloRespuesta2ExamenChulde = Arrays.copyOf(textoChulde.getRespuestas2(), textoChulde.getRespuestas2().length);
+    private String[] copiaArregloRespuesta3ExamenChulde = Arrays.copyOf(textoChulde.getRespuestas3(), textoChulde.getRespuestas3().length);
+    private String[] copiaArregloRespuesta4ExamenChulde = Arrays.copyOf(textoChulde.getRespuestas4(), textoChulde.getRespuestas4().length);
+//endregion
+
+    //region metodos uso texto
+    public void MenuExamenChulde(ActionEvent event) {
+        GestionPersonaje pj = new GestionPersonaje();
+        PersonajeRepo repo = new PersonajeRepo();
+
+        if (iteradorExamenChulde == 0) {
+            textPreguntasChalduTpFinal.setText(copiaArregloPreguntaExamenBChulde[iteradorExamenChulde]);
+            respuestasTpFinalChandlu1.setText(copiaArregloRespuesta1ExamenChulde[iteradorExamenChulde]);
+            respuestasTpFinalChandlu2.setText(copiaArregloRespuesta2ExamenChulde[iteradorExamenChulde]);
+            respuestasTpFinalChandlu3.setText(copiaArregloRespuesta3ExamenChulde[iteradorExamenChulde]);
+            respuestasTpFinalChandlu4.setText(copiaArregloRespuesta4ExamenChulde[iteradorExamenChulde]);
+            comenzarTpFinalChulde.setDisable(true);
+            elegirRespuestaTpFinalChulde.setDisable(false);
+            tpFinalChuldeTerminarTp.setDisable(true);
+            iteradorExamenChulde++;
+            ActualizarTextRespuestasChulde();
+        } else if (iteradorExamenChulde < copiaArregloPreguntaExamenBChulde.length) {
+            textPreguntasChalduTpFinal.setText(copiaArregloPreguntaExamenBChulde[iteradorExamenChulde]);
+            respuestasTpFinalChandlu1.setText(copiaArregloRespuesta1ExamenChulde[iteradorExamenChulde]);
+            respuestasTpFinalChandlu2.setText(copiaArregloRespuesta2ExamenChulde[iteradorExamenChulde]);
+            respuestasTpFinalChandlu3.setText(copiaArregloRespuesta3ExamenChulde[iteradorExamenChulde]);
+            respuestasTpFinalChandlu4.setText(copiaArregloRespuesta4ExamenChulde[iteradorExamenChulde]);
+            String respuesta = respuestaUsuarioTPFinalChulde.getText();
+            ActualizarTextRespuestasChulde();
+            if (respuesta.equals(respuestasTPFinalChulde[iteradorExamenChulde - 1])) {
+                notaChulde += 1;
+            }
+            iteradorExamenChulde++;
+            actualizarBotonesTpFinalChulde();
+            ActualizarTextRespuestasChulde();
+        } else {
+            String respuesta = respuestaUsuarioTPFinalChulde.getText();
+            if (respuesta.equals(respuestasTPFinalChulde[iteradorExamenChulde - 1])) {
+                notaChulde += 1;
+            }
+            textPreguntasChalduTpFinal.setText("Bueno terminaron el TP para la proxima semana se los corrijo");
+            respuestasTpFinalChandlu1.setText("");
+            respuestasTpFinalChandlu2.setText("");
+            respuestasTpFinalChandlu3.setText("");
+            respuestasTpFinalChandlu4.setText("");
+            elegirRespuestaTpFinalChulde.setDisable(true); // Deshabilitar el botón cuando se han mostrado todos los mensajes
+            tpFinalChuldeTerminarTp.setDisable(false);
+            comenzarTpFinalChulde.setDisable(true);
+            pj.setAsistenciaDia(GameData.AsistenciaClase.PRESENTE);
+
+            Personaje personaje = pj.cargarPersonaje();
+            ArrayList<Integer> Notas = personaje.getListaNotas();
+            Notas.set(3, notaChulde);
+            personaje.setEstres(personaje.getEstres() + estresParciales);
+            if (personaje.getEstres() >= 100) {
+                personaje.setEstres(100);
+            }
+            repo.Modificar(personaje);
+            pj.cambioEstado(personaje.getEstres());
+        }
+    }
+
+
+    private void actualizarBotonesTpFinalChulde() {
+        elegirRespuestaTpFinalChulde.setDisable(false);
+        tpFinalChuldeTerminarTp.setDisable(true);
+        comenzarTpFinalChulde.setDisable(true);
+    }
+
+    private void ActualizarTextRespuestasChulde() {
+        respuestaUsuarioTPFinalChulde.setText(" ");
+    }
+    private String[] respuestasTPFinalChulde = Arrays.copyOf(textoChulde.getArregloRespuestas(), textoChulde.getArregloRespuestas().length);
     //endregion
     //endregion
     //endregion
@@ -952,16 +1145,21 @@ public class SceneController {
     }
 
     ///EVENTO CARTAS
-    public void EventoCartas(ActionEvent event) {
+    public void EventoCartasYBenoffi(ActionEvent event) {
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
         int ultimodia = gestionPersonaje.ultimoDia();
 
         if (ultimodia == 5 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
             switchToEventoCartas(event);
-        } else {
+        } else if(ultimodia == 7 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoBenoffi(event);
+        }
+        else
+        {
             switchToPatioFacultad(event);
         }
+
     }
 
     public void AceptarCartas(ActionEvent event)
@@ -988,14 +1186,12 @@ public class SceneController {
         }
     }
 
-
-
     private void UpdateBotonCartas() {
         jugarCartas.setVisible(false);
     }
 
     //EVENTO METEGOL
-    public void EventoMetegol(ActionEvent event) {
+    public void EventoMetegolYRespuestas(ActionEvent event) {
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
 
@@ -1003,10 +1199,16 @@ public class SceneController {
 
         if (ultimodia == 11 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
             switchToEventoMeteGol(event);
-        } else {
+        } else if(ultimodia == 15 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoRespuestas(event);
+        }
+        else
+        {
             switchToBanioGeneral(event);
         }
     }
+
+
     public void AceptarMetegol(ActionEvent event)
     {
         PersonajeRepo repo = new PersonajeRepo();
@@ -1024,6 +1226,8 @@ public class SceneController {
         switchToPatioFacultad(event);
     }
 
+
+
     public void RechazarMetegol(ActionEvent event)
     {
         if (event.getSource().equals(nojugarMetegol)) {
@@ -1033,6 +1237,68 @@ public class SceneController {
 
     private void UpdateMetegol() {
         jugarMetegol.setVisible(false);
+    }
+    public void AceptarBenoffi(ActionEvent event)
+    {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (event.getSource().equals(aceptarEventoBuffini)) {
+
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            personaje.setEstres(personaje.getEstres()-5);
+            if (personaje.getEstres() < 0) {
+                personaje.setEstres(0);
+            }
+            repo.Modificar(personaje);
+        }
+        switchToPatioFacultad(event);
+    }
+
+    public void RechazarBenoffi(ActionEvent event)
+    {
+        if (event.getSource().equals(rechazoEventoBuffini)) {
+            switchToPatioFacultad(event);
+        }
+    }
+
+    public void AceptarRespuestas(ActionEvent event)
+    {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        int ultimodia = gestionPersonaje.ultimoDia();
+        if (event.getSource().equals(siDarPlataEventoRespuestas) && personaje.getDinero() >= 500) {
+            switchToEventoRespuestas2(event);
+            gestionPersonaje.descontarDinero(500);
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            repo.Modificar(personaje);
+        }
+    }
+
+    public void ActualizarDineroBanio()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        mostrarDineroEvento.setText(String.valueOf(personaje.getDinero()));
+    }
+
+    public void RechazarRespuestas(ActionEvent event)
+    {
+        if (event.getSource().equals(NoDarPlantaEventoRespuestas)) {
+            switchToBuffetGeneral(event);
+        }
+    }
+
+    public void TerminarDeverRespuestas(ActionEvent event)
+    {
+         switchToBanioGeneral(event);
     }
 
     public void RestarEstresEventos() {
