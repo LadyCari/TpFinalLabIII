@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0">
          <image>
@@ -56,7 +55,10 @@
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="respuestaUsuarioTPFinalBtzz" layoutX="244.0" layoutY="630.0" prefHeight="66.0" prefWidth="439.0" />
+      <TextField fx:id="respuestaUsuarioTPFinalBtzz" alignment="CENTER" layoutX="244.0" layoutY="630.0" prefHeight="66.0" prefWidth="439.0" promptText="Duck Power">
+         <font>
+            <Font name="Rockwell Extra Bold" size="35.0" />
+         </font></TextField>
       <Button fx:id="elegirRespuestaTpFinalBatizzi" layoutX="738.0" layoutY="643.0" mnemonicParsing="false" onAction="#MenuExamenBatizzi" prefHeight="40.0" prefWidth="200.0" text="Elegir numero">
          <font>
             <Font name="Rockwell Extra Bold" size="18.0" />

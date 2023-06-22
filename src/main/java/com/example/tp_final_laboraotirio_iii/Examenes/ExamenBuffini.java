@@ -1,25 +1,17 @@
 package com.example.tp_final_laboraotirio_iii.Examenes;
 
-import com.example.tp_final_laboraotirio_iii.Modelos.Personaje;
-import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
-
-import java.util.List;
-
 public class ExamenBuffini {
-    PersonajeRepo personajeRepo = new PersonajeRepo();
-    List<Personaje> personajes = personajeRepo.Listar();
-    String[] listaRespuestas;
 
     //region arreglo de strings
-    String[] Preguntas = {"¿Qué es una tabla hash?","¿Qué es una colisión?","¿Por qué no es conveniente utilizar el hashcode default?","En el siguiente ejemplo, que atributo asignarías al hashCode para que tu objeto sea único?","¿Qué otro método utilizamos junto al Hashcode?","¿Qué utilidad tiene el método Equals?","¿Qué estructura utilizamos si no queremos permitir duplicados?","¿Qué es la genericidad?","¿Por qué no es buena práctica utilizar Object como forma de genericidad?","¿Qué representa la T en genericidad?"};
-    String[] Respuestas1 ={"1-Es una estructura de datos agrupados por clave-valor","1- Según la RAE: Encuentro violento de dos o más cuerpos, de los cuales al menos uno está en movimiento","1-Puede generar colisiones entre los buckets","1- Dni y dirección","1-Equals","1-Determina si dos objetos son iguales","1-LinkedHashSet","1-Actitud o comportamiento de la persona generosa","1-Es un nivel de abstracción muy alto, y genera errores","1-elementos de una colección"};
-    String[] Respuestas2 ={"2-Una estructura de datos con orden de inserción","2-Qué dos objetos distintos se guarden en el mismo bucket o slot","2-Puede lanzar errores en tiempo de ejecución","2- Nombre y edad","2-ToString","2-Determina si los atributos de un objeto no son nulos","2-LinkedList","2-Es la capacidad de trabajar con distintos tipos de datos","2-Hace el código muy difícil de comprender","2-tipo de datos"};
-    String[] Respuestas3 ={"3-Tabla hash? eso usaba Tony hawk para hacer ollies","3-Qué dos objetos iguales se guarden en el mismo bucket o slot","3-Porque de manera default no interactúa con el método equals por lo que  tanto traerá varios comportamientos inesperados.\n","3- Dirección y nombre","3-CompareTo","3-Compara dos objetos y devuelve cual es vayor (utilizando algún atributo entero que posea)","3-Vector","3-Permite heredar clases múltiples","3-Es una crotada","3-clave-valor"};
-    String[] Respuestas4 ={"4-Una colección de datos de la interfaz List","4-Estoy entre la 3 y la 4, pero nose","4-¿Que era el hashcode?","4- Nombre, edad y altura","4-Respuesta vacía, los desarrolladores se quedaron sin ideas","","4-ArrayList","4-Demasiadas opciones? :) Tranqui pa, una menos","4-Todas son correctas","4-números"};
+    String[] Preguntas = {"¿En qué memoria está alojada una variable estática?","¿Cuántos y cuáles son los modificadores de acceso?","¿Cuál es una característica de los métodos estáticos?","¿Qué indica el OPERADOR FINAL (en una clase)?","¿Cual es una característica de la herencia?","¿Qué función cumple la palabra reservada SUPER?","¿Podemos instanciar una clase abstracta?","¿Qué son las interfaces?","¿Puede heredar una interfaz de otra?","¿Porque devuelve -1 la interfaz comparable?"};
+    String[] Respuestas1 ={"1-En la memoria Caché","1-Es 1, llamado emun","1-Puede llamar variables de instancia","1-Que la clase termino","1-Permite reutilizar código","1-Para crear una clase abstracta","1-Claro, como cualquier otra variable","1-Es una colección de métodos abstractos","1-No, no sigas preguntando boludeces","1-Cuando el atributo es NULL"};
+    String[] Respuestas2 ={"2-En la memoria Heap","2-Son 2, objeto e instancia","2-Puede llamar sólo a otros métodos estáticos","2-Que el valor del atributo término","2-Todas son correctas","2-Para llamar a los métodos o el constructor de una superclase","2-Si, pero a diferencia de cualquier variable, debemos reservar espacio en la memoria","2-Es un objeto que se hereda solo","2-Si, utilizando el implements","2-Cuando los objetos que se comparan son iguales"};
+    String[] Respuestas3 ={"3-En la memoria Ram","3-Son 3; parámetro, público y final","3-Se quedan quietos y no se mueven","3-El valor no puede cambiar una vez finalizado","3-Permite crear una clase en base a una ya creada","3-Para llamar desde un objeto a una superclase","3-No","3-Es un método especial","3-Si x2, pero utilizando el extends","3-Cuando el objeto actual es mayor que el objeto comparado"};
+    String[] Respuestas4 ={"4-En la memoria humana","4-son 4; Private, Default, Protected, Public","4-Todas son correctas","4-Que no puede heredar","4-Permite crear una estructura jerárquica de clases","4-Para ir a comprar al super más cercano de casa","4-Esta opción no cuenta, pero la respuesta de arriba fue medio cortante","4-Es una clase abstracta con métodos abstracto","4-Si y como es una interfaz no requiere palabra reservada","4-Cuando el objeto actual es menor que el objeto comparado"};
     //endregion
 
     //region arreglo respuestas
-    String[] respuestasTPFinal = {" 1"," 2"," 3"," 2"," 4"," 1"," 2"," 3"," 2"," 3"};
+    String[] respuestasTPFinal = {" 2"," 4"," 4"," 4"," 2"," 2"," 3"," 1"," 3"," 4"};
     //endregion
 
     //region G y S strings
