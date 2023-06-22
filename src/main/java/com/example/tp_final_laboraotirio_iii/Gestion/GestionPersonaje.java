@@ -52,7 +52,7 @@ public class GestionPersonaje {
     public void cambioEstado (int stress){
         if (stress <=45){
             personaje.setEstadoEstres(Personaje.estadoEstres.RELAJADO);
-        } else if (stress <= 70) {
+        } else if (stress <= 75) {
             personaje.setEstadoEstres(Personaje.estadoEstres.NERVIOSO);
         }else {
             personaje.setEstadoEstres(Personaje.estadoEstres.ESTRESADO);
