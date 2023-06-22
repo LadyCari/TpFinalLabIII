@@ -30,12 +30,12 @@
             <Font name="Rockwell Extra Bold" size="36.0" />
          </font>
       </Label>
-      <Button fx:id="siJugarPingpong" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" onAction="#switchToPatioFacultad" prefHeight="40.0" prefWidth="1002.0" text="DALE! me re copo unas re ganas de jugar tenía.">
+      <Button fx:id="siJugarPingpong" layoutX="248.0" layoutY="619.0" mnemonicParsing="false" onAction="#AceptarPingPong" prefHeight="40.0" prefWidth="1002.0" text="DALE! me re copo unas re ganas de jugar tenía.">
          <font>
             <Font name="Rockwell Extra Bold" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="nojugarpingpong" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" onAction="#switchToBuffetGeneral" prefHeight="40.0" prefWidth="1002.0" text="Na disculpa llego tarde a casa y el bondi pasa en nada.">
+      <Button fx:id="nojugarpingpong" layoutX="248.0" layoutY="669.0" mnemonicParsing="false" onAction="#RechazarPingPong" prefHeight="40.0" prefWidth="1002.0" text="Na disculpa llego tarde a casa y el bondi pasa en nada.">
          <font>
             <Font name="Rockwell Extra Bold" size="21.0" />
          </font>
