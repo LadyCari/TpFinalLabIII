@@ -40,11 +40,11 @@ public class SceneController {
     @FXML
     private RadioButton jugarMetegol, juegarPingPong, jugarCartas;
     @FXML
-    private Label mostrarCorduraPatio, textPreguntasChalduTpFinal, respuestasTpFinalChandlu1, respuestasTpFinalChandlu2, respuestasTpFinalChandlu3, respuestasTpFinalChandlu4, preguntaTPFinalBatizi, preguntaTPFinalBatizi1, preguntaTPFinalBatizi11, preguntaTPFinalBatizi12, preguntaTPFinalBatizi121, registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
+    private Label mostrarDineroEvento,mostrarCorduraPatio, textPreguntasChalduTpFinal, respuestasTpFinalChandlu1, respuestasTpFinalChandlu2, respuestasTpFinalChandlu3, respuestasTpFinalChandlu4, preguntaTPFinalBatizi, preguntaTPFinalBatizi1, preguntaTPFinalBatizi11, preguntaTPFinalBatizi12, preguntaTPFinalBatizi121, registroDias, respuesta3BenoffiTPFinal, respuesta4BenoffiTPFinal, preguntaBenoffiTPFinal, respuesta1BenoffiTPFinal, respuesta2BenoffiTPFinal, tpFinalMaleniarespuesta4, tpFinalMaleniarespuesta3, tpFinalMaleniarespuesta2, tpFinalMaleniarespuesta1, preguntaTPFinalMalenia, mostrarDinero, mostrarCordura, mostrarBebidaFavorita, muetraBebidaFavoritaEnCreacionPj, textoProfesor, txtUsuario1, fechaCargarPartida, dineroGanadoEnElDia1, dineroGanadoEnElDia2, muetraNombreUsuarioCreacionPj;
     @FXML
     private TextField txtName, respuestaUsuarioTPFinalMelina, respuestaUsuarioTPFinalChulde, respuestaUsuarioTPFinalBuffini, respuestaUsuarioTPFinalBtzz;
     @FXML
-    private Button siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, comenzarTpFinalChulde, tpFinalChuldeTerminarTp, elegirRespuestaTpFinalChulde, elegirRespuestaTpFinalBatizzi, tpFinalBatizziTerminarTp, comenzarTpFinalBatizzi, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
+    private Button NoDarPlantaEventoRespuestas,siDarPlataEventoRespuestas,rechazoEventoBuffini,aceptarEventoBuffini,siJugarMetegol,nojugarMetegol, siJugarCartas,nojugarCartas,siJugarPingpong, nojugarpingpong, textoAnteriorClase, comenzarTpFinalChulde, tpFinalChuldeTerminarTp, elegirRespuestaTpFinalChulde, elegirRespuestaTpFinalBatizzi, tpFinalBatizziTerminarTp, comenzarTpFinalBatizzi, elegirRespuestaTpFinalBuffini, comenzarTpFinalBuffini, tpFinalBuffiniTerminarTp, deCafeteriaABuffetGeneral, teCafeteria, jugoCafeteria, lagrimaCafeteria, cortadoCafeteria, cappuchinoCafeteria, cafeConLecheCafeteria, comenzarTpFinalMalenia, tpFinalMeleniaTerminarTp, elegirRespuestaTpFinalMalenia, siguientetextoclase, terminarClase;
     //endregion
     //endregion
 
@@ -421,6 +421,46 @@ public class SceneController {
             e.printStackTrace();
         }
     }
+
+    public void switchToEventoBenoffi(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/EventoBuffiniPokemonGo.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToEventoRespuestas(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/primeraScenaEventoRespuestas.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToEventoRespuestas2(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/segundaScenaEventoRespuestas (1).fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
 
     //endregion
 
@@ -1105,16 +1145,21 @@ public class SceneController {
     }
 
     ///EVENTO CARTAS
-    public void EventoCartas(ActionEvent event) {
+    public void EventoCartasYBenoffi(ActionEvent event) {
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
         int ultimodia = gestionPersonaje.ultimoDia();
 
         if (ultimodia == 5 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
             switchToEventoCartas(event);
-        } else {
+        } else if(ultimodia == 7 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoBenoffi(event);
+        }
+        else
+        {
             switchToPatioFacultad(event);
         }
+
     }
 
     public void AceptarCartas(ActionEvent event)
@@ -1141,14 +1186,12 @@ public class SceneController {
         }
     }
 
-
-
     private void UpdateBotonCartas() {
         jugarCartas.setVisible(false);
     }
 
     //EVENTO METEGOL
-    public void EventoMetegol(ActionEvent event) {
+    public void EventoMetegolYRespuestas(ActionEvent event) {
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
 
@@ -1156,10 +1199,16 @@ public class SceneController {
 
         if (ultimodia == 11 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
             switchToEventoMeteGol(event);
-        } else {
+        } else if(ultimodia == 15 && personaje.getGuardadoPartida().get(ultimodia - 1).getEventoCompletado().equals(GameData.eventoCompletado.NO_COMPLETADO)) {
+            switchToEventoRespuestas(event);
+        }
+        else
+        {
             switchToBanioGeneral(event);
         }
     }
+
+
     public void AceptarMetegol(ActionEvent event)
     {
         PersonajeRepo repo = new PersonajeRepo();
@@ -1177,6 +1226,8 @@ public class SceneController {
         switchToPatioFacultad(event);
     }
 
+
+
     public void RechazarMetegol(ActionEvent event)
     {
         if (event.getSource().equals(nojugarMetegol)) {
@@ -1186,6 +1237,68 @@ public class SceneController {
 
     private void UpdateMetegol() {
         jugarMetegol.setVisible(false);
+    }
+    public void AceptarBenoffi(ActionEvent event)
+    {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        int ultimodia = gestionPersonaje.ultimoDia();
+
+        if (event.getSource().equals(aceptarEventoBuffini)) {
+
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            personaje.setEstres(personaje.getEstres()-5);
+            if (personaje.getEstres() < 0) {
+                personaje.setEstres(0);
+            }
+            repo.Modificar(personaje);
+        }
+        switchToPatioFacultad(event);
+    }
+
+    public void RechazarBenoffi(ActionEvent event)
+    {
+        if (event.getSource().equals(rechazoEventoBuffini)) {
+            switchToPatioFacultad(event);
+        }
+    }
+
+    public void AceptarRespuestas(ActionEvent event)
+    {
+        PersonajeRepo repo = new PersonajeRepo();
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        List<GameData> Listadata = gestionPersonaje.listaGameData();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        int ultimodia = gestionPersonaje.ultimoDia();
+        if (event.getSource().equals(siDarPlataEventoRespuestas) && personaje.getDinero() >= 500) {
+            switchToEventoRespuestas2(event);
+            gestionPersonaje.descontarDinero(500);
+            GameData gameData = Listadata.get(ultimodia - 1);
+            gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
+            repo.Modificar(personaje);
+        }
+    }
+
+    public void ActualizarDineroBanio()
+    {
+        GestionPersonaje gestionPersonaje = new GestionPersonaje();
+        Personaje personaje = gestionPersonaje.cargarPersonaje();
+        mostrarDineroEvento.setText(String.valueOf(personaje.getDinero()));
+    }
+
+    public void RechazarRespuestas(ActionEvent event)
+    {
+        if (event.getSource().equals(NoDarPlantaEventoRespuestas)) {
+            switchToBuffetGeneral(event);
+        }
+    }
+
+    public void TerminarDeverRespuestas(ActionEvent event)
+    {
+         switchToBanioGeneral(event);
     }
 
     public void RestarEstresEventos() {
