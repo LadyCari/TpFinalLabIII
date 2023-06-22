@@ -1,9 +1,5 @@
 package com.example.tp_final_laboraotirio_iii.Modelos;
 
-
-
-import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -97,7 +93,7 @@ public class Personaje implements Serializable{
     }
     //endregion
 
-    //Metodo para generar una bebida favorita random
+    //region Metodo para generar una bebida favorita random
     private Buffet Random()
     {
         Buffet[]comidas = Buffet.values();
@@ -105,6 +101,7 @@ public class Personaje implements Serializable{
 
         return comidas[random.nextInt(6)];
     }
+    //endregion
 
     @Override
     public boolean equals(Object o) {
@@ -132,6 +129,5 @@ public class Personaje implements Serializable{
                 ", ListaNotas=" + ListaNotas +
                 '}';
     }
-
-}
 //endregion
+}

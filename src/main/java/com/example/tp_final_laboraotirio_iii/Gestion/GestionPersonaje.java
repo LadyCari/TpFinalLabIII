@@ -4,7 +4,6 @@ import com.example.tp_final_laboraotirio_iii.Modelos.GameData;
 import com.example.tp_final_laboraotirio_iii.Modelos.Personaje;
 import com.example.tp_final_laboraotirio_iii.Repositorio.PersonajeRepo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GestionPersonaje {
