@@ -59,7 +59,7 @@ public class Clases {
             ///endregion
 
             ///region Dialogos Agustin
-            String[] dialogoAgustin={"Hola soy Adisgustin Batizi, su profe del tercer cuatrimestre. Me gusta el anime, los patitos de ule, regalar cupones de Ayudemi, tocar el piano. Se comenta por los pasillos que soy el mejor profe de la NTU",
+            String[] dialogoAgustin={"Hola soy Adisgustin Batizi, su profe del tercer cuatrimestre. Me gusta el anime, los patitos de ule, regalar cupones de Ayudemi y tocar el piano. Se comenta por los pasillos que soy el mejor profe de la NTU",
                     "Primero comencemos con Tabla Hash, para que mas adelante puedas entender el Hashcode. Esta es una estructura de datos, la cual agrupa claves-valor.Cabe destacar que no poseen un orden y esta compuesta por buckets o slots","Los objetos poseen un hashcode, el cual java transforma en entero para usarlo como entero (utilizado como indice en el bucket). Esto lo hace java con el metodo de dispersion",
                     "Metodo hashcode: Quiza fue chino lo que te dijimos pero ahora cobra sentido. El metodo hashcode permite que un objeto posea un codigo hash.Por defecto si no lo implementamos, Java usa como Hashcode la direccion de memoria algo malo ya que puede generar colisiones (guardar en un mismo bucket diferentes objetos)",
                     "Cuando implementamos el metodo Hashcode debemos elegir los atributos que hagan unico a nuestro objeto ya sea, por ejemplo un Dni, un ID etc.El metodo se creo para ser implementado junto al Equals, un metodo que determina si dos objetos son iguales",
