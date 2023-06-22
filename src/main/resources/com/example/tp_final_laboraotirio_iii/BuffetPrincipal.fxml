@@ -18,8 +18,8 @@
          </image>
       </ImageView>
       <RadioButton fx:id="deBuffetAVendedor" layoutX="385.0" layoutY="388.0" mnemonicParsing="false" onAction="#switchToMenuBuffet" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
-      <RadioButton fx:id="deBuffetAPatio" layoutX="994.0" layoutY="352.0" mnemonicParsing="false" onAction="#EventoCartas" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
+      <RadioButton fx:id="deBuffetAPatio" layoutX="994.0" layoutY="352.0" mnemonicParsing="false" onAction="#EventoCartasYBenoffi" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
       <RadioButton fx:id="volverDeBuffetAComedor" layoutX="1242.0" layoutY="369.0" mnemonicParsing="false" onAction="#switchToPasilloPrincipal" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
-      <RadioButton fx:id="irBanioGeneral" layoutX="744.0" layoutY="352.0" mnemonicParsing="false" onAction="#EventoMetegol" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
+      <RadioButton fx:id="irBanioGeneral" layoutX="744.0" layoutY="352.0" mnemonicParsing="false" onAction="#EventoMetegolYRespuestas" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
    </children>
 </Pane>
