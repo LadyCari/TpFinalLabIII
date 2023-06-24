@@ -34,7 +34,10 @@ public class SceneController {
     private Parent root;
 
     private static final int MaximoIntentosEventos = 2;
-    private int ContadorIntentosEventos = 0, notaTPBuffini, notaChulde, notaTPBatizzi, iteradorExamenChulde = 0,iteradorExamenBatizzi = 0, iteradorExamenBuffini = 0, iteradorExamenMelina, indiceMensajesTeoria = 0, estresClases = 25, estresParciales = 35, notaTPMelina;
+
+    private static int ContadorIntentosEventos = 0;
+
+    private int notaTPBuffini, notaChulde, notaTPBatizzi, iteradorExamenChulde = 0,iteradorExamenBatizzi = 0, iteradorExamenBuffini = 0, iteradorExamenMelina, indiceMensajesTeoria = 0, estresClases = 25, estresParciales = 35, notaTPMelina;
     private String[] arregloCopiaTeoria;
 
     //region FXML
@@ -483,6 +486,41 @@ public class SceneController {
     public void switchToBadEnding(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/FinalJuegoBadEnding.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToJugarPingPong(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaPingPongGIF.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void switchToJugarCartas(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaCartasGIF.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void switchToJugarMeteGol(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/tp_final_laboraotirio_iii/ScenaMetegolGIF.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -1464,7 +1502,6 @@ public class SceneController {
         }
     }
 
-
     public void AceptarMetegol(ActionEvent event)
     {
         PersonajeRepo repo = new PersonajeRepo();
@@ -1557,18 +1594,44 @@ public class SceneController {
          switchToBanioGeneral(event);
     }
 
-    public void RestarEstresEventos() {
+
+
+
+    public void RestarEstresEventos(ActionEvent event) {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
         Personaje personaje = gestionPersonaje.cargarPersonaje();
         if (ContadorIntentosEventos < MaximoIntentosEventos) {
-            personaje.setEstres(personaje.getEstres() - 15);
-            if (personaje.getEstres() < 0) {
-                personaje.setEstres(0);
+            if (event.getSource().equals(juegarPingPong))
+            {
+                switchToJugarPingPong(event);
+                personaje.setEstres(personaje.getEstres() - 15);
+                if (personaje.getEstres() < 0) {
+                    personaje.setEstres(0);
+                }
+                personajeRepo.Modificar(personaje);
+                gestionPersonaje.cambioEstado(personaje.getEstres());
+            } else if (event.getSource().equals(jugarCartas)) {
+
+                switchToJugarCartas(event);
+                personaje.setEstres(personaje.getEstres() - 15);
+                if (personaje.getEstres() < 0) {
+                    personaje.setEstres(0);
+                }
+                personajeRepo.Modificar(personaje);
+                gestionPersonaje.cambioEstado(personaje.getEstres());
             }
-            personajeRepo.Modificar(personaje);
-            gestionPersonaje.cambioEstado(personaje.getEstres());
-            ContadorIntentosEventos++;
+            else
+            {
+                switchToJugarMeteGol(event);
+                personaje.setEstres(personaje.getEstres() - 15);
+                if (personaje.getEstres() < 0) {
+                    personaje.setEstres(0);
+                }
+                personajeRepo.Modificar(personaje);
+                gestionPersonaje.cambioEstado(personaje.getEstres());
+            }
+           ContadorIntentosEventos++;
         }
     }
 
@@ -1831,6 +1894,4 @@ public class SceneController {
         repo.Modificar(personaje);
     }
     //endregion
-
-
 }

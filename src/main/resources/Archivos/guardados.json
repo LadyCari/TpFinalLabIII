@@ -1,10 +1,10 @@
 [ {
-  "buffet" : "Capuccino",
-  "dinero" : 900,
+  "buffet" : "Te",
+  "dinero" : 700,
   "id" : 1,
-  "listaNotas" : [ 10, 5, 5, 1 ],
-  "estres" : 0,
-  "estadoEstres" : "RELAJADO",
+  "estres" : 60,
+  "estadoEstres" : "NERVIOSO",
+  "listaNotas" : [ 0, 0, 0, 0 ],
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "NO_PRESENTE",
@@ -16,7 +16,7 @@
   }, {
     "fecha" : "3",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
+    "eventoCompletado" : "COMPLETADO"
   }, {
     "fecha" : "4",
     "asistenciaClase" : "NO_PRESENTE",
@@ -24,7 +24,7 @@
   }, {
     "fecha" : "5",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
+    "eventoCompletado" : "COMPLETADO"
   }, {
     "fecha" : "6",
     "asistenciaClase" : "NO_PRESENTE",
@@ -48,7 +48,7 @@
   }, {
     "fecha" : "11",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
+    "eventoCompletado" : "COMPLETADO"
   }, {
     "fecha" : "12",
     "asistenciaClase" : "NO_PRESENTE",
@@ -57,22 +57,6 @@
     "fecha" : "13",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "COMPLETADO"
-  }, {
-    "fecha" : "14",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "15",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "16",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "17",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "nombre" : "wrrwr"
+  "nombre" : "iii"
 } ]

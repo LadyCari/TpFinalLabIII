@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp_final_laboraotirio_iii.SceneController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/juegosTemporal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="720.0" fitWidth="1280.0">
+         <image>
+            <Image url="@Imagenes/plantillaInterfazUsuario.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="504.0" layoutY="634.0" mnemonicParsing="false" onAction="#switchToPatioFacultad" prefHeight="66.0" prefWidth="272.0" text="Terminar juego">
+         <font>
+            <Font name="Rockwell Extra Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="413.0" fitWidth="993.0" layoutX="144.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/pingPong.gif" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
