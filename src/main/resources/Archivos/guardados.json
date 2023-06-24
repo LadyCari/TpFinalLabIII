@@ -1,10 +1,13 @@
 [ {
-  "buffet" : "Capuccino",
-  "dinero" : 300,
+  "buffet" : "Lagrima",
+  "dinero" : 600,
   "id" : 1,
+  "estres" : 25,
+  "estadoEstres" : "RELAJADO",
+  "listaNotas" : [ 0, 0, 0, 0 ],
   "guardadoPartida" : [ {
     "fecha" : "1",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "2",
@@ -22,9 +25,30 @@
     "fecha" : "5",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "COMPLETADO"
+  }, {
+    "fecha" : "6",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "7",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "8",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "9",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "10",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "11",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "COMPLETADO"
   } ],
-  "estres" : 0,
-  "estadoEstres" : "RELAJADO",
-  "listaNotas" : [ 0, 0, 0, 0 ],
-  "nombre" : "Caro"
+  "nombre" : "caro"
 } ]
