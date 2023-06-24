@@ -3,8 +3,8 @@
   "dinero" : 600,
   "id" : 1,
   "estres" : 0,
-  "estadoEstres" : "RELAJADO",
   "listaNotas" : [ 0, 0, 0, 0 ],
+  "estadoEstres" : "RELAJADO",
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "NO_PRESENTE",
