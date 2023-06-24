@@ -3,8 +3,8 @@
 ##  Participantes  
 - <a href="https://www.linkedin.com/in/carolina-ferraris-86264823b/">Carolina Ferraris</a>
 - <a href="https://www.linkedin.com/in/santiago-rubini-3067a5248/">Santiago Rubbini</a>
-- <a >Ignacio Reyna</a>
-- <a >Marcelo Asis</a>
+- <a href="https://www.linkedin.com/in/ignacio-nicolas-reyna-349834248/">Ignacio Reyna</a>
+- <a href="https://www.linkedin.com/in/marcelo-alejandro-asis-825ba7255/">Marcelo Asis</a>
 
 
 ##  Juego para aprender java
