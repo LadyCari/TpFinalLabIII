@@ -1,9 +1,9 @@
 [ {
-  "buffet" : "Te",
-  "dinero" : 700,
+  "buffet" : "Lagrima",
+  "dinero" : 600,
   "id" : 1,
-  "estres" : 60,
-  "estadoEstres" : "NERVIOSO",
+  "estres" : 0,
+  "estadoEstres" : "RELAJADO",
   "listaNotas" : [ 0, 0, 0, 0 ],
   "guardadoPartida" : [ {
     "fecha" : "1",
@@ -49,14 +49,6 @@
     "fecha" : "11",
     "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "COMPLETADO"
-  }, {
-    "fecha" : "12",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "13",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "COMPLETADO"
   } ],
-  "nombre" : "iii"
+  "nombre" : "hgfhth"
 } ]

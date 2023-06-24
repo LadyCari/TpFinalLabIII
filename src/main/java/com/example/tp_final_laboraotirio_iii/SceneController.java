@@ -1595,8 +1595,6 @@ public class SceneController {
     }
 
 
-
-
     public void RestarEstresEventos(ActionEvent event) {
         PersonajeRepo personajeRepo = new PersonajeRepo();
         GestionPersonaje gestionPersonaje = new GestionPersonaje();
