@@ -3,6 +3,7 @@ package com.example.tp_final_laboraotirio_iii.Modelos;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Random;
 
 public class Personaje implements Serializable{
@@ -101,6 +102,18 @@ public class Personaje implements Serializable{
         return comidas[random.nextInt(6)];
     }
     //endregion
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Personaje personaje)) return false;
+        return id == personaje.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
     //region toString
 

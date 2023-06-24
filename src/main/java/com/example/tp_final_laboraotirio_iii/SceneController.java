@@ -1704,14 +1704,15 @@ public class SceneController {
 
         if (event.getSource().equals(siCupongAyudemi)) {
             personaje.setEstres(personaje.getEstres()-10);
+            if (personaje.getEstres() < 0) {
+                personaje.setEstres(0);
+            }
             GameData gameData = Listadata.get(ultimodia - 1);
             gameData.setEventoCompletado(GameData.eventoCompletado.COMPLETADO);
             repo.Modificar(personaje);
         }
         switchToaula2(event);
     }
-
-
 
 
     public void PatioJuegos() {

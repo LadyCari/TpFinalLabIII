@@ -22,7 +22,7 @@
             <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="37.0" layoutY="184.0" prefHeight="114.0" prefWidth="1207.0" text="Cada 3 clases teoricas tendras un trabajo practico evaluativo de los temas que consta de 10 pregungas y aumentara tu stress +35, trata de no estar estresado o no lo pasaras muy bien" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Label layoutX="37.0" layoutY="184.0" prefHeight="114.0" prefWidth="1207.0" text="Cada 3 clases teoricas tendras un trabajo practico evaluativo de los temas que consta de 10 preguntas y aumentara tu stress +35, trata de no estar estresado o no lo pasaras muy bien" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="26.0" />
          </font>
