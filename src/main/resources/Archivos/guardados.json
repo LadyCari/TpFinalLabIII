@@ -1,10 +1,10 @@
 [ {
   "buffet" : "Lagrima",
-  "dinero" : 450,
+  "dinero" : 370,
   "id" : 1,
-  "estres" : 100,
-  "estadoEstres" : "ESTRESADO",
   "listaNotas" : [ 3, 0, 0, 0 ],
+  "estadoEstres" : "NERVIOSO",
+  "estres" : 70,
   "guardadoPartida" : [ {
     "fecha" : "1",
     "asistenciaClase" : "PRESENTE",
@@ -36,6 +36,38 @@
   }, {
     "fecha" : "8",
     "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "9",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "10",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "11",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "12",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "13",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "14",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "15",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "16",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   } ],
   "nombre" : "klmñ"

@@ -41,19 +41,19 @@
             <Font name="Rockwell Extra Bold" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="respuestasTpFinalChandlu1" alignment="CENTER" layoutX="42.0" layoutY="177.0" prefHeight="60.0" prefWidth="615.0" text="1-Respuesta" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="respuestasTpFinalChandlu1" alignment="CENTER" layoutX="42.0" layoutY="177.0" prefHeight="60.0" prefWidth="615.0" text="1-Respuesta" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="respuestasTpFinalChandlu2" alignment="CENTER" layoutX="42.0" layoutY="237.0" prefHeight="60.0" prefWidth="615.0" text="2-Respuesta" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="respuestasTpFinalChandlu2" alignment="CENTER" layoutX="42.0" layoutY="237.0" prefHeight="60.0" prefWidth="615.0" text="2-Respuesta" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="respuestasTpFinalChandlu3" alignment="CENTER" layoutX="42.0" layoutY="297.0" prefHeight="60.0" prefWidth="615.0" text="3-Respuesta" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="respuestasTpFinalChandlu3" alignment="CENTER" layoutX="42.0" layoutY="297.0" prefHeight="60.0" prefWidth="615.0" text="3-Respuesta" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="respuestasTpFinalChandlu4" alignment="CENTER" layoutX="46.0" layoutY="360.0" prefHeight="60.0" prefWidth="607.0" text="4-Respuesta" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="respuestasTpFinalChandlu4" alignment="CENTER" layoutX="46.0" layoutY="360.0" prefHeight="60.0" prefWidth="607.0" text="4-Respuesta" textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font name="Rockwell Extra Bold" size="16.0" />
          </font></Label>
