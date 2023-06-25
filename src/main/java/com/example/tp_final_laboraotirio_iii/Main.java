@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/tp_final_laboraotirio_iii/MenuPrincipal.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/tp_final_laboraotirio_iii/VentanaPresentacion.fxml"));
         Parent root = loader.load();
 
         SceneController controller = loader.getController();

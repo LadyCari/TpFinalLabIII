@@ -1,25 +1,25 @@
 [ {
-  "buffet" : "Jugo",
-  "dinero" : 120,
+  "buffet" : "Lagrima",
+  "dinero" : 450,
   "id" : 1,
-  "estres" : 75,
-  "listaNotas" : [ 0, 10, 10, 10 ],
-  "estadoEstres" : "NERVIOSO",
+  "estres" : 100,
+  "estadoEstres" : "ESTRESADO",
+  "listaNotas" : [ 3, 0, 0, 0 ],
   "guardadoPartida" : [ {
     "fecha" : "1",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "2",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "3",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "4",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "5",
@@ -37,42 +37,6 @@
     "fecha" : "8",
     "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "9",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "10",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "11",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "12",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "13",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "14",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "15",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "16",
-    "asistenciaClase" : "PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
-  }, {
-    "fecha" : "17",
-    "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "nombre" : "sqad"
+  "nombre" : "klmñ"
 } ]
