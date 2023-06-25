@@ -1,6 +1,6 @@
-package com.example.tp_final_laboraotirio_iii.Examenes;
+package com.example.tp_final_laboraotirio_iii.TpFinales;
 
-public class ExamenBuffini {
+public class TPFinalBuffini implements TPFinal{
 
     //region arreglo de strings
     String[] Preguntas = {"¿En qué memoria está alojada una variable estática?","¿Cuántos y cuáles son los modificadores de acceso?","¿Cuál es una característica de los métodos estáticos?","¿Qué indica el OPERADOR FINAL (en una clase)?","¿Cual es una característica de la herencia?","¿Qué función cumple la palabra reservada SUPER?","¿Podemos instanciar una clase abstracta?","¿Qué son las interfaces?","¿Puede heredar una interfaz de otra?","¿Porque devuelve -1 la interfaz comparable?"};
@@ -10,29 +10,62 @@ public class ExamenBuffini {
     String[] Respuestas4 ={"4-En la memoria humana","4-son 4; Private, Default, Protected, Public","4-Todas son correctas","4-Que no puede heredar","4-Permite crear una estructura jerárquica de clases","4-Para ir a comprar al super más cercano de casa","4-Esta opción no cuenta, pero la respuesta de arriba fue medio cortante","4-Es una clase abstracta con métodos abstracto","4-Si y como es una interfaz no requiere palabra reservada","4-Cuando el objeto actual es menor que el objeto comparado"};
     //endregion
 
+    //region arreglo de string tpFinal Chino
+    String[] preguntasChino= {"質問をシミュレートするため","十分に質問してください","こんにちは、元気ですか","なんて繊細な男の子なんだろう","イベントはいつありますか","つ以上費やさないでください","ゲームはストレスを軽減する","通訳と話しています","人々はとても失礼です","それは考えられないよ、友達"};
+    String[] respuestasChino1={"1-質問をシ","1-ランダムです","1-ランダムです","1-シミュレー","1-シミュレー","1-レートするため","1-レートするため","1-レートするため","1-レートするため","1-レートするため"};
+    String[] respuestasChino2={"2-質問をシ","2-ランダムです","2-ランダムです","2-シミュレー","2-シミュレー","2-レートするため","2-レートするため","2-レートするため","2-レートするため","2-レートするため"};
+    String[] respuestasChino3={"3-質問をシ","3-ランダムです","3-ランダムです","3-シミュレー","3-シミュレー","3-レートするため","3-レートするため","3-レートするため","3-レートするため","3-レートするため"};
+    String[] respuestasChino4={"4-質問をシ","4-ランダムです","4-ランダムです","4-シミュレー","4-シミュレー","4-レートするため","4-レートするため","4-レートするため","4-レートするため","4-レートするため"};
+//endregion
+
     //region arreglo respuestas
     String[] respuestasTPFinal = {" 2"," 4"," 2"," 4"," 2"," 2"," 3"," 1"," 3"," 4"};
     //endregion
 
     //region G y S strings
-    public String[] getPreguntas(){
+    @Override
+    public String[] getPreguntas() {
         return Preguntas;
     }
-    public String[] getRespuestas1(){
+    @Override
+    public String[] getRespuestas1() {
         return Respuestas1;
     }
+    @Override
     public String[] getRespuestas2() {
         return Respuestas2;
     }
+    @Override
     public String[] getRespuestas3() {
         return Respuestas3;
     }
+    @Override
     public String[] getRespuestas4() {
         return Respuestas4;
     }
-
-    public String[] getArregloRespuestas(){
+    @Override
+    public String[] getRespuestasTPFinal() {
         return respuestasTPFinal;
+    }
+    @Override
+    public String[] getPreguntasChino() {
+        return preguntasChino;
+    }
+    @Override
+    public String[] getRespuestas1Chino() {
+        return respuestasChino1;
+    }
+    @Override
+    public String[] getRespuestas2Chino() {
+        return respuestasChino2;
+    }
+    @Override
+    public String[] getRespuestas3Chino() {
+        return respuestasChino3;
+    }
+    @Override
+    public String[] getRespuestas4Chino() {
+        return respuestasChino4;
     }
     //endregion
 }

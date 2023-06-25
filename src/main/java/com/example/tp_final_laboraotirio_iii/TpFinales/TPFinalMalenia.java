@@ -1,9 +1,9 @@
-package com.example.tp_final_laboraotirio_iii.Examenes;
+package com.example.tp_final_laboraotirio_iii.TpFinales;
 
 
-public class ExamenMalenia {
+public class TPFinalMalenia implements TPFinal {
 
-    //region arreglo de strings
+    //region arreglo de strings tpFinal normal
     String[] Preguntas = {"¿Qué pilar fundamental utilizamos cuando ocultamos los datos?","Que pilar fundamental busca resaltar las características generales de un ente, para crear nuestro software?","¿Cuáles son los 4 pilares fundamentales de la programación orientada a objetos?","¿Cual es la funcionalidad de La JVM?","¿Qué modificador de acceso restringe el acceso a los atributos al resto del programa?","¿Qué ocurre si no declaro un constructor en una clase?","¿Cómo podemos traer un dato de un atributo privado?","¿Qué significa la sobrecarga de métodos?","¿Qué ocurre si no colocamos el toString en nuestra clase?","¿Quien fundó el lenguaje Java?"};
     String[] Respuestas1 = {"1-Polimorfismo","1-Polimorfismo","1-Public,Private, Abstracción,Polimorfismo","1-Provee herramientas para permitir el desarrollo de aplicaciones con java, además de ser necesario para ejecutar y compilar programas java en cualquier plataforma","1-Public","1-PERO A VOS TE FALLA? COMO NO VAS A DECLARAR UN CONSTRUCTOR","1- Utilizando el método getter","1-Sobreescritura de los métodos por parte de las subclases","1-El compilador buscará el toString default de la superclase object y mostrará la dirección de memoria de los datos","1-Perón (justo después de los derechos laborales)"};
     String[] Respuestas2 = {"2- Abstracción","2-Abstracción","2-toString, Public, Private, Implements","2-Interpretar el código binario de Java (Bytecode) para ser traducido a binario de máquina, y poder ejecutar el código","2-Private","2-Lanza un error en tiempo de ejecución, debido a que no se puede instanciar un objeto si su clase no posee un constructor","2-Utilizando el método setter","2-Métodos con mismo nombre pero distintos comportamientos","2-La clase tiene un método toString predeterminado y mostrará los datos correctamente","2-James Gosling y su equipo en Sun Microsystems (carreo James)"};
@@ -11,29 +11,63 @@ public class ExamenMalenia {
     String[] Respuestas4 = {"4-Pilar… Pila? FIFO?","4.Herencia","4-Interfaces, Estatico, Final, Abstracto","4-JVM? ¿Es algún anime eso?","4-Default","4-Habrá un error en tiempo de compilación ya que el compilador no identificará ningún constructor de la clase","4-Pidiendo por favor, ser educado siempre es opción","4-Qué le pongo mucho peso al método","4-Explota la pc","4-Bill gates, luego de crear Microsoft"};
     //endregion
 
+    //region arreglo de string tpFinal Chino
+    String[] preguntasChino= {"質問をシミュレートするため","十分に質問してください","こんにちは、元気ですか","なんて繊細な男の子なんだろう","イベントはいつありますか","つ以上費やさないでください","ゲームはストレスを軽減する","通訳と話しています","人々はとても失礼です","それは考えられないよ、友達"};
+    String[] respuestasChino1={"1-質問をシ","1-ランダムです","1-ランダムです","1-シミュレー","1-シミュレー","1-レートするため","1-レートするため","1-レートするため","1-レートするため","1-レートするため"};
+    String[] respuestasChino2={"2-質問をシ","2-ランダムです","2-ランダムです","2-シミュレー","2-シミュレー","2-レートするため","2-レートするため","2-レートするため","2-レートするため","2-レートするため"};
+
+    String[] respuestasChino3={"3-質問をシ","3-ランダムです","3-ランダムです","3-シミュレー","3-シミュレー","3-レートするため","3-レートするため","3-レートするため","3-レートするため","3-レートするため"};
+    String[] respuestasChino4={"4-質問をシ","4-ランダムです","4-ランダムです","4-シミュレー","4-シミュレー","4-レートするため","4-レートするため","4-レートするため","4-レートするため","4-レートするため"};
+//endregion
+
     //region arreglo respuestas
     String[] respuestasTPFinal = {" 3"," 2"," 3"," 2"," 2"," 3"," 1"," 2"," 1"," 2"};
     //endregion
 
     //region G y S strings
-    public String[] getPreguntas(){
+    @Override
+    public String[] getPreguntas() {
         return Preguntas;
     }
-    public String[] getRespuestas1(){
+    @Override
+    public String[] getRespuestas1() {
         return Respuestas1;
     }
+    @Override
     public String[] getRespuestas2() {
         return Respuestas2;
     }
+    @Override
     public String[] getRespuestas3() {
         return Respuestas3;
     }
+    @Override
     public String[] getRespuestas4() {
         return Respuestas4;
     }
-
-    public String[] getArregloRespuestas(){
+    @Override
+    public String[] getRespuestasTPFinal() {
         return respuestasTPFinal;
+    }
+    @Override
+    public String[] getPreguntasChino() {
+        return preguntasChino;
+    }
+    @Override
+    public String[] getRespuestas1Chino() {
+        return respuestasChino1;
+    }
+    @Override
+    public String[] getRespuestas2Chino() {
+        return respuestasChino2;
+    }
+    @Override
+    public String[] getRespuestas3Chino() {
+        return respuestasChino3;
+    }
+    @Override
+    public String[] getRespuestas4Chino() {
+        return respuestasChino4;
     }
     //endregion
 

@@ -1,13 +1,13 @@
 [ {
-  "buffet" : "Lagrima",
-  "dinero" : 600,
+  "buffet" : "Jugo",
+  "dinero" : 120,
   "id" : 1,
-  "estres" : 25,
-  "estadoEstres" : "RELAJADO",
-  "listaNotas" : [ 0, 0, 0, 0 ],
+  "estres" : 75,
+  "listaNotas" : [ 0, 10, 10, 10 ],
+  "estadoEstres" : "NERVIOSO",
   "guardadoPartida" : [ {
     "fecha" : "1",
-    "asistenciaClase" : "PRESENTE",
+    "asistenciaClase" : "NO_PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "2",
@@ -16,7 +16,7 @@
   }, {
     "fecha" : "3",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "COMPLETADO"
+    "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "4",
     "asistenciaClase" : "NO_PRESENTE",
@@ -24,7 +24,7 @@
   }, {
     "fecha" : "5",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "COMPLETADO"
+    "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "6",
     "asistenciaClase" : "NO_PRESENTE",
@@ -35,7 +35,7 @@
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "8",
-    "asistenciaClase" : "NO_PRESENTE",
+    "asistenciaClase" : "PRESENTE",
     "eventoCompletado" : "NO_COMPLETADO"
   }, {
     "fecha" : "9",
@@ -48,7 +48,31 @@
   }, {
     "fecha" : "11",
     "asistenciaClase" : "NO_PRESENTE",
-    "eventoCompletado" : "COMPLETADO"
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "12",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "13",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "14",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "15",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "16",
+    "asistenciaClase" : "PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
+  }, {
+    "fecha" : "17",
+    "asistenciaClase" : "NO_PRESENTE",
+    "eventoCompletado" : "NO_COMPLETADO"
   } ],
-  "nombre" : "caro"
+  "nombre" : "sqad"
 } ]

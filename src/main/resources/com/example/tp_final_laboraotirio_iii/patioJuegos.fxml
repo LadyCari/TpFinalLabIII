@@ -19,9 +19,9 @@
             <Image url="@Imagenes/plantillaInterfazUsuario.png" />
          </image>
       </ImageView>
-      <RadioButton fx:id="jugarMetegol" layoutX="181.0" layoutY="345.0" mnemonicParsing="false" onAction="#switchToJugarMeteGol" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
-      <RadioButton fx:id="juegarPingPong" layoutX="785.0" layoutY="406.0" mnemonicParsing="false" onAction="#switchToJugarPingPong" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
-      <RadioButton fx:id="jugarCartas" layoutX="1130.0" layoutY="320.0" mnemonicParsing="false" onAction="#switchToJugarCartas" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
+      <RadioButton fx:id="jugarMetegol" layoutX="181.0" layoutY="345.0" mnemonicParsing="false" onAction="#RestarEstresEventos" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
+      <RadioButton fx:id="juegarPingPong" layoutX="785.0" layoutY="406.0" mnemonicParsing="false" onAction="#RestarEstresEventos" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
+      <RadioButton fx:id="jugarCartas" layoutX="1130.0" layoutY="320.0" mnemonicParsing="false" onAction="#RestarEstresEventos" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
       <RadioButton fx:id="dePatioAGym" layoutX="1123.0" layoutY="235.0" mnemonicParsing="false" onAction="#Gimnasio" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
       <RadioButton fx:id="dePatioAComedor" layoutX="418.0" layoutY="189.0" mnemonicParsing="false" onAction="#switchToBuffetGeneral" scaleX="2.0" scaleY="2.0" scaleZ="2.0" />
       <ImageView fitHeight="120.0" fitWidth="250.0" layoutX="81.0" layoutY="25.0">

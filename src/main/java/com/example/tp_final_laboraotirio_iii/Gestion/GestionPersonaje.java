@@ -58,12 +58,42 @@ public class GestionPersonaje {
         }
         repo.Modificar(personaje);
     }
-/*
-public void calcularNota (int notaParcial, int cantidadmaterias){
-       double notaExamen = notaParcial/cantidadmaterias;
-       personaje.
-}
-*/
+
+    public void actualizarBuffet(String bebida, int gasto){
+
+        if (descontarDinero(gasto)) {
+            if (personaje.getBuffet().name().equals(bebida)) {
+                personaje.setEstres(personaje.getEstres() - 10);
+            } else {
+                personaje.setEstres(personaje.getEstres() - 5);
+            }
+        }
+        if (personaje.getEstres() < 0) {
+            personaje.setEstres(0);
+        }
+        repo.Modificar(personaje);
+    }
+
+    public void restarStressJuegos (Personaje personaje, int stress){
+
+        personaje.setEstres(personaje.getEstres() - stress);
+
+        if (personaje.getEstres() < 0) {
+            personaje.setEstres(0);
+        }
+
+        repo.Modificar(personaje);
+        cambioEstado(personaje.getEstres());
+    }
+
+    public void sumarStressPersonaje(Personaje personaje, int estres){
+
+        personaje.setEstres(personaje.getEstres() + estres);
+        if (personaje.getEstres() >= 100) {
+            personaje.setEstres(100);
+        }
+        repo.Modificar(personaje);
+    }
 //endregion
     }
 
